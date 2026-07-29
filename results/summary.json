@@ -1,0 +1,750 @@
+{
+  "benchmark": "CAGE Challenge 4",
+  "cage_commit": "8c3c50ca54b176c2de199847944e8dcc035497e3",
+  "episodes_per_condition": 30,
+  "steps_per_episode": 500,
+  "seed_start": 3407,
+  "seed_end": 3436,
+  "reward_direction": "closer_to_zero_is_better",
+  "conditions": {
+    "sleep__default": {
+      "episodes": 30,
+      "reward_mean": -6840.133333333333,
+      "reward_std": 1583.7758834156077,
+      "reward_min": -10486,
+      "reward_max": -4262,
+      "blue_actions": {
+        "Sleep": 74850
+      },
+      "red_actions": {
+        "AggressiveServiceDiscovery": 1224,
+        "DegradeServices": 10936,
+        "DiscoverDeception": 2237,
+        "DiscoverRemoteSystems": 1128,
+        "ExploitRemoteService": 6470,
+        "Impact": 10810,
+        "PrivilegeEscalate": 1613,
+        "Sleep": 54222,
+        "StealthServiceDiscovery": 1180
+      },
+      "attack": {
+        "unique_session_hosts_mean": 68.6,
+        "unique_session_hosts_std": 7.851114570556208,
+        "unique_new_session_hosts_mean": 67.6,
+        "unique_new_session_hosts_std": 7.851114570556208,
+        "unique_privileged_hosts_mean": 53.766666666666666,
+        "unique_privileged_hosts_std": 6.656742613487638,
+        "unique_new_privileged_hosts_mean": 53.766666666666666,
+        "unique_new_privileged_hosts_std": 6.656742613487638,
+        "successful_exploit_hosts_mean": 49.96666666666667,
+        "successful_exploit_hosts_std": 6.300705427877809,
+        "unique_impacted_hosts_mean": 17.966666666666665,
+        "unique_impacted_hosts_std": 3.9028479629909008,
+        "successful_impact_count_mean": 17.966666666666665,
+        "successful_impact_count_std": 3.9028479629909008,
+        "max_concurrent_session_hosts_mean": 68.6,
+        "max_concurrent_session_hosts_std": 7.851114570556208,
+        "max_concurrent_privileged_hosts_mean": 53.766666666666666,
+        "max_concurrent_privileged_hosts_std": 6.656742613487638,
+        "max_session_lineage_depth_mean": 1,
+        "max_session_lineage_depth_std": 0.0,
+        "ordered_chain_completions_mean": 16.1,
+        "ordered_chain_completions_std": 3.9610604640676716,
+        "privileged_to_impact_host_rate_mean": 0.3348225677603692,
+        "privileged_to_impact_host_rate_std": 0.06344166091677429,
+        "episodes_with_impact": 30,
+        "impact_episode_rate": 1.0,
+        "first_successful_impact_step_mean": 51.6,
+        "first_successful_impact_step_std": 29.448938860339265,
+        "episodes_with_new_session": 30,
+        "new_session_episode_rate": 1.0,
+        "first_new_session_step_mean": 5.633333333333334,
+        "action_results": {
+          "AggressiveServiceDiscovery": {
+            "completed": 1224,
+            "succeeded": 1224,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "DegradeServices": {
+            "completed": 10936,
+            "succeeded": 10936,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "DiscoverDeception": {
+            "completed": 2237,
+            "succeeded": 2237,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "DiscoverRemoteSystems": {
+            "completed": 1128,
+            "succeeded": 1128,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "ExploitRemoteService": {
+            "completed": 6470,
+            "succeeded": 1652,
+            "failed": 4818,
+            "success_rate": 0.2553323029366306
+          },
+          "Impact": {
+            "completed": 10810,
+            "succeeded": 539,
+            "failed": 10271,
+            "success_rate": 0.049861239592969474
+          },
+          "PrivilegeEscalate": {
+            "completed": 1613,
+            "succeeded": 1613,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "StealthServiceDiscovery": {
+            "completed": 1180,
+            "succeeded": 1180,
+            "failed": 0,
+            "success_rate": 1.0
+          }
+        }
+      }
+    },
+    "reactive__default": {
+      "episodes": 30,
+      "reward_mean": -6560.733333333334,
+      "reward_std": 1418.9285378607183,
+      "reward_min": -10094,
+      "reward_max": -3471,
+      "blue_actions": {
+        "AllowTrafficZone": 120,
+        "Analyse": 2747,
+        "BlockTrafficZone": 960,
+        "DeployDecoy": 2063,
+        "Monitor": 64156,
+        "Sleep": 4804
+      },
+      "red_actions": {
+        "AggressiveServiceDiscovery": 1237,
+        "DegradeServices": 10226,
+        "DiscoverDeception": 2416,
+        "DiscoverRemoteSystems": 1218,
+        "ExploitRemoteService": 7032,
+        "Impact": 10381,
+        "PrivilegeEscalate": 1540,
+        "Sleep": 54485,
+        "StealthServiceDiscovery": 1285
+      },
+      "attack": {
+        "unique_session_hosts_mean": 66.9,
+        "unique_session_hosts_std": 7.100938905055678,
+        "unique_new_session_hosts_mean": 65.9,
+        "unique_new_session_hosts_std": 7.100938905055678,
+        "unique_privileged_hosts_mean": 51.333333333333336,
+        "unique_privileged_hosts_std": 5.274677451960662,
+        "unique_new_privileged_hosts_mean": 51.333333333333336,
+        "unique_new_privileged_hosts_std": 5.274677451960662,
+        "successful_exploit_hosts_mean": 47.56666666666667,
+        "successful_exploit_hosts_std": 5.672643906406332,
+        "unique_impacted_hosts_mean": 17.433333333333334,
+        "unique_impacted_hosts_std": 2.848196310337864,
+        "successful_impact_count_mean": 17.433333333333334,
+        "successful_impact_count_std": 2.848196310337864,
+        "max_concurrent_session_hosts_mean": 66.9,
+        "max_concurrent_session_hosts_std": 7.100938905055678,
+        "max_concurrent_privileged_hosts_mean": 51.333333333333336,
+        "max_concurrent_privileged_hosts_std": 5.274677451960662,
+        "max_session_lineage_depth_mean": 1,
+        "max_session_lineage_depth_std": 0.0,
+        "ordered_chain_completions_mean": 15.4,
+        "ordered_chain_completions_std": 2.8589042189855425,
+        "privileged_to_impact_host_rate_mean": 0.34254869866056525,
+        "privileged_to_impact_host_rate_std": 0.06298748933929604,
+        "episodes_with_impact": 30,
+        "impact_episode_rate": 1.0,
+        "first_successful_impact_step_mean": 44.733333333333334,
+        "first_successful_impact_step_std": 24.361080070929166,
+        "episodes_with_new_session": 30,
+        "new_session_episode_rate": 1.0,
+        "first_new_session_step_mean": 5.8,
+        "action_results": {
+          "AggressiveServiceDiscovery": {
+            "completed": 1237,
+            "succeeded": 1161,
+            "failed": 76,
+            "success_rate": 0.9385610347615198
+          },
+          "DegradeServices": {
+            "completed": 10226,
+            "succeeded": 10226,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "DiscoverDeception": {
+            "completed": 2416,
+            "succeeded": 2416,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "DiscoverRemoteSystems": {
+            "completed": 1218,
+            "succeeded": 1218,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "ExploitRemoteService": {
+            "completed": 7032,
+            "succeeded": 1546,
+            "failed": 5486,
+            "success_rate": 0.21985210466439134
+          },
+          "Impact": {
+            "completed": 10381,
+            "succeeded": 523,
+            "failed": 9858,
+            "success_rate": 0.05038050284173008
+          },
+          "PrivilegeEscalate": {
+            "completed": 1540,
+            "succeeded": 1540,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "StealthServiceDiscovery": {
+            "completed": 1285,
+            "succeeded": 1209,
+            "failed": 76,
+            "success_rate": 0.9408560311284047
+          }
+        }
+      }
+    },
+    "layerchain__default": {
+      "episodes": 30,
+      "reward_mean": -3120.9,
+      "reward_std": 656.8410436830716,
+      "reward_min": -4538,
+      "reward_max": -1901,
+      "blue_actions": {
+        "AllowTrafficZone": 123,
+        "Analyse": 5976,
+        "BlockTrafficZone": 1019,
+        "DeployDecoy": 2063,
+        "Monitor": 54103,
+        "Restore": 1769,
+        "Sleep": 9797
+      },
+      "red_actions": {
+        "AggressiveServiceDiscovery": 2212,
+        "DegradeServices": 5934,
+        "DiscoverDeception": 3355,
+        "DiscoverRemoteSystems": 1066,
+        "ExploitRemoteService": 9922,
+        "Impact": 5889,
+        "PrivilegeEscalate": 1368,
+        "Sleep": 57912,
+        "StealthServiceDiscovery": 2162
+      },
+      "attack": {
+        "unique_session_hosts_mean": 64.76666666666667,
+        "unique_session_hosts_std": 7.017517763109371,
+        "unique_new_session_hosts_mean": 63.766666666666666,
+        "unique_new_session_hosts_std": 7.017517763109371,
+        "unique_privileged_hosts_mean": 34.96666666666667,
+        "unique_privileged_hosts_std": 6.112737157407928,
+        "unique_new_privileged_hosts_mean": 34.96666666666667,
+        "unique_new_privileged_hosts_std": 6.112737157407928,
+        "successful_exploit_hosts_mean": 44.36666666666667,
+        "successful_exploit_hosts_std": 5.694929518635171,
+        "unique_impacted_hosts_mean": 8.266666666666667,
+        "unique_impacted_hosts_std": 2.3935097428021654,
+        "successful_impact_count_mean": 8.266666666666667,
+        "successful_impact_count_std": 2.3935097428021654,
+        "max_concurrent_session_hosts_mean": 52.733333333333334,
+        "max_concurrent_session_hosts_std": 6.632914559645371,
+        "max_concurrent_privileged_hosts_mean": 30.666666666666668,
+        "max_concurrent_privileged_hosts_std": 5.479253801588517,
+        "max_session_lineage_depth_mean": 1,
+        "max_session_lineage_depth_std": 0.0,
+        "ordered_chain_completions_mean": 6.3,
+        "ordered_chain_completions_std": 2.3825756371344577,
+        "privileged_to_impact_host_rate_mean": 0.23998845954196604,
+        "privileged_to_impact_host_rate_std": 0.06824227316044759,
+        "episodes_with_impact": 30,
+        "impact_episode_rate": 1.0,
+        "first_successful_impact_step_mean": 56.2,
+        "first_successful_impact_step_std": 34.120765915592614,
+        "episodes_with_new_session": 30,
+        "new_session_episode_rate": 1.0,
+        "first_new_session_step_mean": 5.766666666666667,
+        "action_results": {
+          "AggressiveServiceDiscovery": {
+            "completed": 1988,
+            "succeeded": 1898,
+            "failed": 90,
+            "success_rate": 0.954728370221328
+          },
+          "DegradeServices": {
+            "completed": 5346,
+            "succeeded": 5321,
+            "failed": 25,
+            "success_rate": 0.9953236064347175
+          },
+          "DiscoverDeception": {
+            "completed": 2943,
+            "succeeded": 2941,
+            "failed": 2,
+            "success_rate": 0.99932042133877
+          },
+          "DiscoverRemoteSystems": {
+            "completed": 1025,
+            "succeeded": 1025,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "ExploitRemoteService": {
+            "completed": 8723,
+            "succeeded": 2434,
+            "failed": 6289,
+            "success_rate": 0.2790324429668692
+          },
+          "Impact": {
+            "completed": 5327,
+            "succeeded": 248,
+            "failed": 5079,
+            "success_rate": 0.046555284400225265
+          },
+          "PrivilegeEscalate": {
+            "completed": 1258,
+            "succeeded": 1142,
+            "failed": 116,
+            "success_rate": 0.9077901430842608
+          },
+          "RedSessionCheck": {
+            "completed": 3352,
+            "succeeded": 3352,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "StealthServiceDiscovery": {
+            "completed": 1934,
+            "succeeded": 1850,
+            "failed": 84,
+            "success_rate": 0.9565667011375388
+          }
+        }
+      }
+    },
+    "sleep__chain": {
+      "episodes": 30,
+      "reward_mean": -7012.333333333333,
+      "reward_std": 1593.0061798024792,
+      "reward_min": -9688,
+      "reward_max": -3995,
+      "blue_actions": {
+        "Sleep": 74850
+      },
+      "red_actions": {
+        "AggressiveServiceDiscovery": 1777,
+        "DegradeServices": 13962,
+        "DiscoverDeception": 843,
+        "DiscoverRemoteSystems": 3198,
+        "ExploitRemoteService": 7475,
+        "Impact": 6951,
+        "PrivilegeEscalate": 1570,
+        "Sleep": 53370,
+        "StealthServiceDiscovery": 671,
+        "Withdraw": 3
+      },
+      "attack": {
+        "unique_session_hosts_mean": 67.56666666666666,
+        "unique_session_hosts_std": 6.571064517175957,
+        "unique_new_session_hosts_mean": 66.56666666666666,
+        "unique_new_session_hosts_std": 6.571064517175957,
+        "unique_privileged_hosts_mean": 52.333333333333336,
+        "unique_privileged_hosts_std": 5.729068180971686,
+        "unique_new_privileged_hosts_mean": 52.333333333333336,
+        "unique_new_privileged_hosts_std": 5.729068180971686,
+        "successful_exploit_hosts_mean": 48.63333333333333,
+        "successful_exploit_hosts_std": 5.504442650158951,
+        "unique_impacted_hosts_mean": 16.966666666666665,
+        "unique_impacted_hosts_std": 3.628437067878614,
+        "successful_impact_count_mean": 16.966666666666665,
+        "successful_impact_count_std": 3.628437067878614,
+        "max_concurrent_session_hosts_mean": 67.53333333333333,
+        "max_concurrent_session_hosts_std": 6.621849355647475,
+        "max_concurrent_privileged_hosts_mean": 52.333333333333336,
+        "max_concurrent_privileged_hosts_std": 5.729068180971686,
+        "max_session_lineage_depth_mean": 1,
+        "max_session_lineage_depth_std": 0.0,
+        "ordered_chain_completions_mean": 15.166666666666666,
+        "ordered_chain_completions_std": 3.777859476240775,
+        "privileged_to_impact_host_rate_mean": 0.3251846161178389,
+        "privileged_to_impact_host_rate_std": 0.06592643870961369,
+        "episodes_with_impact": 30,
+        "impact_episode_rate": 1.0,
+        "first_successful_impact_step_mean": 33.733333333333334,
+        "first_successful_impact_step_std": 24.61156006613333,
+        "episodes_with_new_session": 30,
+        "new_session_episode_rate": 1.0,
+        "first_new_session_step_mean": 5.633333333333334,
+        "action_results": {
+          "AggressiveServiceDiscovery": {
+            "completed": 1777,
+            "succeeded": 1777,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "DegradeServices": {
+            "completed": 13962,
+            "succeeded": 13962,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "DiscoverDeception": {
+            "completed": 843,
+            "succeeded": 843,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "DiscoverRemoteSystems": {
+            "completed": 3198,
+            "succeeded": 3198,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "ExploitRemoteService": {
+            "completed": 7475,
+            "succeeded": 1645,
+            "failed": 5830,
+            "success_rate": 0.22006688963210702
+          },
+          "Impact": {
+            "completed": 6951,
+            "succeeded": 509,
+            "failed": 6442,
+            "success_rate": 0.07322687383110343
+          },
+          "PrivilegeEscalate": {
+            "completed": 1570,
+            "succeeded": 1570,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "StealthServiceDiscovery": {
+            "completed": 671,
+            "succeeded": 671,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "Withdraw": {
+            "completed": 3,
+            "succeeded": 3,
+            "failed": 0,
+            "success_rate": 1.0
+          }
+        }
+      }
+    },
+    "reactive__chain": {
+      "episodes": 30,
+      "reward_mean": -6584.466666666666,
+      "reward_std": 1381.9705673019555,
+      "reward_min": -10493,
+      "reward_max": -4447,
+      "blue_actions": {
+        "AllowTrafficZone": 120,
+        "Analyse": 2621,
+        "BlockTrafficZone": 960,
+        "DeployDecoy": 2063,
+        "Monitor": 64402,
+        "Remove": 1,
+        "Sleep": 4683
+      },
+      "red_actions": {
+        "AggressiveServiceDiscovery": 2067,
+        "DegradeServices": 12589,
+        "DiscoverDeception": 940,
+        "DiscoverRemoteSystems": 3330,
+        "ExploitRemoteService": 8425,
+        "Impact": 6197,
+        "PrivilegeEscalate": 1524,
+        "Sleep": 54063,
+        "StealthServiceDiscovery": 681,
+        "Withdraw": 4
+      },
+      "attack": {
+        "unique_session_hosts_mean": 66.3,
+        "unique_session_hosts_std": 6.82226746275264,
+        "unique_new_session_hosts_mean": 65.3,
+        "unique_new_session_hosts_std": 6.82226746275264,
+        "unique_privileged_hosts_mean": 50.8,
+        "unique_privileged_hosts_std": 6.4673539153711594,
+        "unique_new_privileged_hosts_mean": 50.8,
+        "unique_new_privileged_hosts_std": 6.4673539153711594,
+        "successful_exploit_hosts_mean": 46.46666666666667,
+        "successful_exploit_hosts_std": 6.264893366122754,
+        "unique_impacted_hosts_mean": 15.7,
+        "unique_impacted_hosts_std": 2.8769196489764304,
+        "successful_impact_count_mean": 15.7,
+        "successful_impact_count_std": 2.8769196489764304,
+        "max_concurrent_session_hosts_mean": 66.3,
+        "max_concurrent_session_hosts_std": 6.82226746275264,
+        "max_concurrent_privileged_hosts_mean": 50.8,
+        "max_concurrent_privileged_hosts_std": 6.4673539153711594,
+        "max_session_lineage_depth_mean": 1,
+        "max_session_lineage_depth_std": 0.0,
+        "ordered_chain_completions_mean": 13.8,
+        "ordered_chain_completions_std": 2.8448784391135824,
+        "privileged_to_impact_host_rate_mean": 0.31125899020815223,
+        "privileged_to_impact_host_rate_std": 0.056368115108150436,
+        "episodes_with_impact": 30,
+        "impact_episode_rate": 1.0,
+        "first_successful_impact_step_mean": 37.666666666666664,
+        "first_successful_impact_step_std": 25.04972831966225,
+        "episodes_with_new_session": 30,
+        "new_session_episode_rate": 1.0,
+        "first_new_session_step_mean": 5.166666666666667,
+        "action_results": {
+          "AggressiveServiceDiscovery": {
+            "completed": 2067,
+            "succeeded": 1813,
+            "failed": 254,
+            "success_rate": 0.8771165940977261
+          },
+          "DegradeServices": {
+            "completed": 12589,
+            "succeeded": 12589,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "DiscoverDeception": {
+            "completed": 940,
+            "succeeded": 940,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "DiscoverRemoteSystems": {
+            "completed": 3330,
+            "succeeded": 3330,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "ExploitRemoteService": {
+            "completed": 8425,
+            "succeeded": 1570,
+            "failed": 6855,
+            "success_rate": 0.18635014836795252
+          },
+          "Impact": {
+            "completed": 6197,
+            "succeeded": 471,
+            "failed": 5726,
+            "success_rate": 0.07600451831531387
+          },
+          "PrivilegeEscalate": {
+            "completed": 1524,
+            "succeeded": 1524,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "StealthServiceDiscovery": {
+            "completed": 681,
+            "succeeded": 638,
+            "failed": 43,
+            "success_rate": 0.9368575624082232
+          },
+          "Withdraw": {
+            "completed": 4,
+            "succeeded": 4,
+            "failed": 0,
+            "success_rate": 1.0
+          }
+        }
+      }
+    },
+    "layerchain__chain": {
+      "episodes": 30,
+      "reward_mean": -4014.2,
+      "reward_std": 917.8857009453847,
+      "reward_min": -6159,
+      "reward_max": -2389,
+      "blue_actions": {
+        "AllowTrafficZone": 129,
+        "Analyse": 6163,
+        "BlockTrafficZone": 1003,
+        "DeployDecoy": 2063,
+        "Monitor": 54263,
+        "Remove": 2,
+        "Restore": 1504,
+        "Sleep": 9723
+      },
+      "red_actions": {
+        "AggressiveServiceDiscovery": 3274,
+        "DegradeServices": 9623,
+        "DiscoverDeception": 1146,
+        "DiscoverRemoteSystems": 2684,
+        "ExploitRemoteService": 9571,
+        "Impact": 4812,
+        "PrivilegeEscalate": 1758,
+        "Sleep": 55672,
+        "StealthServiceDiscovery": 1273,
+        "Withdraw": 7
+      },
+      "attack": {
+        "unique_session_hosts_mean": 62.6,
+        "unique_session_hosts_std": 6.681317235396026,
+        "unique_new_session_hosts_mean": 61.6,
+        "unique_new_session_hosts_std": 6.681317235396026,
+        "unique_privileged_hosts_mean": 36.9,
+        "unique_privileged_hosts_std": 5.2367292591209385,
+        "unique_new_privileged_hosts_mean": 36.9,
+        "unique_new_privileged_hosts_std": 5.2367292591209385,
+        "successful_exploit_hosts_mean": 39.3,
+        "successful_exploit_hosts_std": 4.390520090680222,
+        "unique_impacted_hosts_mean": 7.8,
+        "unique_impacted_hosts_std": 1.7962924780409972,
+        "successful_impact_count_mean": 7.8,
+        "successful_impact_count_std": 1.7962924780409972,
+        "max_concurrent_session_hosts_mean": 51.93333333333333,
+        "max_concurrent_session_hosts_std": 7.266055020129944,
+        "max_concurrent_privileged_hosts_mean": 28.2,
+        "max_concurrent_privileged_hosts_std": 4.969238707622459,
+        "max_session_lineage_depth_mean": 1,
+        "max_session_lineage_depth_std": 0.0,
+        "ordered_chain_completions_mean": 5.866666666666666,
+        "ordered_chain_completions_std": 1.6679994670929073,
+        "privileged_to_impact_host_rate_mean": 0.21189877097406823,
+        "privileged_to_impact_host_rate_std": 0.04050120926111969,
+        "episodes_with_impact": 30,
+        "impact_episode_rate": 1.0,
+        "first_successful_impact_step_mean": 29.733333333333334,
+        "first_successful_impact_step_std": 17.631285325302358,
+        "episodes_with_new_session": 30,
+        "new_session_episode_rate": 1.0,
+        "first_new_session_step_mean": 5.8,
+        "action_results": {
+          "AggressiveServiceDiscovery": {
+            "completed": 2873,
+            "succeeded": 2586,
+            "failed": 287,
+            "success_rate": 0.9001044204664114
+          },
+          "DegradeServices": {
+            "completed": 8646,
+            "succeeded": 8601,
+            "failed": 45,
+            "success_rate": 0.9947952810548231
+          },
+          "DiscoverDeception": {
+            "completed": 992,
+            "succeeded": 992,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "DiscoverRemoteSystems": {
+            "completed": 2434,
+            "succeeded": 2433,
+            "failed": 1,
+            "success_rate": 0.9995891536565324
+          },
+          "ExploitRemoteService": {
+            "completed": 8405,
+            "succeeded": 2162,
+            "failed": 6243,
+            "success_rate": 0.25722784057108866
+          },
+          "Impact": {
+            "completed": 4341,
+            "succeeded": 234,
+            "failed": 4107,
+            "success_rate": 0.05390463026952315
+          },
+          "PrivilegeEscalate": {
+            "completed": 1618,
+            "succeeded": 1396,
+            "failed": 222,
+            "success_rate": 0.8627935723114957
+          },
+          "RedSessionCheck": {
+            "completed": 3700,
+            "succeeded": 3700,
+            "failed": 0,
+            "success_rate": 1.0
+          },
+          "StealthServiceDiscovery": {
+            "completed": 1122,
+            "succeeded": 1080,
+            "failed": 42,
+            "success_rate": 0.9625668449197861
+          },
+          "Withdraw": {
+            "completed": 7,
+            "succeeded": 7,
+            "failed": 0,
+            "success_rate": 1.0
+          }
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "layerchain_vs_sleep__default": {
+      "reward_penalty_reduction_pct": 54.373696419173115,
+      "paired_reward_gain_mean": 3719.233333333333,
+      "paired_reward_gain_std": 1517.3921295145312,
+      "paired_reward_gain_ci95_approx": [
+        3176.2415333616054,
+        4262.225133305061
+      ],
+      "paired_reward_win_rate": 1.0,
+      "unique_new_session_hosts_reduction_pct": 5.670611439842199,
+      "unique_privileged_hosts_reduction_pct": 34.96590204587724,
+      "successful_impact_count_reduction_pct": 53.98886827458256,
+      "ordered_chain_completions_reduction_pct": 60.86956521739131
+    },
+    "layerchain_vs_reactive__default": {
+      "reward_penalty_reduction_pct": 52.430622593002816,
+      "paired_reward_gain_mean": 3439.8333333333335,
+      "paired_reward_gain_std": 1153.2466041073164,
+      "paired_reward_gain_ci95_approx": [
+        3027.1493361019393,
+        3852.5173305647277
+      ],
+      "paired_reward_win_rate": 1.0,
+      "unique_new_session_hosts_reduction_pct": 3.2372281234193334,
+      "unique_privileged_hosts_reduction_pct": 31.88311688311688,
+      "successful_impact_count_reduction_pct": 52.58126195028681,
+      "ordered_chain_completions_reduction_pct": 59.09090909090909
+    },
+    "layerchain_vs_sleep__chain": {
+      "reward_penalty_reduction_pct": 42.75514569567904,
+      "paired_reward_gain_mean": 2998.133333333333,
+      "paired_reward_gain_std": 1595.6402613616144,
+      "paired_reward_gain_ci95_approx": [
+        2427.140798990019,
+        3569.1258676766474
+      ],
+      "paired_reward_win_rate": 1.0,
+      "unique_new_session_hosts_reduction_pct": 7.46119178768152,
+      "unique_privileged_hosts_reduction_pct": 29.490445859872615,
+      "successful_impact_count_reduction_pct": 54.02750491159135,
+      "ordered_chain_completions_reduction_pct": 61.31868131868132
+    },
+    "layerchain_vs_reactive__chain": {
+      "reward_penalty_reduction_pct": 39.03530531452814,
+      "paired_reward_gain_mean": 2570.266666666667,
+      "paired_reward_gain_std": 1375.3123264925312,
+      "paired_reward_gain_ci95_approx": [
+        2078.117471241219,
+        3062.415862092115
+      ],
+      "paired_reward_win_rate": 0.9666666666666667,
+      "unique_new_session_hosts_reduction_pct": 5.666156202143946,
+      "unique_privileged_hosts_reduction_pct": 27.362204724409445,
+      "successful_impact_count_reduction_pct": 50.318471337579616,
+      "ordered_chain_completions_reduction_pct": 57.48792270531402
+    }
+  }
+}
