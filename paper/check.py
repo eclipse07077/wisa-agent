@@ -82,8 +82,19 @@ def check_attack(summary: dict, raw: dict) -> None:
 
 def check_hashes(manifest: dict) -> None:
     for relative, expected in manifest["sha256"].items():
-        actual = hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
-        assert actual == expected, relative
+        data = (ROOT / relative).read_bytes()
+        actual = hashlib.sha256(data).hexdigest()
+        valid = actual == expected
+        if actual != expected and relative.endswith(
+            (".json", ".md", ".py", ".tex", ".bib", ".yml", ".yaml", ".csv", ".ps1")
+        ):
+            normalized_lf = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+            normalized_crlf = normalized_lf.replace(b"\n", b"\r\n")
+            valid = expected in {
+                hashlib.sha256(normalized_lf).hexdigest(),
+                hashlib.sha256(normalized_crlf).hexdigest(),
+            }
+        assert valid, relative
 
 
 def check_cage(summary: dict, manifest: dict) -> None:
