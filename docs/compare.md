@@ -404,3 +404,58 @@ RAVEL-C는 중요한 node를 complete fracture랑 exact matching 문제로 다�
 큰 방향은 예선 그대로임. 근데 실제 구현된 역할은 많이 달라졌다. 방어는 예선 폐루프를 CAGE 행동 공간에 맞게 줄였고, 공격은 능동 공격에서 로그 조사로 바뀌었고, LLM이랑 RL은 통째로 빠짐. 대신 체인 표현이랑 수학적 검증, 실험 분리를 강화했음.
 
 논문에서는 이 차이를 분명하게 구분해야 함. 예선 전체를 구현했다고 쓰면 안 됨. 실제로 구현하고 검증한 것만 써야 한다.
+
+## 5. 실제 파일이랑 다음 작업
+
+문서는 네 개만 보면 됨.
+
+| 파일 | 용도 |
+|---|---|
+| `docs/compare.md` | 지금까지 한 것과 결과, 부족한 점, 논문 주장 범위, 예선 대비 차이 |
+| `docs/method.md` | 최종 공통 코어, grounded trace, 방어 v12, RAVEL-C의 실제 방법 |
+| `docs/protocol.md` | 데이터 분할, seed, label barrier, 결과 파일, 재현 명령 |
+| `docs/research.md` | 참고한 논문과 공개 코드, 우리 방법이랑 겹치는 부분, novelty 경계 |
+
+코드는 여기서 시작하면 됨.
+
+| 구분 | 파일 |
+|---|---|
+| 공통 evidence·predicate·chain | `src/wisa_agent/method/` |
+| CAGE 방어 v12 | `src/wisa_agent/cage/report.py` |
+| CAGE agent 등록 | `src/wisa_agent/cage/teams.py` |
+| TC grounded trace | `src/wisa_agent/tc/cdm_agent.py` |
+| RAVEL ledger·transport | `src/wisa_agent/tc/ravel.py` |
+| RAVEL-C certificate | `src/wisa_agent/tc/cert.py` |
+| CAGE 실행 | `experiments/run.py`·`experiments/batch.py` |
+| RAVEL-C 실행·평가 | `experiments/cert.py`·`experiments/cert_eval.py` |
+
+최종 숫자는 아래 파일 기준.
+
+| 내용 | 파일 |
+|---|---|
+| 공·방 통합 요약 | `results/results.json` |
+| 방어 최종 요약 | `results/defense.json` |
+| Grounded trace 요약 | `results/attack.json` |
+| RAVEL-C 요약 | `results/ravel.json` |
+| CAGE 100-seed 원본 | `results/cage-v12-final-100x500.json` |
+| H051 최종 평가 | `results/eval-cert-051.json` |
+
+논문은 공·방 통합 초안이 `paper/paper.md`, RAVEL-C 공격 조사 초안이 `paper/attack.md`. 쓸 수 있는 주장과 쓰면 안 되는 주장은 `paper/claims.md`에 따로 고정돼 있음.
+
+다음 작업 우선순위는 이 순서가 맞음.
+
+1. v12 component ablation
+2. CAGE 공개 상위 baseline 동일 조건 비교
+3. E5 표현 이동 실패 원인 분리
+4. Grounded trace와 RAVEL-C 통합 여부 결정
+5. 새 holdout 확보 후 공격 방법 재평가
+6. 논문 하나로 갈지 방어·공격을 나눌지 최종 결정
+
+재현 확인은 아래 두 명령으로 시작하면 됨.
+
+```powershell
+python paper/check.py
+python paper/attack-check.py
+```
+
+전체 테스트는 환경에 CAGE가 설치된 워크스테이션에서 `pytest -q`로 돌리면 됨.
