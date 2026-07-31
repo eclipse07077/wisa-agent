@@ -1,0 +1,47 @@
+{
+  "theia_e3": {
+    "source": "https://drive.google.com/drive/folders/1QlbUFWAGq3Hpl8wVdzOdIoZLFxkII4EK",
+    "archives": [
+      {
+        "name": "ta1-theia-e3-official-1r.json.tar.gz",
+        "id": "10cecNtR3VsHfV0N-gNEeoVeB89kCnse5",
+        "bytes": 1167693020,
+        "sha256": "1645eb83e4796f31fea1bb75f266f51168466fb7af975abe5ef169384fbe0d9c"
+      },
+      {
+        "name": "ta1-theia-e3-official-3.json.tar.gz",
+        "id": "1dWJecuLXZMksKAPo8348Q6L5DiccsS1u",
+        "bytes": 38217897,
+        "sha256": "69b2cba159a551eaa397b5e354554a9e0ac8c287af24b5d96a5638dd704855eb"
+      },
+      {
+        "name": "ta1-theia-e3-official-5m.json.tar.gz",
+        "id": "1zbgWJgF7F0fI6JhViqQZoo6AWdoV5YFK",
+        "bytes": 28549962,
+        "sha256": "8bfd590022b3674eb43808c42c7a74348909b5e152f0449af69a85ff37a9cdf6"
+      },
+      {
+        "name": "ta1-theia-e3-official-6r.json.tar.gz",
+        "id": "1Kadc6CUTb4opVSDE4x6RFFnEy0P1cRp0",
+        "bytes": 1546028723,
+        "sha256": "3384d1a62a71b1a3de43004d60e990881b3d1dc87fa9e7cf8938bc850300cc9c"
+      }
+    ],
+    "index": {
+      "records": 113293343,
+      "node_records": 1586787,
+      "nodes": 1487424,
+      "events": 39922077
+    },
+    "event_days": {
+      "3": 8269250,
+      "4": 4956317,
+      "5": 1495439,
+      "9": 698805,
+      "10": 6303291,
+      "11": 7339776,
+      "12": 7071180,
+      "13": 3788019
+    }
+  }
+}

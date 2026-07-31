@@ -1,0 +1,89 @@
+{
+  "method": "grounded_trace_v4",
+  "frozen_on": "CADETS E3",
+  "cadets_e3": {
+    "base_auroc": 0.787047716024969,
+    "full_auroc": 0.7914425427025469,
+    "base_ap": 0.12600133409178832,
+    "full_ap": 0.12599610462649105,
+    "reported_nodes": 530,
+    "chain_malicious_nodes": 17,
+    "matched_base_malicious_nodes": 10
+  },
+  "theia_e3": {
+    "base_auroc": 0.8372272893281882,
+    "full_auroc": 0.8466358576401077,
+    "base_ap": 0.028518737306844275,
+    "full_ap": 0.028947167021857557,
+    "reported_nodes": 1218,
+    "chain_malicious_nodes": 17,
+    "matched_base_malicious_nodes": 8,
+    "attack_free_reported_nodes": 196,
+    "max_top_chain_footprint": 485
+  },
+  "clearscope_e5": {
+    "threshold": 0.15188712121731615,
+    "nodes": 150964,
+    "positives": 51,
+    "label_coverage": 1.0,
+    "base_auroc": 0.5267171203561901,
+    "full_auroc": 0.542433486219758,
+    "base_ap": 0.023037320106792155,
+    "full_ap": 0.023051715010833706,
+    "reported_nodes": 522,
+    "chain_malicious_nodes": 4,
+    "matched_base_malicious_nodes": 11,
+    "attack_free_reported_nodes": 5,
+    "chain_count": 97,
+    "predicate_count": 6144,
+    "runtime_seconds": 887.6871017520316,
+    "peak_memory_mb": 227.09375,
+    "selected": false
+  },
+  "static_graph_check": {
+    "theia_valid_chains": 0,
+    "trace_valid_chains": 0
+  },
+  "exploratory_alert_calibration": {
+    "rule": "validation_chain_score_quantile_0.995_higher",
+    "cadets_e3": {
+      "threshold": 0.7169942712513206,
+      "reported_nodes": 102,
+      "malicious_nodes": 5,
+      "matched_base_malicious_nodes": 9,
+      "attack_free_reported_nodes": 27
+    },
+    "theia_e3": {
+      "threshold": 0.7429803998023656,
+      "reported_nodes": 27,
+      "malicious_nodes": 5,
+      "matched_base_malicious_nodes": 8,
+      "attack_free_reported_nodes": 8,
+      "day_10_reported_nodes": 0
+    },
+    "selected": false
+  },
+  "post_e5_no_path_diagnostic": {
+    "status": "preregistered_cadets_development_ablation",
+    "drop_path": true,
+    "threshold": 0.1353821549325458,
+    "profile_path_states": 9,
+    "base_auroc": 0.7342957592643241,
+    "full_auroc": 0.733837699723664,
+    "base_ap": 0.08594796051382746,
+    "full_ap": 0.08590206582872674,
+    "reported_nodes": 1220,
+    "chain_malicious_nodes": 3,
+    "matched_base_malicious_nodes": 12,
+    "chain_recall": 0.04411764705882353,
+    "matched_base_recall": 0.17647058823529413,
+    "chain_count": 192,
+    "predicate_count": 8192,
+    "runtime_seconds": 159.2358067210298,
+    "peak_memory_mb": 400.5390625,
+    "h30": "confirmed_with_caveat",
+    "selected": false,
+    "e5_rerun": false
+  },
+  "verdict": "시간·세션 체인은 CADETS와 THEIA E3에서 attribution을 개선했지만 ClearScope E5에서는 matched anomaly-only보다 나빠 CDM20 일반화에 실패했다. CADETS no-path 진단은 event path 손실을 주요 표현 한계로 지지하지만 E5의 유일한 실패 원인을 증명하지 않는다."
+}

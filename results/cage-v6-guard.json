@@ -1,0 +1,48 @@
+{
+  "report__default": {
+    "reward": {
+      "count": 20,
+      "mean_difference": 0.0,
+      "standard_deviation": 0.0,
+      "confidence_interval": [
+        0.0,
+        0.0
+      ],
+      "effect_size": 0.0,
+      "win_rate": 0.0
+    },
+    "unique_privileged_hosts": {
+      "count": 20,
+      "mean_difference": 0.0,
+      "standard_deviation": 0.0,
+      "confidence_interval": [
+        0.0,
+        0.0
+      ],
+      "effect_size": 0.0,
+      "win_rate": 0.0
+    },
+    "unique_impacted_hosts": {
+      "count": 20,
+      "mean_difference": 0.0,
+      "standard_deviation": 0.0,
+      "confidence_interval": [
+        0.0,
+        0.0
+      ],
+      "effect_size": 0.0,
+      "win_rate": 0.0
+    },
+    "successful_impact_count": {
+      "count": 20,
+      "mean_difference": 0.0,
+      "standard_deviation": 0.0,
+      "confidence_interval": [
+        0.0,
+        0.0
+      ],
+      "effect_size": 0.0,
+      "win_rate": 0.0
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "benchmarks": {
+    "cage_challenge_4": {
+      "commit": "8c3c50ca54b176c2de199847944e8dcc035497e3",
+      "red_agent": "FiniteStateRedAgent",
+      "red_agents": [
+        "FiniteStateRedAgent",
+        "ChainAwareRedAgent"
+      ]
+    },
+    "pidsmaker_velox": {
+      "commit": "54f687c54aa03e5519cf44953d5ee44f5f6a4a28"
+    }
+  },
+  "reference_code": {
+    "cybermonic": "2afd652d80ce9d4051a07c23c2538f3dec6bb6c6",
+    "magic": "aa0b647eea74b6faa0e52eb444370c4411a32cbe",
+    "orthrus": "e7f25dfee1ddd182a955b88f8a90a8cbd4a8e543"
+  },
+  "frozen_versions": {
+    "defense": "v12",
+    "attack": "grounded_trace_v4"
+  },
+  "evaluation": {
+    "cage_final_seeds": [
+      14400,
+      14499
+    ],
+    "cage_v6_final_seeds": [
+      5400,
+      5499
+    ],
+    "cage_final_episodes": 100,
+    "cage_final_red_policies": 2,
+    "cage_steps": 500,
+    "followup_validation_seeds_opened": false,
+    "followup_final_seeds_opened": false
+  },
+  "sha256": {
+    "results/cage-final-v6-100x500.json": "c1998bf110188c39daf8a944b4439156bd68bf7d208137f88a0e26e5271d5d1c",
+    "results/cage-final-stats.json": "797e7dd27d39f2407e6710095980bb917dad28c0b678fedc5a63c9f66cc6b361",
+    "results/cage-v9-dev-20x500.json": "70e866c2c3889fa87e487815ef7448f98c51568feb9dacc8d381b74ff4db731d",
+    "results/cage-v9-vs-v6.json": "1da3e1ccdc81c1b4e886a02825c180a8084fa3b1a0c8b37d1825d4f61090fc74",
+    "results/cage-v10-dev-20x500.json": "cafd5604f091f5e4c2197c5d5ef67031388c8edf5b4392bed43c3eb00aebc08f",
+    "results/cage-v10-dev-stats.json": "e8df29ff4933c1081178fb8c73a95d0bf7fffc5c9fc3204c3c94bf0e8d35dac1",
+    "results/cage-v10-vs-v6.json": "90c5ec19e482dcdccd205b15a637353f82911e4203066ef041e270a2ac31f09b",
+    "results/cage-v12-dev-20x500.json": "bdd306c28beedc331efffa818aadc3b591fc9f5280d94ba1ae745695f224588f",
+    "results/cage-v12-default-stats.json": "4208a49adfa0064f750771539d18de61e26cdfdb2fa6cac6189ed721b7e5dc93",
+    "results/cage-v12-chain-stats.json": "b2c993ae1b942197043cfd74ce4c043437120948baa91da60affa49345a9bbaa",
+    "results/cage-v12-val-20x500.json": "34899d0fa92fe10bb15386eaae0f0041cd6de580fade9a8d079c6ce99863c555",
+    "results/cage-v12-val-default-stats.json": "f13553b80a46baefd7c5c9f0c1c6c9afad4d322fe5ba06d60b62b40be1cf3e40",
+    "results/cage-v12-val-chain-stats.json": "64c5474317f28139d1700665da447b271d8018140be9a29c0de19b41383c1624",
+    "results/cage-v12-final-100x500.json": "958814b72e2bbf939ecaf55db73e75ce852ab86eb380c0b6c78eeac12a78d1e6",
+    "results/cage-v12-final-default-stats.json": "0cb49a0758f5d54750c554a33b0d43d7ab2df82018e4ed2e09ac7af1e931eeda",
+    "results/cage-v12-final-chain-stats.json": "c9ef562d1f9cfaabac8d6c584878cb891a505bdee41c7ffdbd17812a67000bd7",
+    "results/tc-cadets-raw-trace-grounded-dev.json": "aec29119102aa8bf6833a588eddc8a9a1ff9efae372df35a6bf9d9e40598b2b4",
+    "results/tc-theia-raw.json": "56b12ca6e4956814e499ebe3cfc4b84741024ff6e36fa91234166a422fe70cc0",
+    "results/tc-clearscope-e5.json": "894389eecf43774517b6545bb692eef8d23e311cff95399334a7266be00f7fd9",
+    "results/tc-cadets-no-path.json": "6869b85bcbdd4c055848e9604f9e9da22da780810aa8e6429c10251f9f0ba5e1",
+    "results/tc-cadets-alert.json": "3efbf79c0b903409956f505638a82f884702e9f3fb4c75960fb962d31772b6b6",
+    "results/tc-theia-alert.json": "e3b104f1559dff4f139b807d49d809c2e2084013e3f6957434fbfbd8af473b5b",
+    "results/tc-cadets-v5.json": "9f161fb448ea720faca35778d9486b9609ee4a6f78646acd56ab07e717a9a5d2",
+    "results/tc-cadets-v6.json": "665416816be45fd929cbed9898e1c87bf5fdc8e3a120bc7cf103500f015afedc",
+    "results/tc-cadets-v7.json": "1f4ed2d9175fb8ccaf3ab8e779958f1e0637b292a2ab793312a6b49e1ee706d2",
+    "results/optc.json": "3436eaef438efc04a7ef250c22545c6a4e1073a89291d979a9383c11d6036817",
+    "output/pdf/paper.pdf": "25bc242ad69112a439bb699ce217e6717ad1fadc9be84710c161ab26f99dc02b"
+  }
+}

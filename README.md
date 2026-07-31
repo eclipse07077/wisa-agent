@@ -2,6 +2,8 @@
 
 이 저장소에는 provenance 기반 공격 조사 방법 RAVEL-C와 CAGE Challenge 4 방어 에이전트 실험이 함께 있다.
 
+방어 에이전트 v12는 계층 관측, 공격 체인, 대응 범위 제약, 재발 감시와 동적 deception을 결합한다. 최종 100-pair 평가에서 LayerChain 대비 reward는 공식 Red에서 `+468.65`, chain-aware Red에서 `+595.39`였고 두 조건 모두 privileged host, impacted host와 Impact action이 감소했다.
+
 RAVEL-C는 detector root마다 조건부 proof account를 만들고, UUID-continuous typed chain을 factorized proof로 표현한다. UUID 하나가 모든 route를 완전히 끊는지 singleton-hyperclause witness로 인증한 뒤, exact matching으로 다음 세 목적을 순서대로 최적화한다.
 
 1. 인증 transport 수 최대화
@@ -10,11 +12,12 @@ RAVEL-C는 detector root마다 조건부 proof account를 만들고, UUID-contin
 
 최종 방법은 `ravel_cert_v4`다. H501과 H201은 개발 데이터이며 RAVEL-C recovery는 각각 Velox `7→8`, `2→2`였다. 사전등록한 H051 홀드아웃에서는 exact budget 512에서 Velox 4, FlowSub 8, fractional proposal 2, RAVEL-C 3이었다. 네 성공 조건이 모두 실패했으므로 SOTA나 actor-recall safety를 주장하지 않는다. 논문의 기여는 인증 가능한 fixed-budget formulation, exact lexicographic projection, fixed-budget safety의 불가능성 정리와 label-barrier 반증이다.
 
-최종 논문은 `output/pdf/attack.pdf`, 작은 결과 요약은 `results/ravel.json`, 주장 감사표는 `paper/claims.md`에 있다.
+공격 논문은 `output/pdf/attack.pdf`, 공·방 통합 논문은 `output/pdf/paper.pdf`에 있다. 작은 결과 요약은 `results/ravel.json`, `results/defense.json`, 전체 실험 판정은 `results/results.json`, 주장 감사표는 `paper/claims.md`에 있다.
 
 ## 구성
 
 - `src/wisa_agent/tc`: proof account, transport, certificate
+- `src/wisa_agent/cage`: 계층 방어, 범위 제약 대응, deception
 - `experiments`: label-free 선택, 동결, 독립 감사, label-only 평가
 - `config`: 데이터셋과 실험 설정
 - `results`: 고정 manifest, 감사 영수증, 결과 요약

@@ -1,0 +1,177 @@
+{
+  "dataset": "theia",
+  "status": "exploratory_after_external_output_observed",
+  "split": {
+    "train": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "validation": [
+      9
+    ],
+    "test": [
+      10,
+      12,
+      13
+    ]
+  },
+  "anomaly_threshold": 0.16709559265486004,
+  "alert_rule": {
+    "quantile": 0.995,
+    "method": "higher",
+    "validation_chain_count": 48,
+    "threshold": 0.7429803998023656
+  },
+  "aggregate": {
+    "nodes": 701622,
+    "positives": 118,
+    "label_coverage": 1.0,
+    "base": {
+      "auroc": 0.8372272893281882,
+      "ap": 0.028518737306844275,
+      "precision_at_100": 0.08,
+      "recall_at_100": 0.06779661016949153,
+      "precision_at_500": 0.016,
+      "recall_at_500": 0.06779661016949153,
+      "precision_at_1000": 0.008,
+      "recall_at_1000": 0.06779661016949153
+    },
+    "full": {
+      "auroc": 0.8418956186533456,
+      "ap": 0.02869028024432744,
+      "precision_at_100": 0.08,
+      "recall_at_100": 0.06779661016949153,
+      "precision_at_500": 0.016,
+      "recall_at_500": 0.06779661016949153,
+      "precision_at_1000": 0.008,
+      "recall_at_1000": 0.06779661016949153
+    },
+    "chains": {
+      "reported_nodes": 27,
+      "precision": 0.18518518518518517,
+      "recall": 0.0423728813559322,
+      "matched_baseline_precision": 0.2962962962962963,
+      "matched_baseline_recall": 0.06779661016949153
+    }
+  },
+  "unfiltered_chain_count": 144,
+  "alert_chain_count": 4,
+  "alert_node_count_sum": 29,
+  "days": {
+    "10": {
+      "unfiltered_chains": 48,
+      "alert_chains": 0,
+      "alert_nodes": 0,
+      "metrics": {
+        "nodes": 148687,
+        "positives": 58,
+        "label_coverage": 1.0,
+        "base": {
+          "auroc": 0.7718408901033609,
+          "ap": 0.0374485401892556,
+          "precision_at_100": 0.04,
+          "recall_at_100": 0.06896551724137931,
+          "precision_at_500": 0.01,
+          "recall_at_500": 0.08620689655172414,
+          "precision_at_1000": 0.009,
+          "recall_at_1000": 0.15517241379310345
+        },
+        "full": {
+          "auroc": 0.7718408901033609,
+          "ap": 0.0374485401892556,
+          "precision_at_100": 0.04,
+          "recall_at_100": 0.06896551724137931,
+          "precision_at_500": 0.01,
+          "recall_at_500": 0.08620689655172414,
+          "precision_at_1000": 0.009,
+          "recall_at_1000": 0.15517241379310345
+        },
+        "chains": {
+          "reported_nodes": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "matched_baseline_precision": 0.0,
+          "matched_baseline_recall": 0.0
+        }
+      }
+    },
+    "12": {
+      "unfiltered_chains": 48,
+      "alert_chains": 3,
+      "alert_nodes": 21,
+      "metrics": {
+        "nodes": 455662,
+        "positives": 61,
+        "label_coverage": 1.0,
+        "base": {
+          "auroc": 0.8290127567402322,
+          "ap": 0.023184939177885652,
+          "precision_at_100": 0.04,
+          "recall_at_100": 0.06557377049180328,
+          "precision_at_500": 0.008,
+          "recall_at_500": 0.06557377049180328,
+          "precision_at_1000": 0.007,
+          "recall_at_1000": 0.11475409836065574
+        },
+        "full": {
+          "auroc": 0.8379970524251861,
+          "ap": 0.02355655018098474,
+          "precision_at_100": 0.04,
+          "recall_at_100": 0.06557377049180328,
+          "precision_at_500": 0.008,
+          "recall_at_500": 0.06557377049180328,
+          "precision_at_1000": 0.008,
+          "recall_at_1000": 0.13114754098360656
+        },
+        "chains": {
+          "reported_nodes": 21,
+          "precision": 0.23809523809523808,
+          "recall": 0.08196721311475409,
+          "matched_baseline_precision": 0.19047619047619047,
+          "matched_baseline_recall": 0.06557377049180328
+        }
+      }
+    },
+    "13": {
+      "unfiltered_chains": 48,
+      "alert_chains": 1,
+      "alert_nodes": 8,
+      "metrics": {
+        "nodes": 203728,
+        "positives": 0,
+        "label_coverage": 0.0,
+        "base": {
+          "auroc": null,
+          "ap": null,
+          "precision_at_100": 0.0,
+          "recall_at_100": 0.0,
+          "precision_at_500": 0.0,
+          "recall_at_500": 0.0,
+          "precision_at_1000": 0.0,
+          "recall_at_1000": 0.0
+        },
+        "full": {
+          "auroc": null,
+          "ap": null,
+          "precision_at_100": 0.0,
+          "recall_at_100": 0.0,
+          "precision_at_500": 0.0,
+          "recall_at_500": 0.0,
+          "precision_at_1000": 0.0,
+          "recall_at_1000": 0.0
+        },
+        "chains": {
+          "reported_nodes": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "matched_baseline_precision": 0.0,
+          "matched_baseline_recall": 0.0
+        }
+      }
+    }
+  },
+  "runtime_seconds": 326.87524265400134,
+  "peak_memory_mb": 797.015625
+}

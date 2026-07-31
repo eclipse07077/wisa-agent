@@ -1,0 +1,41 @@
+{
+  "cadets": {
+    "base": {
+      "auroc": 0.9977379100520937,
+      "ap": 0.9412991275675624,
+      "precision_at_100": 0.0,
+      "recall_at_100": 0.0,
+      "precision_at_500": 0.002,
+      "recall_at_500": 7.784524365561264e-05,
+      "precision_at_1000": 0.241,
+      "recall_at_1000": 0.018760703721002647
+    },
+    "full": {
+      "auroc": 0.9977379100520938,
+      "ap": 0.9412991275675624,
+      "precision_at_100": 0.0,
+      "recall_at_100": 0.0,
+      "precision_at_500": 0.002,
+      "recall_at_500": 7.784524365561264e-05,
+      "precision_at_1000": 0.241,
+      "recall_at_1000": 0.018760703721002647
+    },
+    "chains": {
+      "reported_nodes": 15,
+      "precision": 0.0,
+      "recall": 0.0,
+      "matched_baseline_precision": 0.0,
+      "matched_baseline_recall": 0.0
+    },
+    "chain_count": 32,
+    "predicate_count": 437,
+    "layers": {
+      "0": 0,
+      "4": 0,
+      "3": 1,
+      "1": 2,
+      "2": 3,
+      "5": 4
+    }
+  }
+}

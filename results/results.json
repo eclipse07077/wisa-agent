@@ -1,0 +1,468 @@
+{
+  "status": "final_evaluation",
+  "frozen_versions": {
+    "defense": "v12",
+    "attack": "grounded_trace_v4"
+  },
+  "cage": {
+    "commit": "8c3c50ca54b176c2de199847944e8dcc035497e3",
+    "red": "FiniteStateRedAgent",
+    "seeds": [
+      3400,
+      3419
+    ],
+    "episodes": 20,
+    "steps": 500,
+    "means": {
+      "sleep_reward": -6836.45,
+      "reactive_reward": -6286.1,
+      "layerchain_reward": -2878.6,
+      "report_reward": -3583.0,
+      "report_privileged_hosts": 36.6,
+      "report_impacted_hosts": 10.0
+    },
+    "report_minus_layerchain": {
+      "reward": -704.4,
+      "reward_ci95": [
+        -1290.855,
+        -130.89
+      ],
+      "impacted_hosts": 2.15,
+      "impacted_hosts_ci95": [
+        0.45,
+        3.8
+      ]
+    },
+    "ablations": {
+      "report_minus_no_chain_reward": 77.45,
+      "ci95": [
+        -90.61,
+        244.45
+      ],
+      "report_minus_no_honeypot_reward": 360.65,
+      "honeypot_ci95": [
+        -67.65,
+        759.2
+      ],
+      "guard_effect": 0.0
+    },
+    "failed_versions": {
+      "transition_honeypot_v7_reward": -3855.6,
+      "normal_deviation_v8_reward": -3750.65,
+      "fresh_analysis_v9_reward": -6376.85,
+      "event_aware_v10_reward": -3674.55
+    },
+    "prospective_followup": {
+      "development_seeds": [
+        6400,
+        6419
+      ],
+      "v6_reward": -3638.2,
+      "layerchain_reward": -3217.1,
+      "v10_minus_v6": {
+        "reward": -36.35,
+        "reward_ci95": [
+          -367.55375,
+          260.6524999999999
+        ],
+        "privileged_hosts": -0.3,
+        "impacted_hosts": -1.65,
+        "impacted_hosts_ci95": [
+          -3.25,
+          -0.05
+        ]
+      },
+      "selected": false,
+      "validation_seeds_opened": false,
+      "final_seeds_opened": false
+    },
+    "validation": {
+      "seeds": [
+        4400,
+        4419
+      ],
+      "layerchain_reward": -3698.75,
+      "layerchain_reward_std": 934.9340551611114,
+      "report_reward": -3799.5,
+      "report_reward_std": 1272.8269521030736,
+      "report_minus_layerchain": {
+        "reward": -100.75,
+        "reward_ci95": [
+          -672.5,
+          500.2687499999997
+        ],
+        "effect_size": -0.07371546385850401,
+        "win_rate": 0.45,
+        "privileged_hosts": 1.9,
+        "impacted_hosts": 0.55,
+        "successful_impacts": 0.5
+      }
+    },
+    "v6_final": {
+      "seeds": [
+        5400,
+        5499
+      ],
+      "episodes": 100,
+      "layerchain": {
+        "reward": -3027.08,
+        "reward_std": 926.603342104916,
+        "privileged_hosts": 34.69,
+        "impacted_hosts": 8.72,
+        "successful_impacts": 8.76
+      },
+      "report": {
+        "reward": -3591.8,
+        "reward_std": 1049.5284179096818,
+        "privileged_hosts": 36.84,
+        "impacted_hosts": 9.71,
+        "successful_impacts": 9.79
+      },
+      "report_minus_layerchain": {
+        "reward": -564.72,
+        "reward_ci95": [
+          -812.212,
+          -319.8637500000001
+        ],
+        "effect_size": -0.44635180699562116,
+        "win_rate": 0.37,
+        "privileged_hosts": 2.15,
+        "privileged_hosts_ci95": [
+          1.03,
+          3.260249999999996
+        ],
+        "impacted_hosts": 0.99,
+        "impacted_hosts_ci95": [
+          0.26,
+          1.69
+        ],
+        "successful_impacts": 1.03,
+        "successful_impacts_ci95": [
+          0.28,
+          1.75
+        ]
+      }
+    },
+    "final": {
+      "seeds": [
+        14400,
+        14499
+      ],
+      "episodes": 100,
+      "steps": 500,
+      "default_red": {
+        "layerchain": {
+          "reward": -3110.39,
+          "reward_std": 815.6326120870842,
+          "privileged_hosts": 35.12,
+          "impacted_hosts": 8.3,
+          "successful_impacts": 8.31
+        },
+        "v12": {
+          "reward": -2641.74,
+          "reward_std": 746.6937607881828,
+          "privileged_hosts": 32.28,
+          "impacted_hosts": 7.41,
+          "successful_impacts": 7.46
+        },
+        "v12_minus_layerchain": {
+          "reward": 468.65,
+          "reward_ci95": [
+            276.23825,
+            656.8929999999999
+          ],
+          "effect_size": 0.4827589342876469,
+          "win_rate": 0.67,
+          "privileged_hosts": -2.84,
+          "privileged_hosts_ci95": [
+            -4.13,
+            -1.61
+          ],
+          "impacted_hosts": -0.89,
+          "impacted_hosts_ci95": [
+            -1.55,
+            -0.26
+          ],
+          "successful_impacts": -0.85,
+          "successful_impacts_ci95": [
+            -1.51,
+            -0.21
+          ]
+        }
+      },
+      "chain_red": {
+        "layerchain": {
+          "reward": -3703.61,
+          "reward_std": 983.8474871137294,
+          "privileged_hosts": 35.5,
+          "impacted_hosts": 6.58,
+          "successful_impacts": 6.64
+        },
+        "v12": {
+          "reward": -3108.22,
+          "reward_std": 814.1292474785561,
+          "privileged_hosts": 33.35,
+          "impacted_hosts": 5.53,
+          "successful_impacts": 5.56
+        },
+        "v12_minus_layerchain": {
+          "reward": 595.39,
+          "reward_ci95": [
+            410.389,
+            784.2849999999999
+          ],
+          "effect_size": 0.6236679773226809,
+          "win_rate": 0.72,
+          "privileged_hosts": -2.15,
+          "privileged_hosts_ci95": [
+            -3.24,
+            -1.0397500000000037
+          ],
+          "impacted_hosts": -1.05,
+          "impacted_hosts_ci95": [
+            -1.66,
+            -0.45
+          ],
+          "successful_impacts": -1.08,
+          "successful_impacts_ci95": [
+            -1.7,
+            -0.4697500000000036
+          ]
+        }
+      }
+    },
+    "verdict": "범위 제약 방어 v12는 두 Red 정책의 최종 100-episode 평가에서 LayerChain보다 reward가 높고 공격 영향 지표가 낮았다."
+  },
+  "tc_cadets_e3": {
+    "split": {
+      "train_days": [
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "validation_days": [
+        2
+      ],
+      "development_days": [
+        6,
+        11,
+        12,
+        13
+      ]
+    },
+    "threshold": 0.17950530037920376,
+    "events": 18893277,
+    "baseline": {
+      "auroc": 0.787047716024969,
+      "ap": 0.12600133409178832
+    },
+    "grounded_trace": {
+      "auroc": 0.7914425427025469,
+      "ap": 0.12599610462649105,
+      "reported_nodes": 530,
+      "malicious_nodes": 17,
+      "precision": 0.03207547169811321,
+      "recall": 0.25,
+      "runtime_seconds": 168.68859474203782,
+      "peak_memory_mb": 400.83984375
+    },
+    "matched_anomaly_only": {
+      "reported_nodes": 530,
+      "malicious_nodes": 10,
+      "precision": 0.018867924528301886,
+      "recall": 0.14705882352941177
+    },
+    "failed_versions": {
+      "event_chain_count": 0,
+      "semantic_chain_precision": 0.0,
+      "raw_trace_ap": 0.022482859750661256
+    },
+    "verdict": "trace 체인은 고정 조사 예산의 attribution을 개선했지만 node-ranking AP는 개선하지 못했다."
+  },
+  "tc_magic_coarse": {
+    "label_source": "ThreaTrace",
+    "score_source": "MAGIC public anomaly score",
+    "theia": {
+      "base_auroc": 0.9987304341522164,
+      "base_ap": 0.9768525423791764,
+      "chain_count": 0,
+      "full_changed": false
+    },
+    "trace": {
+      "base_auroc": 0.9998153809050484,
+      "base_ap": 0.9983969243093214,
+      "chain_count": 0,
+      "full_changed": false
+    },
+    "verdict": "강한 공개 anomaly score는 재현했지만 정적 그래프 어댑터는 두 데이터 모두 체인을 만들지 못했다."
+  },
+  "tc_theia_e3": {
+    "records": 113293343,
+    "events": 39922077,
+    "nodes": 1487424,
+    "split": {
+      "train_days": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "validation_days": [
+        9
+      ],
+      "test_days": [
+        10,
+        12,
+        13
+      ],
+      "day_2_tracked_events": 0
+    },
+    "threshold": 0.16709559265486004,
+    "baseline": {
+      "auroc": 0.8372272893281882,
+      "ap": 0.028518737306844275
+    },
+    "grounded_trace": {
+      "auroc": 0.8466358576401077,
+      "ap": 0.028947167021857557,
+      "reported_nodes": 1218,
+      "malicious_nodes": 17,
+      "precision": 0.013957307060755337,
+      "recall": 0.1440677966101695,
+      "runtime_seconds": 323.8272108999663,
+      "peak_memory_mb": 809.33984375
+    },
+    "matched_anomaly_only": {
+      "reported_nodes": 1218,
+      "malicious_nodes": 8,
+      "precision": 0.006568144499178982,
+      "recall": 0.06779661016949153
+    },
+    "attack_free_day_13": {
+      "reported_nodes": 196
+    },
+    "large_top_chain_footprints": [
+      416,
+      441,
+      485
+    ],
+    "verdict": "동결된 trace 체인은 외부 performer에서도 matched-budget attribution과 AUROC/AP를 개선했지만 false attribution과 작은 절대 AP 향상이 남았다."
+  },
+  "tc_clearscope_e5": {
+    "source": {
+      "pidsmaker_commit": "54f687c54aa03e5519cf44953d5ee44f5f6a4a28",
+      "dump_bytes": 6630620258,
+      "nodes": 501006,
+      "events": 198794211,
+      "missing_node_events": 0,
+      "event_path": "unknown"
+    },
+    "split": {
+      "train_days": [
+        8,
+        9
+      ],
+      "validation_days": [
+        11
+      ],
+      "test_days": [
+        14,
+        15,
+        17
+      ]
+    },
+    "threshold": 0.15188712121731615,
+    "baseline": {
+      "auroc": 0.5267171203561901,
+      "ap": 0.023037320106792155
+    },
+    "grounded_trace": {
+      "auroc": 0.542433486219758,
+      "ap": 0.023051715010833706,
+      "reported_nodes": 522,
+      "malicious_nodes": 4,
+      "precision": 0.007662835249042145,
+      "recall": 0.0784313725490196,
+      "runtime_seconds": 887.6871017520316,
+      "peak_memory_mb": 227.09375
+    },
+    "matched_anomaly_only": {
+      "reported_nodes": 522,
+      "malicious_nodes": 11,
+      "precision": 0.0210727969348659,
+      "recall": 0.21568627450980393
+    },
+    "attack_free_day_14": {
+      "reported_nodes": 5
+    },
+    "verdict": "CDM20에서 체인은 형성됐지만 matched-budget attribution이 악화돼 H25와 E5 일반화 주장을 기각했다."
+  },
+  "tc_post_e5_no_path_diagnostic": {
+    "status": "preregistered_cadets_development_ablation",
+    "drop_path": true,
+    "threshold": 0.1353821549325458,
+    "profile_path_states": 9,
+    "baseline": {
+      "auroc": 0.7342957592643241,
+      "ap": 0.08594796051382746
+    },
+    "grounded_trace": {
+      "auroc": 0.733837699723664,
+      "ap": 0.08590206582872674,
+      "reported_nodes": 1220,
+      "malicious_nodes": 3,
+      "precision": 0.002459016393442623,
+      "recall": 0.04411764705882353,
+      "runtime_seconds": 159.2358067210298,
+      "peak_memory_mb": 400.5390625
+    },
+    "matched_anomaly_only": {
+      "reported_nodes": 1220,
+      "malicious_nodes": 12,
+      "precision": 0.009836065573770493,
+      "recall": 0.17647058823529413
+    },
+    "chain_count": 192,
+    "predicate_count": 8192,
+    "h30": "confirmed_with_caveat",
+    "h29_executed": false,
+    "e5_rerun": false,
+    "verdict": "CADETS에서 path만 제거하자 attribution 우위와 ranking이 함께 악화돼 event path 손실을 주요 표현 한계로 판정했다. 이 진단만으로 E5의 유일한 원인을 확정하지 않는다."
+  },
+  "tc_alert_calibration": {
+    "status": "exploratory_after_external_output_observed",
+    "rule": "validation_chain_score_quantile_0.995_higher",
+    "cadets_e3": {
+      "threshold": 0.7169942712513206,
+      "reported_nodes": 102,
+      "malicious_nodes": 5,
+      "matched_base_malicious_nodes": 9,
+      "attack_free_reported_nodes": 27
+    },
+    "theia_e3": {
+      "threshold": 0.7429803998023656,
+      "reported_nodes": 27,
+      "malicious_nodes": 5,
+      "matched_base_malicious_nodes": 8,
+      "attack_free_reported_nodes": 8,
+      "day_10_reported_nodes": 0
+    },
+    "verdict": "경보량은 줄었지만 두 performer 모두 matched anomaly-only보다 악성 회수가 낮아 H24를 기각했다."
+  },
+  "integrity": {
+    "test_labels_used_for_training": false,
+    "failed_runs_removed": false,
+    "cage_original_heldout_seeds_evaluated": true,
+    "cage_followup_reserved_seeds_evaluated": false,
+    "cage_final_evaluated_once": true,
+    "cage_v12_final_evaluated_once_per_red": true,
+    "tc_coarse_external_evaluated": true,
+    "tc_fine_external_evaluated": true,
+    "tc_e5_evaluated": true,
+    "llm_api_used": false
+  }
+}

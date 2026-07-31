@@ -1,0 +1,1226 @@
+{
+  "dataset": "clearscope_e5",
+  "split": {
+    "train": [
+      8,
+      9
+    ],
+    "validation": [
+      11
+    ],
+    "test": [
+      14,
+      15,
+      17
+    ]
+  },
+  "ground_truth": {
+    "14": [],
+    "15": [
+      "node_clearscope_e5_appstarter_0515.csv"
+    ],
+    "17": [
+      "node_clearscope_e5_lockwatch_0517.csv",
+      "node_clearscope_e5_tester_0517.csv"
+    ]
+  },
+  "predicate_mode": "trace",
+  "chain_node_score": "chain_score_times_predicate_confidence",
+  "threshold": 0.15188712121731615,
+  "profile": {
+    "structural_states": 21,
+    "trace_transitions": 30,
+    "path_states": 10
+  },
+  "aggregate": {
+    "nodes": 150964,
+    "positives": 51,
+    "label_coverage": 1.0,
+    "base": {
+      "auroc": 0.5267171203561901,
+      "ap": 0.023037320106792155,
+      "precision_at_100": 0.09,
+      "recall_at_100": 0.17647058823529413,
+      "precision_at_500": 0.022,
+      "recall_at_500": 0.21568627450980393,
+      "precision_at_1000": 0.011,
+      "recall_at_1000": 0.21568627450980393
+    },
+    "full": {
+      "auroc": 0.542433486219758,
+      "ap": 0.023051715010833706,
+      "precision_at_100": 0.09,
+      "recall_at_100": 0.17647058823529413,
+      "precision_at_500": 0.022,
+      "recall_at_500": 0.21568627450980393,
+      "precision_at_1000": 0.011,
+      "recall_at_1000": 0.21568627450980393
+    },
+    "chains": {
+      "reported_nodes": 522,
+      "precision": 0.007662835249042145,
+      "recall": 0.0784313725490196,
+      "matched_baseline_precision": 0.0210727969348659,
+      "matched_baseline_recall": 0.21568627450980393
+    }
+  },
+  "days": {
+    "14": {
+      "nodes": 45858,
+      "positives": 0,
+      "label_coverage": 0.0,
+      "base": {
+        "auroc": null,
+        "ap": null,
+        "precision_at_100": 0.0,
+        "recall_at_100": 0.0,
+        "precision_at_500": 0.0,
+        "recall_at_500": 0.0,
+        "precision_at_1000": 0.0,
+        "recall_at_1000": 0.0
+      },
+      "full": {
+        "auroc": null,
+        "ap": null,
+        "precision_at_100": 0.0,
+        "recall_at_100": 0.0,
+        "precision_at_500": 0.0,
+        "recall_at_500": 0.0,
+        "precision_at_1000": 0.0,
+        "recall_at_1000": 0.0
+      },
+      "chains": {
+        "reported_nodes": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matched_baseline_precision": 0.0,
+        "matched_baseline_recall": 0.0
+      }
+    },
+    "15": {
+      "nodes": 73611,
+      "positives": 26,
+      "label_coverage": 1.0,
+      "base": {
+        "auroc": 0.6403907568954792,
+        "ap": 0.02750272992412791,
+        "precision_at_100": 0.05,
+        "recall_at_100": 0.19230769230769232,
+        "precision_at_500": 0.012,
+        "recall_at_500": 0.23076923076923078,
+        "precision_at_1000": 0.006,
+        "recall_at_1000": 0.23076923076923078
+      },
+      "full": {
+        "auroc": 0.6713238484013779,
+        "ap": 0.027547269525786473,
+        "precision_at_100": 0.05,
+        "recall_at_100": 0.19230769230769232,
+        "precision_at_500": 0.012,
+        "recall_at_500": 0.23076923076923078,
+        "precision_at_1000": 0.006,
+        "recall_at_1000": 0.23076923076923078
+      },
+      "chains": {
+        "reported_nodes": 280,
+        "precision": 0.010714285714285714,
+        "recall": 0.11538461538461539,
+        "matched_baseline_precision": 0.02142857142857143,
+        "matched_baseline_recall": 0.23076923076923078
+      }
+    },
+    "17": {
+      "nodes": 54341,
+      "positives": 25,
+      "label_coverage": 1.0,
+      "base": {
+        "auroc": 0.4480329921201856,
+        "ap": 0.027089378799605136,
+        "precision_at_100": 0.05,
+        "recall_at_100": 0.2,
+        "precision_at_500": 0.01,
+        "recall_at_500": 0.2,
+        "precision_at_1000": 0.005,
+        "recall_at_1000": 0.2
+      },
+      "full": {
+        "auroc": 0.4480329921201857,
+        "ap": 0.027089378799605136,
+        "precision_at_100": 0.05,
+        "recall_at_100": 0.2,
+        "precision_at_500": 0.01,
+        "recall_at_500": 0.2,
+        "precision_at_1000": 0.005,
+        "recall_at_1000": 0.2
+      },
+      "chains": {
+        "reported_nodes": 237,
+        "precision": 0.004219409282700422,
+        "recall": 0.04,
+        "matched_baseline_precision": 0.02109704641350211,
+        "matched_baseline_recall": 0.2
+      }
+    }
+  },
+  "chain_count": 97,
+  "predicate_count": 6144,
+  "plans": {
+    "baseline": 3,
+    "combined": 3,
+    "high_risk": 3,
+    "negative": 3,
+    "pairwise": 46,
+    "single": 17
+  },
+  "top_chains": [
+    {
+      "id": "chain-be6fc3220a57",
+      "score": 0.7459167278471748,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CLONE",
+        "EVENT_READ",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001376E52",
+        "02FC36F1-A1E0-56D9-B58F-BD1F78EFC749",
+        "0432172A-0181-C737-B98E-2756E6433132",
+        "083C0ED2-A55E-D5D7-1A8E-7D8A3C1AAD7F",
+        "096BC3B7-8283-6008-9A5C-7F4D9AFBB9EC",
+        "0D3D9EC0-108B-6718-7003-42BA3A0EDF0F",
+        "11CC3C06-9D50-90A7-3CA7-7DE66AE67041",
+        "150A0B2C-E6CA-C0BB-388B-4F0EAAF96D61",
+        "1A07617B-464A-5DAF-3DAC-C95F31451307",
+        "1A5CED40-57AC-3CC9-9DA1-1EAC588A8CB2",
+        "1B878418-54E9-D085-42F9-9A23918E815F",
+        "245F2BEA-36ED-FDC9-D558-A21930E3E5D9",
+        "281D0199-32CA-839A-AE13-B2DD5279242F",
+        "378CD3B1-5F17-B2FE-D2B7-CCC1BA8C0B48",
+        "3C19E71D-8B9C-8B4D-8005-8C87795F7D55",
+        "3C1F9F60-40E3-4034-23DD-360457E81AB4",
+        "42C1EC06-FD3D-A02C-6FA5-36BC8F16412B",
+        "49AEF97F-3ABB-388C-61C8-8DD93BA11318",
+        "4BF1A2D0-289E-AE73-C131-E0F5C781ACB9",
+        "500F6CE3-ADC3-AA96-B153-DCDE6A27FF7B",
+        "57A9841B-01E6-6D78-2DC5-8925DFD87EBE",
+        "58089EA9-5412-29DB-797B-BB9F74732730",
+        "59C16E58-FE47-9505-2D10-592A7727BF74",
+        "5A5EF63C-CFEF-AACF-3C7E-03CE6445D934",
+        "5B53600E-14B7-CB28-C8D3-F31198FB1D17",
+        "5C594036-21D9-119D-67A3-3F526897F825",
+        "5EC89050-E480-BFEA-BD93-5471A4C6CF7A",
+        "661E39BA-5AA1-F325-E2DE-2021F7923DD8",
+        "6812F1EE-074D-B447-AD6B-398AEBE5847F",
+        "6BB93F4D-43DA-6073-ABCA-F5B234557FC3",
+        "6BF27476-F8A4-4685-2EF0-ACE2C8C264FB",
+        "704548B6-7E60-1027-220E-EE4F89121659",
+        "767EE068-520C-0053-C892-1650736253F6",
+        "78FA4679-3AD1-6C99-A03B-6D155E05C4E5",
+        "7941392D-512F-3FF0-DC8B-69CFEA10626C",
+        "7DC9B1CB-1009-9A85-F8A7-2529093504AE",
+        "839E4F55-2D74-5656-2099-FC6BB2251BCE",
+        "841D4E73-EF8A-118A-46EC-6B19B61E6035",
+        "881CAA14-9E2F-0C8E-798A-3A2ED57F553D",
+        "88ABC482-F290-5A37-F67C-793490EB0767",
+        "9689F4AC-8258-C00F-9359-42CFC2BADFD3",
+        "A01ED75E-D84E-5433-CB79-A6CA96AB9146",
+        "B9828548-2B55-2789-35D6-009E61261A50",
+        "D237ABD2-771E-1BD7-3736-D12A0F92058C",
+        "D6FE47C2-C540-F108-8397-3FA1C6C5DF03",
+        "DD6529E6-A973-F6CA-95FA-3D100E454BBD",
+        "DDC3014B-84D4-C151-CB7C-5B560829F492",
+        "E005641A-B24B-8920-A7D3-AE896D7999D0",
+        "E6385263-2224-6856-1B38-CD442C1F5E10",
+        "E8474704-5F75-741D-C524-107B53373249",
+        "EA15E6B9-D166-D5B9-7ACC-F4B7038DE68D",
+        "F3E6B2C1-E6D3-9B4E-CFB4-45D17CF8FA66",
+        "F46DF5DA-A52E-98F7-EBB7-9E3C3545A980",
+        "F814A558-0771-DB39-015D-9214E5A75896",
+        "FA3DE619-A36D-655C-942E-2DE4CEA8FB6E",
+        "FC95D039-6C3E-5BF7-E762-B66B94455F67"
+      ]
+    },
+    {
+      "id": "chain-a3f962fc3b8a",
+      "score": 0.7163893836512375,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001146230",
+        "00000000-0000-0000-0000-000001146246",
+        "00000000-0000-0000-0000-000001146248",
+        "00000000-0000-0000-0000-000001146262",
+        "00000000-0000-0000-0000-00000114628A"
+      ]
+    },
+    {
+      "id": "chain-c6747e166cd3",
+      "score": 0.6998158662396797,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_RECVFROM",
+        "EVENT_READ",
+        "EVENT_SENDTO"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000013B68A4",
+        "00000000-0000-0000-0000-0000013B68D0"
+      ]
+    },
+    {
+      "id": "chain-837872f5b931",
+      "score": 0.6998112832385429,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_RECVFROM",
+        "EVENT_READ",
+        "EVENT_SENDTO"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001BEEAE2",
+        "00000000-0000-0000-0000-000001BEEB0C"
+      ]
+    },
+    {
+      "id": "chain-60f38528683b",
+      "score": 0.6993634997328783,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_RECVFROM",
+        "EVENT_READ",
+        "EVENT_SENDTO"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000013B68A4",
+        "00000000-0000-0000-0000-0000013B68D0"
+      ]
+    },
+    {
+      "id": "chain-cbe2c4f5c38f",
+      "score": 0.6961801365128399,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000010CDC56",
+        "00000000-0000-0000-0000-0000010CDC6C",
+        "00000000-0000-0000-0000-0000010CDC86",
+        "00000000-0000-0000-0000-0000010CDCB0"
+      ]
+    },
+    {
+      "id": "chain-7a3ad5c2fd3b",
+      "score": 0.6961755535117032,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000010CD8F6",
+        "00000000-0000-0000-0000-0000010CD90C",
+        "00000000-0000-0000-0000-0000010CD926",
+        "00000000-0000-0000-0000-0000010CD950"
+      ]
+    },
+    {
+      "id": "chain-2579c469bf6f",
+      "score": 0.6961755524189513,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000013185E0",
+        "00000000-0000-0000-0000-0000013185F6",
+        "00000000-0000-0000-0000-000001318610",
+        "00000000-0000-0000-0000-00000131863A"
+      ]
+    },
+    {
+      "id": "chain-fa93665c4d5a",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001318C70",
+        "00000000-0000-0000-0000-000001318C86",
+        "00000000-0000-0000-0000-000001318C88",
+        "00000000-0000-0000-0000-000001318CA2",
+        "00000000-0000-0000-0000-000001318CCC"
+      ]
+    },
+    {
+      "id": "chain-efa7985e5047",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001313BEE",
+        "00000000-0000-0000-0000-000001313C04",
+        "00000000-0000-0000-0000-000001313C06",
+        "00000000-0000-0000-0000-000001313C20",
+        "00000000-0000-0000-0000-000001313C4A"
+      ]
+    },
+    {
+      "id": "chain-e87d8b993b08",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000131B1A2",
+        "00000000-0000-0000-0000-00000131B1B8",
+        "00000000-0000-0000-0000-00000131B1BA",
+        "00000000-0000-0000-0000-00000131B1D4",
+        "00000000-0000-0000-0000-00000131B1FE"
+      ]
+    },
+    {
+      "id": "chain-e447bbe40ac5",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000131DFC4",
+        "00000000-0000-0000-0000-00000131DFDA",
+        "00000000-0000-0000-0000-00000131DFDC",
+        "00000000-0000-0000-0000-00000131DFF6",
+        "00000000-0000-0000-0000-00000131E020"
+      ]
+    },
+    {
+      "id": "chain-ce5739e5092f",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000131D2A6",
+        "00000000-0000-0000-0000-00000131D2BC",
+        "00000000-0000-0000-0000-00000131D2BE",
+        "00000000-0000-0000-0000-00000131D2D8",
+        "00000000-0000-0000-0000-00000131D302"
+      ]
+    },
+    {
+      "id": "chain-c8d803fc434b",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000010C25A2",
+        "00000000-0000-0000-0000-0000010C25B8",
+        "00000000-0000-0000-0000-0000010C25BA",
+        "00000000-0000-0000-0000-0000010C25D4",
+        "00000000-0000-0000-0000-0000010C25FE"
+      ]
+    },
+    {
+      "id": "chain-c330e4db01c6",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001316B2E",
+        "00000000-0000-0000-0000-000001316B44",
+        "00000000-0000-0000-0000-000001316B46",
+        "00000000-0000-0000-0000-000001316B5E",
+        "00000000-0000-0000-0000-000001316B88"
+      ]
+    },
+    {
+      "id": "chain-b52c55f7d5b0",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000010CEA80",
+        "00000000-0000-0000-0000-0000010CEA96",
+        "00000000-0000-0000-0000-0000010CEA98",
+        "00000000-0000-0000-0000-0000010CEAB2",
+        "00000000-0000-0000-0000-0000010CEADC"
+      ]
+    },
+    {
+      "id": "chain-a7c1a382f054",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001313192",
+        "00000000-0000-0000-0000-0000013131A8",
+        "00000000-0000-0000-0000-0000013131AA",
+        "00000000-0000-0000-0000-0000013131C4",
+        "00000000-0000-0000-0000-0000013131EE"
+      ]
+    },
+    {
+      "id": "chain-6afd15c6b1de",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000131E0E8",
+        "00000000-0000-0000-0000-00000131E0FE",
+        "00000000-0000-0000-0000-00000131E100",
+        "00000000-0000-0000-0000-00000131E118",
+        "00000000-0000-0000-0000-00000131E142"
+      ]
+    },
+    {
+      "id": "chain-6a567e9950b3",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001093DC8",
+        "00000000-0000-0000-0000-000001093DDE",
+        "00000000-0000-0000-0000-000001093DE0",
+        "00000000-0000-0000-0000-000001093DFA",
+        "00000000-0000-0000-0000-000001093E24"
+      ]
+    },
+    {
+      "id": "chain-68917bd8d9fd",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000136E3DA",
+        "00000000-0000-0000-0000-00000136E3F0",
+        "00000000-0000-0000-0000-00000136E3F2",
+        "00000000-0000-0000-0000-00000136E40C",
+        "00000000-0000-0000-0000-00000136E436"
+      ]
+    },
+    {
+      "id": "chain-5c52c5af7f36",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001315562",
+        "00000000-0000-0000-0000-000001315578",
+        "00000000-0000-0000-0000-00000131557A",
+        "00000000-0000-0000-0000-000001315594",
+        "00000000-0000-0000-0000-0000013155BE"
+      ]
+    },
+    {
+      "id": "chain-5297527d3b43",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000010C59F6",
+        "00000000-0000-0000-0000-0000010C5A0C",
+        "00000000-0000-0000-0000-0000010C5A0E",
+        "00000000-0000-0000-0000-0000010C5A28",
+        "00000000-0000-0000-0000-0000010C5A52"
+      ]
+    },
+    {
+      "id": "chain-4f73a39d6c62",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001085E6E",
+        "00000000-0000-0000-0000-000001085E84",
+        "00000000-0000-0000-0000-000001085E86",
+        "00000000-0000-0000-0000-000001085EA0",
+        "00000000-0000-0000-0000-000001085ECA"
+      ]
+    },
+    {
+      "id": "chain-4d2cfd5d7743",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000131B222",
+        "00000000-0000-0000-0000-00000131B238",
+        "00000000-0000-0000-0000-00000131B23A",
+        "00000000-0000-0000-0000-00000131B254",
+        "00000000-0000-0000-0000-00000131B27E"
+      ]
+    },
+    {
+      "id": "chain-3baee3ad98a1",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000010DEF4C",
+        "00000000-0000-0000-0000-0000010DEF62",
+        "00000000-0000-0000-0000-0000010DEF64",
+        "00000000-0000-0000-0000-0000010DEF7E",
+        "00000000-0000-0000-0000-0000010DEFA8"
+      ]
+    },
+    {
+      "id": "chain-2e84e8512701",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000010AA98E",
+        "00000000-0000-0000-0000-0000010AA9A4",
+        "00000000-0000-0000-0000-0000010AA9A6",
+        "00000000-0000-0000-0000-0000010AA9C0",
+        "00000000-0000-0000-0000-0000010AA9EA"
+      ]
+    },
+    {
+      "id": "chain-2678bb21ec7e",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001312B1C",
+        "00000000-0000-0000-0000-000001312B32",
+        "00000000-0000-0000-0000-000001312B34",
+        "00000000-0000-0000-0000-000001312B4E",
+        "00000000-0000-0000-0000-000001312B78"
+      ]
+    },
+    {
+      "id": "chain-1de8aa6d3a4b",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000010A3E84",
+        "00000000-0000-0000-0000-0000010A3E9A",
+        "00000000-0000-0000-0000-0000010A3E9C",
+        "00000000-0000-0000-0000-0000010A3EB6",
+        "00000000-0000-0000-0000-0000010A3EDE"
+      ]
+    },
+    {
+      "id": "chain-17378e1ec9ef",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000131DF3E",
+        "00000000-0000-0000-0000-00000131DF54",
+        "00000000-0000-0000-0000-00000131DF56",
+        "00000000-0000-0000-0000-00000131DF70",
+        "00000000-0000-0000-0000-00000131DF9A"
+      ]
+    },
+    {
+      "id": "chain-0e7fcd094156",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000110ECEE",
+        "00000000-0000-0000-0000-00000110ED04",
+        "00000000-0000-0000-0000-00000110ED06",
+        "00000000-0000-0000-0000-00000110ED20",
+        "00000000-0000-0000-0000-00000110ED4A"
+      ]
+    },
+    {
+      "id": "chain-f487e5560108",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001906956",
+        "00000000-0000-0000-0000-00000190696C",
+        "00000000-0000-0000-0000-00000190696E",
+        "00000000-0000-0000-0000-000001906988",
+        "00000000-0000-0000-0000-0000019069B2"
+      ]
+    },
+    {
+      "id": "chain-eeb680c32ad2",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000019F550A",
+        "00000000-0000-0000-0000-0000019F5520",
+        "00000000-0000-0000-0000-0000019F5522",
+        "00000000-0000-0000-0000-0000019F553C",
+        "00000000-0000-0000-0000-0000019F5564"
+      ]
+    },
+    {
+      "id": "chain-eb217c86041b",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000018E844A",
+        "00000000-0000-0000-0000-0000018E8460",
+        "00000000-0000-0000-0000-0000018E8462",
+        "00000000-0000-0000-0000-0000018E847A",
+        "00000000-0000-0000-0000-0000018E84A4"
+      ]
+    },
+    {
+      "id": "chain-e40eaaf9a821",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000199034A",
+        "00000000-0000-0000-0000-00000199036E",
+        "00000000-0000-0000-0000-000001990370",
+        "00000000-0000-0000-0000-00000199038E",
+        "00000000-0000-0000-0000-0000019903B8"
+      ]
+    },
+    {
+      "id": "chain-dd8010713f69",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000191E464",
+        "00000000-0000-0000-0000-00000191E47A",
+        "00000000-0000-0000-0000-00000191E47C",
+        "00000000-0000-0000-0000-00000191E496",
+        "00000000-0000-0000-0000-00000191E4C0"
+      ]
+    },
+    {
+      "id": "chain-d69cc7ae8770",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001A4B02A",
+        "00000000-0000-0000-0000-000001A4B040",
+        "00000000-0000-0000-0000-000001A4B042",
+        "00000000-0000-0000-0000-000001A4B05C",
+        "00000000-0000-0000-0000-000001A4B086"
+      ]
+    },
+    {
+      "id": "chain-d5e7c45d349e",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000018E5000",
+        "00000000-0000-0000-0000-0000018E5016",
+        "00000000-0000-0000-0000-0000018E5018",
+        "00000000-0000-0000-0000-0000018E5030",
+        "00000000-0000-0000-0000-0000018E505A"
+      ]
+    },
+    {
+      "id": "chain-d3c73b10916a",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000019F2424",
+        "00000000-0000-0000-0000-0000019F243A",
+        "00000000-0000-0000-0000-0000019F243C",
+        "00000000-0000-0000-0000-0000019F2456",
+        "00000000-0000-0000-0000-0000019F2480"
+      ]
+    },
+    {
+      "id": "chain-ce72d49d4f22",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000019D35B6",
+        "00000000-0000-0000-0000-0000019D35CC",
+        "00000000-0000-0000-0000-0000019D35CE",
+        "00000000-0000-0000-0000-0000019D35E8",
+        "00000000-0000-0000-0000-0000019D3612"
+      ]
+    },
+    {
+      "id": "chain-bbecf4574f0f",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000190E0FC",
+        "00000000-0000-0000-0000-00000190E112",
+        "00000000-0000-0000-0000-00000190E114",
+        "00000000-0000-0000-0000-00000190E12E",
+        "00000000-0000-0000-0000-00000190E158"
+      ]
+    },
+    {
+      "id": "chain-b8dc05024e26",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001A6D924",
+        "00000000-0000-0000-0000-000001A6D93A",
+        "00000000-0000-0000-0000-000001A6D93C",
+        "00000000-0000-0000-0000-000001A6D956",
+        "00000000-0000-0000-0000-000001A6D980"
+      ]
+    },
+    {
+      "id": "chain-b37a85f15b52",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001ADA7C2",
+        "00000000-0000-0000-0000-000001ADA7D8",
+        "00000000-0000-0000-0000-000001ADA7DA",
+        "00000000-0000-0000-0000-000001ADA7F2",
+        "00000000-0000-0000-0000-000001ADA81C"
+      ]
+    },
+    {
+      "id": "chain-b15768285ffe",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000019F5148",
+        "00000000-0000-0000-0000-0000019F515E",
+        "00000000-0000-0000-0000-0000019F5160",
+        "00000000-0000-0000-0000-0000019F517A",
+        "00000000-0000-0000-0000-0000019F51A4"
+      ]
+    },
+    {
+      "id": "chain-ac000eba11e8",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001A71A90",
+        "00000000-0000-0000-0000-000001A71AA6",
+        "00000000-0000-0000-0000-000001A71AA8",
+        "00000000-0000-0000-0000-000001A71AC2",
+        "00000000-0000-0000-0000-000001A71AEA"
+      ]
+    },
+    {
+      "id": "chain-abe5694f93a8",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-00000196A582",
+        "00000000-0000-0000-0000-00000196A598",
+        "00000000-0000-0000-0000-00000196A59A",
+        "00000000-0000-0000-0000-00000196A5B2",
+        "00000000-0000-0000-0000-00000196A5DC"
+      ]
+    },
+    {
+      "id": "chain-a917be67e03d",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001AC34C2",
+        "00000000-0000-0000-0000-000001AC34D8",
+        "00000000-0000-0000-0000-000001AC34DA",
+        "00000000-0000-0000-0000-000001AC34F2",
+        "00000000-0000-0000-0000-000001AC351C"
+      ]
+    },
+    {
+      "id": "chain-9dcdedc14398",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-0000018EED42",
+        "00000000-0000-0000-0000-0000018EED58",
+        "00000000-0000-0000-0000-0000018EED5A",
+        "00000000-0000-0000-0000-0000018EED72",
+        "00000000-0000-0000-0000-0000018EED9C"
+      ]
+    },
+    {
+      "id": "chain-9812bda7c15b",
+      "score": 0.6925738578315906,
+      "stages": [
+        "ingress",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_CONNECT",
+        "EVENT_OPEN",
+        "EVENT_SENDMSG"
+      ],
+      "nodes": [
+        "00000000-0000-0000-0000-000001A221AA",
+        "00000000-0000-0000-0000-000001A221C0",
+        "00000000-0000-0000-0000-000001A221C2",
+        "00000000-0000-0000-0000-000001A221DC",
+        "00000000-0000-0000-0000-000001A22204"
+      ]
+    }
+  ],
+  "runtime_seconds": 887.6871017520316,
+  "peak_memory_mb": 227.09375
+}

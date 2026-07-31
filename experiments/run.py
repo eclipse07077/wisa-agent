@@ -66,12 +66,16 @@ def run_episode(mode: str, red_name: str, seed: int, steps: int) -> dict:
             break
 
     blue_actions = Counter()
+    blue_metrics = []
     for agent in agents.values():
         blue_actions.update(agent.action_counts)
+        if hasattr(agent, "metrics"):
+            blue_metrics.append(agent.metrics())
     return {
         "seed": seed,
         "reward": sum(rewards),
         "blue_actions": dict(sorted(blue_actions.items())),
+        "blue_metrics": blue_metrics,
         "red_actions": dict(sorted(red_actions.items())),
         "attack": telemetry.result(),
     }
@@ -179,7 +183,20 @@ def main() -> None:
     parser.add_argument(
         "--modes",
         nargs="+",
-        choices=("sleep", "reactive", "layerchain"),
+        choices=(
+            "sleep",
+            "reactive",
+            "layerchain",
+            "report",
+            "report_v9",
+            "report_v10",
+            "report_v11",
+            "report_v12",
+            "report_transition",
+            "report_no_chain",
+            "report_no_honeypot",
+            "report_no_guard",
+        ),
         default=("sleep", "reactive", "layerchain"),
     )
     parser.add_argument(

@@ -1,0 +1,343 @@
+\documentclass[runningheads]{llncs}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[section]{placeins}
+\usepackage{url}
+
+\begin{document}
+
+\title{Where Does Hierarchical Causal Chaining Generalize? Cross-Benchmark Evidence from Attack Investigation and Autonomous Defense}
+\titlerunning{Where Does Hierarchical Causal Chaining Generalize?}
+
+\author{Anonymous Authors}
+\authorrunning{Anonymous Authors}
+\institute{Anonymous Institution}
+
+\maketitle
+
+\begin{abstract}
+Autonomous cyber agents combine detection, attack-path reasoning, and response selection, yet it remains unclear which components transfer when telemetry schemas and action spaces change. We implement a shared deterministic core that normalizes observations into typed, stage-aware predicates and searches for causal chains using temporal proximity, shared context, stage progression, and mission impact. The core supports an offline attack-investigation orchestrator and an online defense orchestrator. We evaluate both on CAGE Challenge 4 and DARPA Transparent Computing (TC) E3/E5 under a frozen protocol: thresholds and chain rules are selected only on CADETS E3 development data, and test labels are loaded only after outputs are fixed.
+
+On CADETS E3, grounded traces recover 17 malicious nodes among 530 inspected nodes, compared with 10 for a matched-budget anomaly-only baseline. The frozen method reproduces the attribution direction on THEIA E3, recovering 17 of 1,218 nodes versus 8. Average Precision does not improve on CADETS, however, and 196 nodes are reported on an attack-free THEIA day. On ClearScope E5, attribution reverses: the method recovers 4 of 522 malicious nodes versus 11 for anomaly-only. A preregistered CADETS ablation that removes event paths degrades chain attribution from 17/530 to 3/1,220. In two 100-pair CAGE evaluations, the scope-constrained defender improves reward over an internal LayerChain baseline by 468.65 points under the official Red policy (95\% CI: $[276.24,656.89]$) and 595.39 under a chain-aware Red policy ($[410.39,784.28]$), while reducing all three attack-impact outcomes.
+
+These results delimit rather than establish universal superiority: hierarchical chaining improves E3 investigation priority when temporal and path context are preserved, and improves online defense when evidence scope constrains response scope, but it does not by itself solve alert calibration or CDM20 transfer.
+
+\keywords{Autonomous cyber defense \and Provenance graph \and Attack attribution \and Causal chain \and CAGE Challenge 4 \and DARPA Transparent Computing}
+\end{abstract}
+
+\section{Introduction}
+
+Autonomous cyber defense requires an agent to interpret partial observations, infer attack progression, and select actions that reduce mission loss without disrupting benign activity. CAGE Challenge 4 operationalizes this problem as multi-agent defense over a randomized enterprise network, while DARPA Transparent Computing (TC) exposes process, file, and network provenance for long-running attack investigation \cite{kiely2025environment,darpa2020tc}. The tasks differ - online control versus offline attribution - but both require lifting low-level observations into meaningful stages and connecting individually ambiguous events over time.
+
+Prior CAGE work has explored graph-based multi-agent reinforcement learning (MARL), hierarchical sub-policies, and rule-based state machines \cite{kiely2025challenge,singh2025hmarl,cybermonic2025code}. Provenance-based intrusion detection systems (PIDSs) combine self-supervised graph representation learning, temporal models, and dependency analysis to detect anomalies and reconstruct attack paths \cite{jia2024magic,cheng2024kairos,jiang2025orthrus}. Yet strong graph-level AUROC or F1 does not necessarily imply that an analyst receives a concise set of malicious entities. Inconsistent preprocessing, test-informed thresholding, and coarse labels can also make cross-system comparisons misleading \cite{bilot2025simpler,abrar2025reproducibility}.
+
+We study whether a common evidence-predicate-chain abstraction transfers across these two settings. The core deliberately excludes benchmark-specific hostnames, attack UUIDs, fixed action indices, and test labels. It feeds two task heads: an attack-investigation orchestrator that ranks provenance entities and proposes hypotheses, and a defense orchestrator that maps chain-aware risk to reversible or strong actions. Our goal is not to assume universal improvement, but to identify the conditions under which the shared abstraction helps or fails.
+
+We ask four research questions:
+\begin{itemize}
+\item \textbf{RQ1:} Does hierarchical trace reconstruction improve fine-grained attack attribution over the same anomaly detector without chaining?
+\item \textbf{RQ2:} Do representation and search rules frozen on CADETS E3 transfer across performers and CDM versions?
+\item \textbf{RQ3:} Does a chain-aware risk orchestrator improve reward and attack suppression in CAGE Challenge 4?
+\item \textbf{RQ4:} When transfer fails, is the limiting factor chain construction, input representation, or action orchestration?
+\end{itemize}
+
+This paper makes four contributions:
+\begin{enumerate}
+\item We implement a deterministic typed-evidence and bounded best-first chain-search core shared by attack investigation and defense.
+\item We define a leakage-resistant cross-benchmark protocol with benign-only profiles, validation-set thresholds, fine node labels, paired CAGE seeds, and preserved failed runs.
+\item We reproduce a matched-budget attribution improvement on two E3 performers and a defense improvement against two Red policies while preserving negative intermediate and ClearScope E5 results.
+\item We isolate two transfer boundaries: event-path loss in provenance attribution and evidence-to-action scope mismatch in online defense.
+\end{enumerate}
+
+\section{Background and Related Work}
+
+\subsection{CAGE Challenge 4}
+
+CAGE Challenge 4 is a partially observable multi-agent cyber-defense environment. Blue agents can monitor and analyze hosts, deploy decoys, remove sessions, restore hosts, and control traffic between zones. They must suppress Red activity while preserving Green-user service availability \cite{kiely2025environment}. The published challenge analysis reports that three of the top four teams used heuristics and that topology inference and observation design substantially affected rankings under unseen scenario variants \cite{kiely2025challenge}.
+
+Cybermonic maintains a cumulative graph of hosts, routers, ports, files, and the Internet, and decomposes actions into node-, edge-, and global-level choices \cite{cybermonic2025code}. H-MARL divides defense into Investigate, Recover, and Control Traffic sub-policies selected by an expert or learned master policy \cite{singh2025hmarl}. We adopt the general principle of hierarchical action decomposition but do not reuse learned weights, privileged indicators, or fixed action indices. Our policy instead materializes report-derived risk bands and causal evidence as deterministic decisions, which makes negative behavior attributable to explicit rules.
+
+\subsection{Provenance-Based Detection and Investigation}
+
+DARPA TC records temporal interactions among processes, files, and network objects as a provenance graph. Engagement 3 uses CDM18, whereas Engagement 5 uses CDM20 and changes both performers and schemas. The official release explicitly warns that prototype-generated data are imperfect and that expected indicators may be missing \cite{darpa2020tc}.
+
+MAGIC uses masked graph representation learning and outlier detection for self-supervised APT detection \cite{jia2024magic}. KAIROS uses a temporal graph encoder-decoder to score events and link anomalous edges into attack graphs \cite{cheng2024kairos}. ORTHRUS combines node-level anomaly detection with dependency-based reconstruction and emphasizes Quality of Attribution (QoA), the analyst effort required to understand a detection \cite{jiang2025orthrus}. PIDSMaker-related work shows that complex neural PIDSs do not always outperform simpler systems and argues for standardized preprocessing, splits, labels, and metrics \cite{bilot2025simpler,bilot2026pidsmaker}.
+
+Our anomaly-only comparator is not ORTHRUS. It is the same benign profile and node-scoring model with chain contributions removed, evaluated at the exact node budget emitted by our chain method. Public MAGIC scores are used only in a separate coarse-label robustness check. We therefore do not claim to outperform MAGIC, KAIROS, ORTHRUS, or PIDSMaker systems.
+
+\section{Method}
+
+\subsection{Typed Evidence and Stage-Aware Predicates}
+
+An adapter normalizes each observation into typed evidence with time, layer, source, subject, relation, object, context, confidence, and provenance. Missing fields remain unknown rather than being treated as benign. Evidence is mapped into five stages, summarized in Table~\ref{tab:stages}.
+
+\begin{table}[t]
+\caption{Stage mapping shared across the two task heads.}
+\label{tab:stages}
+\centering
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{1.35cm}>{\raggedright\arraybackslash}p{2.65cm}>{\raggedright\arraybackslash}p{2.55cm}>{\raggedright\arraybackslash}p{2.65cm}}
+\toprule
+Stage & Meaning & TC examples & CAGE examples \\
+\midrule
+Ingress & Access path formation & connect, receive & network/service discovery \\
+Trust break & Identity or integrity boundary violation & execute, clone & exploit, suspicious process \\
+Lifecycle & Execution or session maintenance & open, read & session, privilege \\
+Mission effect & Effect on mission state & write, send & service impact \\
+Response & Defensive intervention & not used & analyze, decoy, remove, restore \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For TC, the benign profile estimates three distributions: structural tuples $(\text{source type},\text{relation},\text{target type})$, relation transitions within 18 seconds, and relation-conditioned path buckets. The anomaly score for event $e$ is
+\begin{equation}
+A(e)=0.50A_{\mathrm{struct}}(e)+0.30A_{\mathrm{trace}}(e)
++0.20A_{\mathrm{path}}(e).
+\label{eq:anomaly}
+\end{equation}
+Each component is a Laplace-smoothed log-surprise value normalized to $[0,1]$. We set the anomaly threshold to the 0.995 quantile of validation event scores. Test labels do not enter profile fitting or threshold selection.
+
+Directly turning every anomalous event into a predicate causes repeated READ and WRITE activity to dominate the frontier. The grounded-trace representation instead identifies a process session as suspicious when at least one event exceeds the threshold, reconstructs its surrounding transitions within an 18-second window, and aggregates those transitions into one predicate per stage. Each predicate retains its strongest anomaly evidence, endpoints, relations, and path context.
+
+\subsection{Causal Edge Scoring and Bounded Search}
+
+For two predicates $p_i$ and $p_j$, we compute
+\begin{equation}
+E_{ij}=0.30T_{ij}+0.30J_{ij}+0.25G_{ij}+0.15M_{ij},
+\label{eq:edge}
+\end{equation}
+where $T$ is temporal proximity within 18 seconds, $J$ is Jaccard similarity over context, $G$ rewards forward stage progression, and $M$ rewards a transition into mission effect. If a factor is unobservable, its weight is redistributed over observed factors rather than assigned a zero.
+
+We retain edges with $E_{ij}\geq0.58$ and keep the top five outgoing edges per predicate. Bounded best-first search starts from ingress or trust-break predicates. A valid chain has length three to five, spans at least three distinct stages, and terminates at mission effect or response. Its score is
+\begin{equation}
+S(C)=\operatorname{clip}\left(
+0.55\bar{E}+0.20\bar{q}+0.05\bar{v}
++0.06|\mathcal{S}_C|+0.08I_{\mathrm{mission}},0,1\right),
+\label{eq:chain}
+\end{equation}
+where $\bar{q}$ and $\bar{v}$ are mean predicate confidence and severity, and $\mathcal{S}_C$ is the set of stages in the chain. Scores, lengths, and stable chain identifiers define a deterministic ordering. For TC, we cap each day at 2,048 predicates and report the top 48 chains. These limits are frozen during CADETS development and are not changed per external performer.
+
+\begin{figure}[t]
+\centering
+\small
+\fbox{\parbox{0.90\linewidth}{\centering Raw telemetry from TC provenance or CAGE observations}}
+\par\vspace{2pt}
+$\downarrow$
+\par\vspace{2pt}
+\fbox{\parbox{0.90\linewidth}{\centering Typed adapter $\rightarrow$ benign profile $\rightarrow$ stage-aware predicate miner}}
+\par\vspace{2pt}
+$\downarrow$
+\par\vspace{2pt}
+\fbox{\parbox{0.90\linewidth}{\centering Bounded best-first causal-chain search}}
+\par\vspace{4pt}
+\begin{tabular}{p{0.43\linewidth}p{0.43\linewidth}}
+\centering$\swarrow$\par
+\fbox{\parbox{0.88\linewidth}{\centering Attack head\\node ranking, chains, hypotheses}} &
+\centering$\searrow$\par
+\fbox{\parbox{0.88\linewidth}{\centering Defense head\\risk bands, response, verification}}
+\end{tabular}
+\caption{Shared deterministic core and task-specific orchestration heads.}
+\label{fig:architecture}
+\end{figure}
+
+\subsection{Attack-Investigation Orchestrator}
+
+The attack-side pipeline invokes a Profiler, Predicate Miner, Chain Builder, Experiment Planner, Constraint Validator, Campaign Scheduler, and Frontier Explorer. In the TC evaluation, it does not execute exploits. It emits investigation nodes, candidate chains, and baseline, single-factor, pairwise, combined, negative-control, and high-risk hypotheses. A constraint check removes concepts absent from the observed relation space.
+
+Node ranking and chain attribution are evaluated separately. Copying the full chain score to every endpoint can inflate large session footprints. We therefore cap each node contribution at $S(C)\times\operatorname{confidence}(p)$ for the supporting predicate. The primary attribution comparison selects the top anomaly-only nodes at exactly the number of unique nodes emitted by the chains.
+
+\subsection{Defense Orchestrator}
+
+The defender follows a Perceive-Detect-Decide-Respond-Recover loop. For predefined evidence, it computes
+\begin{equation}
+R_{\mathrm{rule}}=0.35q+0.25v+0.25c+0.15k,
+\label{eq:rule-risk}
+\end{equation}
+and for an observed benign-profile deviation,
+\begin{equation}
+R_{\mathrm{deviation}}=0.50a+0.30c+0.20k.
+\label{eq:deviation-risk}
+\end{equation}
+Here $q$, $v$, $c$, $k$, and $a$ denote confidence, severity, cross-evidence correlation, target criticality, and adjusted anomaly magnitude. When both risks are available, the policy takes their maximum.
+
+Risk below 0.50 maps to Monitor; $0.50$--$0.69$ maps to a decoy or Analyze; $0.70$--$0.84$ maps to temporary isolation; and risk at least 0.85 is considered for block or restore after checking independent evidence layers and asset criticality. Decoys are placed dynamically on an observed benign host in the threatened zone rather than in a fixed initial sweep. When no threat is active, the policy fills one zone-level deception-coverage gap per decision; decoy contact re-enters the evidence stream as a trust-break predicate.
+
+The scope-constrained policy requires the action scope to cover the evidence scope. A single evidence layer permits only Analyze or a decoy. Corroborated process and connection evidence, or mission-effect evidence, selects whole-host Restore rather than partial Remove. After a strong action, an 18-step recurrence watch suppresses repeated strong action on the same target and verifies effect from subsequent events rather than API acknowledgement. The Recovery-Reflex guard is intended to prevent an adversary from inducing an expensive restore through a weak, attacker-controlled signal.
+
+\section{Experimental Design}
+
+\subsection{Leakage and Selection Controls}
+
+We separate development, validation, and final evaluation. The common core contains no malicious UUID, attack time, hostname rule, dataset-specific bonus, or fixed CAGE action index. Failed versions and unfavorable seeds are retained. Test labels are loaded only after all outputs for a split are fixed. CAGE confidence intervals use 10,000 bootstrap resamples of paired run-level differences with a fixed analysis seed. Fine TC nodes are causally dependent, so we report descriptive counts and do not treat nodes as independent samples for significance tests.
+
+\subsection{CAGE Setup}
+
+We use official CAGE Challenge 4 commit \texttt{8c3c50ca}, 500 steps per episode, the official \texttt{FiniteStateRedAgent}, and a separately implemented chain-aware Red policy. The internal LayerChain baseline is a simpler hierarchical reactive agent from the same repository; it is not a public competition submission. Cumulative Blue reward is primary, with unique privileged hosts, impacted hosts, and successful Impact actions as secondary metrics.
+
+An initial frozen defender failed on 100 paired seeds 5400--5499, with reward difference $-564.72$ $[-812.21,-319.86]$. We retain this result and all failed variants. A later static-utility v11 also failed on fresh development seeds. Before implementing v12, we registered development 12400--12419, validation 13400--13419, and final 14400--14499. We changed neither code nor constants after development or validation. The final comparison evaluates only LayerChain and v12 on 100 paired seeds under each Red policy. The artifact records raw runs and all selection blocks.
+
+\subsection{DARPA TC Setup}
+
+CADETS E3 uses benign training days 3, 4, 5, 7, 8, 9, and 10; validation day 2; and development days 6, 11, 12, and 13. We freeze grounded trace v4 before applying it unchanged to THEIA E3, using benign days 2--5, validation day 9, and test days 10, 12, and 13. ClearScope E5 follows the public PIDSMaker split: benign days 8 and 9, validation day 11, and test days 14, 15, and 17.
+
+Fine node UUID ground truth comes from the public ORTHRUS/PIDSMaker release. We report AUROC and Average Precision (AP) for anomaly-only and chain-grounded node scores; chain precision and recall at a matched node budget; and chain output on attack-free days. A robustness experiment using public MAGIC anomaly scores and ThreaTrace coarse labels is kept separate from fine-label results.
+
+The evaluation universe contains 297,085 CADETS nodes with 68 covered positives, 701,622 THEIA nodes with 118 positives, and 150,964 ClearScope E5 nodes with 51 positives. The CADETS index covers 68 of 72 public fine-label UUIDs (94.44\%); recall therefore uses covered positives as its denominator. THEIA and E5 label coverage is 100\%.
+
+\section{Results}
+
+\subsection{RQ1: E3 Attack Attribution}
+
+\begin{table}[t]
+\caption{Fine-label E3 results. The inspected-node budget is matched within each dataset.}
+\label{tab:e3}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.3pt}
+\begin{tabular}{llrrrrrr}
+\toprule
+Dataset & Method & AUROC & AP & Inspected & Malicious & Precision & Recall \\
+\midrule
+CADETS & Anomaly & .78705 & .126001 & 530 & 10 & .01887 & .14706 \\
+CADETS & Chain & .79144 & .125996 & 530 & 17 & .03208 & .25000 \\
+THEIA & Anomaly & .83723 & .028519 & 1,218 & 8 & .00657 & .06780 \\
+THEIA & Chain & .84664 & .028947 & 1,218 & 17 & .01396 & .14407 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+On CADETS, grounded traces recover seven additional malicious nodes at the same investigation budget (Table~\ref{tab:e3}). AUROC increases by 0.00439, while AP decreases by 0.000005 and is effectively unchanged. On THEIA, the frozen method recovers 17 malicious nodes instead of 8; AUROC and AP increase by 0.00941 and 0.000428. Precision and recall at top 100, 500, and 1,000 remain unchanged, so the result does not establish a better top-$k$ detector.
+
+The attribution improvement does not yield a low-false-positive alert. The method reports 108 nodes on attack-free CADETS day 11 and 196 on attack-free THEIA day 13. An exploratory 0.995 validation chain-score calibration reduces volume but still leaves attack-free outputs and misses the entire THEIA day-10 attack. RQ1 is therefore supported only for fixed-budget investigation priority.
+
+Three preregistered CADETS compression variants also fail their matched-budget gate. The strictest variant reduces the footprint from 530 to 183 nodes and raises AP to 0.129095, but recovers only 5 malicious nodes versus 10 for anomaly-only at the same budget. We therefore retain grounded trace v4 and do not transfer these variants to THEIA.
+
+\subsection{RQ2: CDM20/E5 Transfer}
+
+\begin{table}[t]
+\caption{Fine-label ClearScope E5 results at a matched 522-node budget.}
+\label{tab:e5}
+\centering
+\small
+\setlength{\tabcolsep}{4.3pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Method & AUROC & AP & Malicious & Precision & Recall \\
+\midrule
+Anomaly-only & .52672 & .023037 & 11 & .02107 & .21569 \\
+Grounded trace & .54243 & .023052 & 4 & .00766 & .07843 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+On ClearScope E5, the frozen method forms 97 valid chains and raises AUROC by 0.01572. Nevertheless, matched-budget attribution falls from 11 malicious nodes to 4 (Table~\ref{tab:e5}). The AP increase is only 0.000014, all reported top-$k$ metrics are unchanged, and five nodes are emitted on attack-free day 14. We reject CDM20 attribution transfer.
+
+The public PIDSMaker E5 event table omits the original event object-path field. We keep path unknown rather than reconstructing it from labels, application names, or node paths. Without retuning or rerunning E5, we execute one preregistered CADETS counterfactual in which path alone is removed from train, validation, and development events.
+
+\begin{table}[t]
+\caption{Preregistered CADETS path-removal diagnostic.}
+\label{tab:path}
+\centering
+\small
+\begin{tabular}{lrr}
+\toprule
+Metric & Path present & Path absent \\
+\midrule
+Grounded-trace AUROC & .791443 & .733838 \\
+Grounded-trace AP & .125996 & .085902 \\
+Chain-reported nodes & 530 & 1,220 \\
+Malicious chain nodes & 17 & 3 \\
+Matched anomaly malicious nodes & 10 & 12 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The number of chains (192) and predicates (8,192) remains unchanged, but the attribution advantage reverses and the investigation footprint broadens (Table~\ref{tab:path}). Path is therefore not merely an auxiliary feature; it constrains both the benign profile and predicate context. This CADETS ablation cannot identify path loss as the sole E5 cause because performer, operating system, CDM version, and path availability change together.
+
+\subsection{RQ3: CAGE Defense}
+
+\begin{table}[t]
+\caption{CAGE final evaluation. Each Red policy uses 100 paired 500-step episodes. Reward is mean $\pm$ standard deviation.}
+\label{tab:cage}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{llrrrr}
+\toprule
+Red & Blue & Reward & Privileged & Impacted & Impact \\
+\midrule
+Official & LayerChain & $-3110.39\pm815.63$ & 35.12 & 8.30 & 8.31 \\
+Official & Scope v12 & $-2641.74\pm746.69$ & 32.28 & 7.41 & 7.46 \\
+Chain & LayerChain & $-3703.61\pm983.85$ & 35.50 & 6.58 & 6.64 \\
+Chain & Scope v12 & $-3108.22\pm814.13$ & 33.35 & 5.53 & 5.56 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Under official Red, v12 minus LayerChain reward is $+468.65$ with a 95\% bootstrap CI of $[276.24,656.89]$, paired effect size 0.483, and win rate 0.67. Privileged hosts decrease by 2.84 $[-4.13,-1.61]$, impacted hosts by 0.89 $[-1.55,-0.26]$, and successful Impact actions by 0.85 $[-1.51,-0.21]$.
+
+Under chain-aware Red, reward improves by $+595.39$ $[410.39,784.28]$, effect size 0.624, and win rate 0.72. Privileged hosts decrease by 2.15 $[-3.24,-1.04]$. Impacted hosts decrease by 1.05 $[-1.66,-0.45]$, and Impact actions by 1.08 $[-1.70,-0.47]$. All four confidence intervals favor v12 under both policies, supporting RQ3 against these two internal comparators.
+
+The development trajectory matters. The initial report-derived v6 scores 564.72 points below LayerChain on its frozen final block, and static-utility v11 also fails. v12 changes policy structure rather than risk weights: corroboration constrains action scope, recurrence watches suppress repeated strong actions, and idle decisions expand deception coverage. The compound change prevents a single-factor causal claim, but its improvement direction is consistent across fresh development, validation, and both final Red policies.
+
+\subsection{RQ4: Transfer Boundaries}
+
+Chain existence is insufficient evidence of useful transfer. ClearScope E5 produces chains, but those chains expand more benign than malicious nodes. Conversely, a static-graph adapter over public MAGIC scores produces no valid chains on THEIA or TRACE because the preprocessed graph lacks the temporal session structure required by our representation.
+
+In CAGE, the shared risk and chain logic executes, but the initial mapping from evidence to action is mismatched. A recent-event bit is not persistent compromise state, and a process-level Remove does not cover process-plus-connection evidence. Constraining action scope and verifying recurrence closes this boundary for the two evaluated Red policies. A representation that supports explanation still does not automatically define a good control policy; its evidence scope must be carried into response selection.
+
+\section{Discussion}
+
+\subsection{What Transfers}
+
+CADETS and THEIA use different operating systems and provenance collectors but preserve CDM18 event paths and temporal sessions. Under those conditions, the same stage mapping, 18-second window, edge threshold, maximum depth, and grounded node contribution improve matched-budget attribution in the same direction. The strongest supported claim is therefore narrow: when temporal session and path context are preserved, hierarchical traces can improve E3 investigation priority across performers.
+
+\subsection{What Does Not Transfer}
+
+Attribution is not detection. Attack-free footprints and failed calibration prevent us from treating chain membership as a low-false-positive alert. Chain creation is also not synonymous with high QoA: E5 produces 97 chains but worse attribution than anomaly-only. Finally, interpretable risk scores alone do not guarantee effective control; the failed CAGE variants show that response scope and event semantics must be modeled explicitly.
+
+\subsection{Claim Boundary}
+
+We do not claim that the framework:
+\begin{itemize}
+\item outperforms public CAGE agents or Red policies beyond the two evaluated here;
+\item outperforms MAGIC, KAIROS, ORTHRUS, or PIDSMaker systems;
+\item transfers to CDM20/E5 or every provenance performer;
+\item produces a calibrated low-false-positive alert stream; or
+\item uses an LLM for action selection or beats a prompt-only LLM.
+\end{itemize}
+
+The contribution is instead a reproducible shared core, a two-performer E3 attribution result, a two-policy CAGE improvement over an internal baseline, preservation of unsuccessful variants, and an explicit diagnosis of representation and action-scope boundaries.
+
+\section{Limitations and Threats to Validity}
+
+\begin{enumerate}
+\item LayerChain is an internal baseline, not a rerun of a top public CAGE submission.
+\item The final CAGE experiment covers the default and one chain-aware Red policy; it does not cover all published stealth, aggression, phishing, or decoy-detection variants.
+\item Matched anomaly-only uses our own benign profile with chaining removed, not a state-of-the-art neural PIDS under identical preprocessing and compute.
+\item Fine malicious nodes are few and causally dependent. We do not assign statistical significance to TC node counts.
+\item The relation-to-stage mapping is attack-label agnostic but still encodes domain knowledge about the CDM event vocabulary.
+\item ClearScope E5 changes performer, OS, schema, and path availability simultaneously, preventing single-factor causal attribution.
+\item The attack-side agent produces provenance hypotheses and investigation priorities; it does not execute a live network exploit.
+\item No LLM API is used, so the study contains no prompt-only LLM baseline.
+\item Matched-budget malicious-node recovery is only a proxy for analyst effort; no human analyst study is performed.
+\end{enumerate}
+
+\section{Conclusion}
+
+We apply a common typed-evidence, predicate, and causal-chain core to attack investigation and autonomous defense. The method improves matched-budget malicious-node recovery on CADETS and THEIA E3, but does not improve CADETS AP and emits broad attack-free footprints. On ClearScope E5, chain formation persists while attribution degrades; a path-removal counterfactual identifies representation fidelity as a major boundary. In CAGE, scope-constrained response improves reward and every attack-impact outcome over a simpler internal baseline under two Red policies.
+
+Hierarchical causal chaining is therefore not a universal performance layer. It is useful when rich temporal and semantic context is preserved and when online response scope covers the supporting evidence. Future work should separately evaluate schema-independent context representations, analyst-budget-aware calibration, and additional independently implemented Red policies under fresh evaluation splits.
+
+\subsubsection{Reproducibility}
+The artifact records benchmark and reference-code commits, data splits, frozen constants, failed versions, per-run CAGE results, fine-label TC outputs, and SHA-256 identifiers for the result files supporting the manuscript. It includes the full protocol, aggregate and raw results, and a checker for the reported quantitative values. One hundred fifty unit and integration tests pass across the split workstation environments. No API credential is used or stored.
+
+\bibliographystyle{splncs04}
+\bibliography{references}
+
+\end{document}

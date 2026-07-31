@@ -1,0 +1,161 @@
+{
+  "threshold": 0.17950530037920376,
+  "days": {
+    "6": {
+      "eligible": 15750,
+      "limits": {
+        "2048": {
+          "selected": 2048,
+          "stages": {
+            "ingress": 643,
+            "trust_break": 409,
+            "lifecycle": 587,
+            "mission_effect": 409
+          },
+          "temporal_pairs": 28563,
+          "compatible_pairs": 10907,
+          "passing_edges": 9841,
+          "normalized_edges": 9843,
+          "maximum_edge": 0.8625,
+          "stage_pairs": {
+            "mission_effect->mission_effect": 201,
+            "trust_break->lifecycle": 136,
+            "trust_break->trust_break": 421,
+            "lifecycle->trust_break": 13,
+            "lifecycle->lifecycle": 9480,
+            "trust_break->mission_effect": 246,
+            "ingress->ingress": 409,
+            "lifecycle->mission_effect": 1
+          },
+          "passing_pairs": {
+            "mission_effect->mission_effect": 201,
+            "trust_break->lifecycle": 136,
+            "trust_break->trust_break": 280,
+            "lifecycle->lifecycle": 8684,
+            "trust_break->mission_effect": 242,
+            "ingress->ingress": 298
+          },
+          "chains": 0,
+          "normalized_chains": 0
+        }
+      }
+    },
+    "11": {
+      "eligible": 19774,
+      "limits": {
+        "2048": {
+          "selected": 2048,
+          "stages": {
+            "ingress": 653,
+            "trust_break": 409,
+            "lifecycle": 577,
+            "mission_effect": 409
+          },
+          "temporal_pairs": 22991,
+          "compatible_pairs": 9154,
+          "passing_edges": 8066,
+          "normalized_edges": 8068,
+          "maximum_edge": 0.8625,
+          "stage_pairs": {
+            "trust_break->trust_break": 358,
+            "trust_break->lifecycle": 130,
+            "ingress->ingress": 152,
+            "lifecycle->trust_break": 13,
+            "lifecycle->lifecycle": 7187,
+            "mission_effect->mission_effect": 1076,
+            "trust_break->mission_effect": 238
+          },
+          "passing_pairs": {
+            "trust_break->trust_break": 229,
+            "trust_break->lifecycle": 130,
+            "ingress->ingress": 133,
+            "lifecycle->lifecycle": 6262,
+            "mission_effect->mission_effect": 1076,
+            "trust_break->mission_effect": 236
+          },
+          "chains": 0,
+          "normalized_chains": 0
+        }
+      }
+    },
+    "12": {
+      "eligible": 16904,
+      "limits": {
+        "2048": {
+          "selected": 2048,
+          "stages": {
+            "ingress": 529,
+            "trust_break": 409,
+            "lifecycle": 701,
+            "mission_effect": 409
+          },
+          "temporal_pairs": 31999,
+          "compatible_pairs": 10875,
+          "passing_edges": 9695,
+          "normalized_edges": 9697,
+          "maximum_edge": 0.8625,
+          "stage_pairs": {
+            "trust_break->lifecycle": 157,
+            "trust_break->trust_break": 503,
+            "lifecycle->trust_break": 28,
+            "lifecycle->lifecycle": 9108,
+            "trust_break->mission_effect": 172,
+            "ingress->ingress": 260,
+            "mission_effect->mission_effect": 647
+          },
+          "passing_pairs": {
+            "trust_break->lifecycle": 157,
+            "trust_break->trust_break": 365,
+            "lifecycle->lifecycle": 8174,
+            "trust_break->mission_effect": 166,
+            "ingress->ingress": 186,
+            "mission_effect->mission_effect": 647
+          },
+          "chains": 0,
+          "normalized_chains": 0
+        }
+      }
+    },
+    "13": {
+      "eligible": 28084,
+      "limits": {
+        "2048": {
+          "selected": 2048,
+          "stages": {
+            "ingress": 516,
+            "trust_break": 409,
+            "lifecycle": 515,
+            "mission_effect": 608
+          },
+          "temporal_pairs": 23961,
+          "compatible_pairs": 19305,
+          "passing_edges": 18803,
+          "normalized_edges": 18807,
+          "maximum_edge": 0.8625,
+          "stage_pairs": {
+            "trust_break->lifecycle": 20,
+            "trust_break->trust_break": 53,
+            "lifecycle->trust_break": 3,
+            "lifecycle->lifecycle": 14432,
+            "trust_break->mission_effect": 234,
+            "ingress->ingress": 2131,
+            "mission_effect->mission_effect": 2424,
+            "lifecycle->mission_effect": 7,
+            "mission_effect->lifecycle": 1
+          },
+          "passing_pairs": {
+            "trust_break->lifecycle": 20,
+            "trust_break->trust_break": 37,
+            "lifecycle->lifecycle": 14084,
+            "trust_break->mission_effect": 232,
+            "ingress->ingress": 2003,
+            "mission_effect->mission_effect": 2424,
+            "lifecycle->mission_effect": 3
+          },
+          "chains": 0,
+          "normalized_chains": 0
+        }
+      }
+    }
+  }
+}
