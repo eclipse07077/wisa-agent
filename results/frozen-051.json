@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "name": "cert-051.json.gz",
+      "bytes": 27267,
+      "sha256": "20e04656ff56f0f2c5a8a5df7fe6d3df2539a4f7ff4f8f8307edf7d68d7cbe5e"
+    },
+    {
+      "name": "cert-plan.json",
+      "bytes": 8137,
+      "sha256": "6c375e89ee0dac6b681b21475244763c9039d6428f3d9c1fb941b430212957a8"
+    },
+    {
+      "name": "route-051.json.gz",
+      "bytes": 835754,
+      "sha256": "ec1e386c1af4c2aa06db60e73cc94a5511be68e1c657d3a8b4d27e3c82ab1466"
+    },
+    {
+      "name": "score-051.json.gz",
+      "bytes": 33246876,
+      "sha256": "551fc12945a6b71d4549c5763e1c3fd8f502b94fcd0eb01fed2e11f025341b0c"
+    },
+    {
+      "name": "v6-051.json.gz",
+      "bytes": 658238,
+      "sha256": "569c56a2d505e7dea9c4332c71db626afb264e53e29787975068d3ae6946a04f"
+    }
+  ]
+}

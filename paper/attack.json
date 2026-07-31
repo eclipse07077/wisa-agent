@@ -1,0 +1,83 @@
+{
+  "schema": 3,
+  "status": "complete_heldout_safety_falsified",
+  "method": "ravel_cert_v4",
+  "paper": {
+    "title": "RAVEL-C: Certified Minimum-Distortion Transport for Budgeted Attack Investigation",
+    "pages": 12,
+    "format": "llncs",
+    "state_of_the_art_claim": false,
+    "performance_superiority_claim": false,
+    "negative_heldout_reported": true
+  },
+  "benchmark": {
+    "framework": "PIDSMaker",
+    "velox_commit": "54f687c54aa03e5519cf44953d5ee44f5f6a4a28",
+    "budget": 512,
+    "development": [
+      "optc_h501",
+      "optc_h201"
+    ],
+    "heldout": "optc_h051",
+    "official_dump_reproduced": false,
+    "local_large_score_manifest": false
+  },
+  "verdict": {
+    "semantic_certificate": true,
+    "lexicographic_projection": true,
+    "fixed_budget_no_free_lunch": true,
+    "primary_safety": false,
+    "secondary_efficacy": false,
+    "competitive_noninferiority": false,
+    "strict_all_comparators": false,
+    "heldout_recovery": {
+      "velox": 4,
+      "flowsub": 8,
+      "fractional": 2,
+      "certified": 3
+    }
+  },
+  "checks": {
+    "focused_cert_tests": "11_passed",
+    "non_cage_tests": "134_passed_1_skipped",
+    "cage_split_tests": "16_passed",
+    "pdf_page_limit": true,
+    "label_barrier": true
+  },
+  "sha256": {
+    "src/wisa_agent/tc/cert.py": "f5e4972ce5f6cecb667fb69706ed4b52899355a618d8bfe9cc68806e94e3ce89",
+    "src/wisa_agent/tc/ravel.py": "4f8a6da8ea5c978ca42f74673d01d72b94de2d7c5371a48fbeafb295e0ad0751",
+    "src/wisa_agent/tc/transport.py": "97b24bb8822247fab322944a9624e953b109bdc7737b21099e0e173998604c73",
+    "experiments/cert.py": "1055f1bc4b5acf30874f3744dcafebea0fe34ab40a98fb1bd66d60060e0deec7",
+    "experiments/cert_check.py": "91036afff7845fa5ff28a6202e3900b9fed5ed3242dd1110b73402f9cb7e4d9c",
+    "experiments/cert_eval.py": "a8241f6650f809f7c7541bfa8104849e34ef78a8550dca170888eca7c277ac46",
+    "experiments/orthrus_eval.py": "5b4acd642701c2889a71cb16a707206c2bbbdc72240e8840e51967e463a788a5",
+    "tests/test_cert.py": "401dec9663ed817c258f90047117f68da93152813806c9a755936bd2247b5296",
+    "tests/test_cert_check.py": "af09c17b459f7f0e407f5e617e995ff24b7164c43209c8b978c401bec43da410",
+    "tests/test_orthrus_eval.py": "e5764e71820e964cfeb3fc6f0d8b06410e8560163504139ae1fa4ae102b25b89",
+    "results/ravel.json": "781eafd9e307dda050302b5c0de75b5a8a4f91daf595637a06bf29e351d073a1",
+    "results/cert-plan.json": "6c375e89ee0dac6b681b21475244763c9039d6428f3d9c1fb941b430212957a8",
+    "results/frozen-051.json": "af72b40f0552ad0b368161ffd1b10c379d7c2cee838debfa919dbf72f9d829b1",
+    "results/audit-051.json": "474b793467a7adabf2d486ddb880e79799975331c80bd904440193838595b942",
+    "results/label-051.json": "102190a52cd6a12df449c64257c3df37741787659856ec6e1ade11138b5f9bc8",
+    "results/eval-cert-051.json": "cee25b17dc9310feaf81d7a35da7732e96e189aa1175284b508570742de98ca8",
+    "results/route-051.json.gz": "ec1e386c1af4c2aa06db60e73cc94a5511be68e1c657d3a8b4d27e3c82ab1466",
+    "results/v6-051.json.gz": "569c56a2d505e7dea9c4332c71db626afb264e53e29787975068d3ae6946a04f",
+    "results/cert-051.json.gz": "20e04656ff56f0f2c5a8a5df7fe6d3df2539a4f7ff4f8f8307edf7d68d7cbe5e",
+    "results/eval-cert-501.json": "6007d64295c634e1bd264fd824920b8c9892900b358b9bf2ea09bc7e0699cf8f",
+    "results/eval-cert-201.json": "13eb0c8ee374ab018080c463814472d1781af960d5cc370ea4f7567eb0a32d54",
+    "README.md": "4ef2eca829611ce26c15c547d543661b348a75393f8462bcee123cce7bc953e4",
+    "docs/protocol.md": "5bbf3c8e7d68321f99a9913a63fea1587bf1c35fbe3568d3b941f3ff04136e12",
+    "docs/ravel.md": "70afe73b91c26764506784a8fb5ca30499c23c59da4d0a1b89eb9e0cbb8d37e0",
+    "docs/research.md": "075c80cef5fcf61d25c160202fb999e168959f2130f0bdc330a8ee5e0b69bc82",
+    "docs/results.md": "284056cf198afd37e0cc8fe21ae29ca2723f37464f0e44ba669488d42c323764",
+    "docs/external.md": "b8d05682ce7806dd6b5c8f5c515120df1a147e16d2238e95906ad53c61a462cf",
+    "paper/claims.md": "4cd09d4764425b4f6bf1c02d91e4db87931c13410fc108f4090b0f65828d89c0",
+    "paper/attack.tex": "d2441297d9165d3a50c9ebc7b11a84cb30e3a249ee53d0e89f63c2804236bc62",
+    "paper/attack.md": "10d411c7fa89dc8408f6d6dd8ba53e33968a7a5e8b9745b1ee33796e21a42259",
+    "paper/references.bib": "d8f2db7e508b4be663099e85514cb3461244cb44b9a2bdd7d9c8edf1c38198d6",
+    "paper/attack-check.py": "c7c9216c1a88c77ea9bf757a51cfd2935d5aea194406a9c8aa3711f8f6a1e8a6",
+    "paper/attack.ps1": "621cae4df2851eb759586cf42274e5b6e80e0258dc03ea0c6125413141460723",
+    "output/pdf/attack.pdf": "b0468a2845c2d47b4b6a80921f3404948b89038b9ccaabbbaf6205d7e89cbbde"
+  }
+}

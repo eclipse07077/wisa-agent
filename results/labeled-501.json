@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "name": "eval-501-tgn.json",
+      "bytes": 20608,
+      "sha256": "14097a1d3bcb4d777e8b7cf42b192fb3919d677071727e7421bc65b9a6feb8c5"
+    },
+    {
+      "name": "eval-501.json",
+      "bytes": 21114,
+      "sha256": "d72b9abe03c7f45fe07964c473b35a48ade477389c78fa46889b7dfd9bb883a7"
+    },
+    {
+      "name": "eval-ablation-501-tgn.json",
+      "bytes": 19573,
+      "sha256": "a8e0251f3c670afe6b5519a334064e4cce82bd8e06eb418ea7a1aea4f25249cc"
+    },
+    {
+      "name": "eval-ablation-501.json",
+      "bytes": 19813,
+      "sha256": "15e4c7d4553fa37f0fdf9b4213fe92dafb054a2c32a91ddcfe74eabe558382a4"
+    },
+    {
+      "name": "frozen-501.json",
+      "bytes": 1750,
+      "sha256": "4b7f3134ebe845b81ea5f150c2f37e80346228168a9767657148bcb04faa3179"
+    },
+    {
+      "name": "ground_truth_corrected_sc2_evts_sysclient0501.json.gz",
+      "bytes": 6045247,
+      "sha256": "302b849b2e462abadaef8987b21d34c363c4e4f84ec6abf44f861dffbb71bada"
+    },
+    {
+      "name": "ground_truth_corrected_sc2_updated.csv",
+      "bytes": 8641,
+      "sha256": "17d8286004e141db6b034f6acca4bf282429d32d092442b3188a3af0563fdba4"
+    }
+  ]
+}

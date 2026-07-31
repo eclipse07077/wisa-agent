@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "name": "eval-201-tgn.json",
+      "bytes": 63424,
+      "sha256": "c68f9801e0a83a108075a118dc0f88c82ade0812803c1e17436b3886be84a584"
+    },
+    {
+      "name": "eval-201.json",
+      "bytes": 63425,
+      "sha256": "898b2bd078affb7f1215a44bbf4936bd2560ef8ceace974aab4a516b3a0cfe36"
+    },
+    {
+      "name": "eval-ablation-201-tgn.json",
+      "bytes": 61021,
+      "sha256": "989b0c15a2da3cc06e6c810474ec2ef211909bd761b63ac00aad22ba98bcdd88"
+    },
+    {
+      "name": "eval-ablation-201.json",
+      "bytes": 61021,
+      "sha256": "9fd35b347b4fbd6e6a16a57317c90b9562ec1d26b552422eeb20952bf448bb6a"
+    },
+    {
+      "name": "eval-methods-201.json",
+      "bytes": 123327,
+      "sha256": "2006ebe24b67358aee7baa90a99aee91ebd71daf0c39f8fb099b69e486341715"
+    },
+    {
+      "name": "frozen-201.json",
+      "bytes": 1906,
+      "sha256": "b87874150b7a9a9929354911da9254e804379cd63b30f5930499da6a46f883bc"
+    },
+    {
+      "name": "ground_truth_corrected_sc1_evts_sysclient0201.json.gz",
+      "bytes": 5270068,
+      "sha256": "a984e0c93ff4c5895cb9f3deacdc6ec7669e1becaabe1fa797d5227a4e722c93"
+    },
+    {
+      "name": "ground_truth_corrected_sc1_updated.csv",
+      "bytes": 36333,
+      "sha256": "87e53d592c661080c355b4bd3c3e9ad603b863ab7c1db242177e2afc401bec93"
+    }
+  ]
+}

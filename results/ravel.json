@@ -1,0 +1,130 @@
+{
+  "schema": 2,
+  "method": "ravel_cert_v4",
+  "status": "heldout_actor_safety_falsified",
+  "claim_scope": {
+    "semantic_certificate": true,
+    "exact_lexicographic_projection": true,
+    "actor_recall_safety": false,
+    "performance_superiority": false,
+    "state_of_the_art": false,
+    "official_optc_dump_reproduction": false
+  },
+  "objective": {
+    "certificate": "global_uuid_universal_cut_iff_full_fracture",
+    "allocation": "exact_lexicographic_matching",
+    "priority": [
+      "maximum_certified_transport_count",
+      "maximum_fractional_assignment_agreement",
+      "maximum_total_normalized_conformal_evidence"
+    ],
+    "edge_rank": "(B+1)^2*transport+(B+1)*source_agreement+normalized_evidence",
+    "fixed_budget_safety_without_label_assumptions": "impossible_for_any_nontrivial_replacement"
+  },
+  "benchmark": {
+    "framework": "PIDSMaker",
+    "detector": "public_velox_configuration_on_corrected_projection",
+    "budget": 512,
+    "development": [
+      "optc_h501",
+      "optc_h201"
+    ],
+    "heldout": "optc_h051",
+    "heldout_label_rows": 114,
+    "heldout_score_universe": 1470624
+  },
+  "development": {
+    "h501": {
+      "score_universe": 1488666,
+      "proof_candidates": 92670,
+      "certified_candidates": 34,
+      "certified_transports": 7,
+      "velox_recovered": 7,
+      "flowsub_recovered": 11,
+      "fractional_recovered": 10,
+      "certified_recovered": 8,
+      "changed_from_velox": 7,
+      "declined_intervals": 0,
+      "nonempty_intervals": 65,
+      "comparison_note": "development_only_and_flowsub_post_label"
+    },
+    "h201": {
+      "score_universe": 1437512,
+      "proof_candidates": 298021,
+      "certified_candidates": 19,
+      "certified_transports": 11,
+      "velox_recovered": 2,
+      "flowsub_recovered": 4,
+      "fractional_recovered": 1,
+      "certified_recovered": 2,
+      "changed_from_velox": 11,
+      "declined_intervals": 0,
+      "nonempty_intervals": 216,
+      "comparison_note": "development_only"
+    }
+  },
+  "heldout": {
+    "dataset": "optc_h051",
+    "label_barrier_passed": true,
+    "source_transports": 59,
+    "proof_candidates": 113495,
+    "certified_candidates": 4,
+    "certified_transports": 4,
+    "source_agreement": 457,
+    "changed_from_source": 55,
+    "witnessed_routes": 5,
+    "results": {
+      "velox": {
+        "recovered": 4,
+        "precision": 0.0078125,
+        "covered_recall": 0.03508771929824561,
+        "mcc": 0.016395863822230627
+      },
+      "flowsub": {
+        "recovered": 8,
+        "precision": 0.015625,
+        "covered_recall": 0.07017543859649122,
+        "mcc": 0.03295604302001206
+      },
+      "fractional": {
+        "recovered": 2,
+        "precision": 0.00390625,
+        "covered_recall": 0.017543859649122806,
+        "mcc": 0.00811577422333991
+      },
+      "certified": {
+        "recovered": 3,
+        "precision": 0.005859375,
+        "covered_recall": 0.02631578947368421,
+        "mcc": 0.012255819022785268
+      }
+    },
+    "comparisons": {
+      "velox_changed_slots": 4,
+      "velox_baseline_only_malicious": 1,
+      "velox_candidate_only_malicious": 0,
+      "fractional_changed_slots": 55,
+      "fractional_recovered_delta": 1
+    },
+    "registered_endpoints": {
+      "primary_safety": false,
+      "secondary_efficacy": false,
+      "competitive_noninferiority": false,
+      "strict_all_comparators": false
+    }
+  },
+  "receipts": {
+    "plan_sha256": "6c375e89ee0dac6b681b21475244763c9039d6428f3d9c1fb941b430212957a8",
+    "freeze_sha256": "af72b40f0552ad0b368161ffd1b10c379d7c2cee838debfa919dbf72f9d829b1",
+    "audit_sha256": "474b793467a7adabf2d486ddb880e79799975331c80bd904440193838595b942",
+    "score_sha256": "551fc12945a6b71d4549c5763e1c3fd8f502b94fcd0eb01fed2e11f025341b0c",
+    "routes_sha256": "ec1e386c1af4c2aa06db60e73cc94a5511be68e1c657d3a8b4d27e3c82ab1466",
+    "source_sha256": "569c56a2d505e7dea9c4332c71db626afb264e53e29787975068d3ae6946a04f",
+    "candidate_sha256": "20e04656ff56f0f2c5a8a5df7fe6d3df2539a4f7ff4f8f8307edf7d68d7cbe5e",
+    "labels_sha256": "ff8af2562c6746b48f81445fa36a5860ebd9a4402fa6b83cd47ddda35bfdeb3b",
+    "evaluation_sha256": "cee25b17dc9310feaf81d7a35da7732e96e189aa1175284b508570742de98ca8",
+    "local_score_manifest": false,
+    "remote_score_manifest_bytes": 33246876
+  },
+  "verdict": "The structural certificate and exact projection are supported. Held-out H051 falsifies actor-recall safety and all superiority endpoints."
+}

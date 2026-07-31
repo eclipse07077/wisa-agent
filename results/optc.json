@@ -1,0 +1,23 @@
+{
+  "dataset": "optc_h051",
+  "status": "inconclusive_zero_official_budget",
+  "label_free": true,
+  "official": {
+    "detector": "velox",
+    "threshold_method": "max_val_loss",
+    "validation_files": 1920,
+    "test_files": 4852,
+    "scored_nodes": 1470624,
+    "validation_threshold": 18.091964721679688,
+    "maximum_test_score": 13.815710067749023,
+    "strict_threshold_seeds": 0,
+    "score_sha256": "12e4a7f7a68e0ef7a32192f17ab4bc507fdc3b7d478f469f7506df7ab867468c",
+    "manifest_sha256": "6f23c493d7e188f1e7ba62bc2efc9d4a2782747484ed8c5d49b51da80c39caea"
+  },
+  "reconstruction": {
+    "continuous_chains": 140,
+    "seeded_chains": 0,
+    "ravel_evaluated": false
+  },
+  "reason": "공식 strict-threshold 예산이 0이라 동일 예산 비교가 정의되지 않는다."
+}

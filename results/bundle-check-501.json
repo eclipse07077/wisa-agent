@@ -1,0 +1,22 @@
+{
+  "method": "ravel_bundle_execution_equivalence_v1",
+  "dataset": "optc_h501",
+  "labels_used": false,
+  "bundle_sha256": "24fe9e706c536ef102c539ef493774f6d31e383edaee7b7dd81373a060b154e6",
+  "content_equal_except_runtime": {
+    "ravel_v5": true,
+    "ravel_v6": true,
+    "ablation": true
+  },
+  "reference_sha256": {
+    "ravel_v5": "533d5e55c18ee37e3db2af3c7392bc0cb0dd5b95cd206743a105ca516628fce1",
+    "ravel_v6": "5ef8a938cf3f6b84ed3af41159f0328c8c4c25c35bc6594748a4d0be39f0c13c",
+    "ablation": "d9e5179a763c189481c9ffb4ec95b30aa46929728258d4c03ca1975c8064a410"
+  },
+  "candidate_sha256": {
+    "ravel_v5": "2da9b523b4be0661c064ebe838c736c899b1dd3a14826184863c23e6c8511ed4",
+    "ravel_v6": "b7fcc37ff3bb5244e057f8631c6b46aee6e927a897e55983084e4b44df1e9239",
+    "ablation": "729658819f906eacf83f689c17201b3eae4d1a46b0de12f96dbd7087467a87a4"
+  },
+  "bundle_runtime_seconds": 236.09864536498208
+}
