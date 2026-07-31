@@ -1,0 +1,44 @@
+{
+  "schema": 2,
+  "method": "report_v12",
+  "benchmark": "CAGE Challenge 4",
+  "steps": 500,
+  "baseline": "LayerChain",
+  "development_history": {
+    "report_v6_final_reward_difference": -564.72,
+    "report_v6_ci95": [
+      -812.212,
+      -319.8637500000001
+    ],
+    "report_v10_selected": false,
+    "report_v11_selected": false
+  },
+  "final": {
+    "seeds": [
+      14400,
+      14499
+    ],
+    "episodes_per_policy": 100,
+    "official_red": {
+      "reward_difference": 468.65,
+      "reward_ci95": [
+        276.23825,
+        656.8929999999999
+      ],
+      "privileged_hosts_difference": -2.84,
+      "impacted_hosts_difference": -0.89,
+      "successful_impacts_difference": -0.85
+    },
+    "chain_red": {
+      "reward_difference": 595.39,
+      "reward_ci95": [
+        410.389,
+        784.2849999999999
+      ],
+      "privileged_hosts_difference": -2.15,
+      "impacted_hosts_difference": -1.05,
+      "successful_impacts_difference": -1.08
+    }
+  },
+  "verdict": "범위 제약 방어 v12는 두 Red 정책에서 LayerChain보다 reward가 높고 모든 공격 영향 지표가 낮았다."
+}

@@ -9,11 +9,21 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 
-CONDITIONS = tuple(
-    (mode, red)
-    for red in ("default", "chain")
-    for mode in ("sleep", "reactive", "layerchain")
+MODES = (
+    "sleep",
+    "reactive",
+    "layerchain",
+    "report",
+    "report_v9",
+    "report_v10",
+    "report_v11",
+    "report_v12",
+    "report_transition",
+    "report_no_chain",
+    "report_no_honeypot",
+    "report_no_guard",
 )
+REDS = ("default", "chain")
 
 
 def run_condition(
@@ -60,7 +70,12 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=3407)
     parser.add_argument("--jobs", type=int, default=3)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--modes", nargs="+", choices=MODES, default=MODES)
+    parser.add_argument("--reds", nargs="+", choices=REDS, default=("default",))
     args = parser.parse_args()
+    conditions = tuple(
+        (mode, red) for red in args.reds for mode in args.modes
+    )
 
     output = args.output.resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -81,7 +96,7 @@ def main() -> None:
                 args.steps,
                 args.seed,
             ): f"{mode}__{red}"
-            for mode, red in CONDITIONS
+            for mode, red in conditions
         }
         for future in as_completed(futures):
             key, condition_output, stdout = future.result()
@@ -89,7 +104,7 @@ def main() -> None:
             print(stdout, flush=True)
 
     merged = {}
-    for mode, red in CONDITIONS:
+    for mode, red in conditions:
         key = f"{mode}__{red}"
         condition = json.loads(outputs[key].read_text(encoding="utf-8"))
         merged[key] = condition[key]

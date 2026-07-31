@@ -1,0 +1,37 @@
+{
+  "method": "frozen_label_barrier_audit_v1",
+  "frozen_sha256": "4b7f3134ebe845b81ea5f150c2f37e80346228168a9767657148bcb04faa3179",
+  "files": 11,
+  "bundles": [
+    {
+      "dataset": "optc_h501",
+      "detector": "ravel_tgn",
+      "score_universe": 1488666,
+      "budget": 512,
+      "chains": 93,
+      "v5_nodes": 512,
+      "v6_nodes": 512,
+      "proof_transports": 57,
+      "objective": 18.325096640375612,
+      "ablations": {
+        "topology": 512,
+        "rank": 512
+      }
+    },
+    {
+      "dataset": "optc_h501",
+      "detector": "velox",
+      "score_universe": 1488666,
+      "budget": 512,
+      "chains": 122,
+      "v5_nodes": 512,
+      "v6_nodes": 512,
+      "proof_transports": 59,
+      "objective": 15.721660347192163,
+      "ablations": {
+        "topology": 512,
+        "rank": 512
+      }
+    }
+  ]
+}

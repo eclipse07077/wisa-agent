@@ -1,0 +1,174 @@
+{
+  "schema": 1,
+  "study": "ravel_cert_h051_heldout",
+  "registered_at": "2026-07-31T12:55:27+09:00",
+  "label_opened": false,
+  "dataset": "optc_h051",
+  "label_path": "Ground_Truth/orthrus/h051/node_h051_0925.csv",
+  "label_scope": "single_heldout_attack",
+  "budget": 512,
+  "root_policy": "deterministic_top_k_capacity",
+  "root_order": [
+    "score_descending",
+    "uuid_ascending"
+  ],
+  "detector": "official_velox_edge_loss_maxima",
+  "method": {
+    "source": "ravel_v6_candidate_graph_and_comparator",
+    "certifier": "global_uuid_universal_cut_iff_full_fracture",
+    "allocation": "exact_lexicographic_matching",
+    "primary_objective": "maximum_certified_transport_count",
+    "secondary_objective": "maximum_ravel_v6_assignment_agreement_among_primary_optima",
+    "tertiary_objective": "maximum_total_conformal_evidence_among_primary_secondary_optima",
+    "dominance_scale": "budget_plus_one_squared_budget_plus_one_and_one",
+    "fallback": "private_detector_root",
+    "thresholds": [],
+    "label_inputs": []
+  },
+  "comparators": [
+    "official_velox_top_512",
+    "flowsub_full_top_512",
+    "ravel_v6_top_512"
+  ],
+  "endpoints": {
+    "primary_safety": "certified_transports_gt_0_and_certified_recovered_ge_official_recovered",
+    "secondary_efficacy": "certified_transports_gt_0_and_certified_recovered_gt_official_recovered",
+    "competitive_noninferiority": "certified_transports_gt_0_and_certified_recovered_ge_flowsub_recovered",
+    "strict_all_comparators": "certified_transports_gt_0_and_certified_recovered_gt_max_official_flowsub_ravel_v6"
+  },
+  "interpretation": {
+    "primary_only": "safe_selective_extension_without_superiority",
+    "secondary": "improvement_over_detector_roots",
+    "competitive": "noninferiority_to_strong_composite_comparator",
+    "strict": "heldout_superiority_over_all_frozen_comparators",
+    "failure": "reject_the_corresponding_claim_without_h051_tuning"
+  },
+  "development_status": {
+    "h501": "retrospective_method_development_only",
+    "h201": "retrospective_method_development_only",
+    "h051_previous_strict_threshold": "preserved_zero_budget_inconclusive_result",
+    "h051_current_labels": "unopened"
+  },
+  "input_sha256": {
+    "pidsmaker_commit": "54f687c54aa03e5519cf44953d5ee44f5f6a4a28",
+    "optc_051_dump": "8b3dc188bc932153e3feca8b2c6254ce692e5478bc5e64d1b8d0f0c6b421f21b",
+    "optc_sqlite": "aa762123532f5bf29c24cbb390d55344a9bbc276cb030542abeee2a09f4f59ec",
+    "previous_h051_manifest": "6f23c493d7e188f1e7ba62bc2efc9d4a2782747484ed8c5d49b51da80c39caea",
+    "official_score_composite": "12e4a7f7a68e0ef7a32192f17ab4bc507fdc3b7d478f469f7506df7ab867468c"
+  },
+  "code_sha256": {
+    "src/wisa_agent/tc/cert.py": "f5e4972ce5f6cecb667fb69706ed4b52899355a618d8bfe9cc68806e94e3ce89",
+    "src/wisa_agent/tc/ravel.py": "4f8a6da8ea5c978ca42f74673d01d72b94de2d7c5371a48fbeafb295e0ad0751",
+    "src/wisa_agent/tc/transport.py": "97b24bb8822247fab322944a9624e953b109bdc7737b21099e0e173998604c73",
+    "src/wisa_agent/tc/cdm_agent.py": "fef06481beefaa45c44afe2dcc94590257fc9d7510a9ff2c4e21270dd8109667",
+    "experiments/cdm.py": "123bb7fbbd7ef1c1eb935f710dc057d7d8498e35da09580b39da796cbbb309d5",
+    "experiments/bear.py": "150301a479da5fd90014ca7fbe0d620a56f91cc33a67e60ce5519b7065860184",
+    "experiments/velox_chain.py": "0e7fb0d4cee7893672d97ff52692ba756e13452f21e7919d8fc545f279612765",
+    "experiments/flow.py": "a3abce692e7ae0f8c219ffdeed65bae2780d512159a077b54b5f12ad89de49b3",
+    "experiments/transport.py": "e18382dafd0fd64e38fa86f2759ba8285e7888cc3d01041e0c25cae8da726904",
+    "experiments/cert.py": "1055f1bc4b5acf30874f3744dcafebea0fe34ab40a98fb1bd66d60060e0deec7",
+    "experiments/cert_check.py": "91036afff7845fa5ff28a6202e3900b9fed5ed3242dd1110b73402f9cb7e4d9c",
+    "experiments/orthrus_eval.py": "5b4acd642701c2889a71cb16a707206c2bbbdc72240e8840e51967e463a788a5",
+    "tests/test_cert.py": "401dec9663ed817c258f90047117f68da93152813806c9a755936bd2247b5296",
+    "tests/test_cert_check.py": "af09c17b459f7f0e407f5e617e995ff24b7164c43209c8b978c401bec43da410",
+    "tests/test_orthrus_eval.py": "e5764e71820e964cfeb3fc6f0d8b06410e8560163504139ae1fa4ae102b25b89"
+  },
+  "amendments": [
+    {
+      "registered_at": "2026-07-31T13:01:12+09:00",
+      "label_opened": false,
+      "scope": "test_only",
+      "change": "added_exhaustive_small_clause_check_for_universal_cut_iff_full_fracture",
+      "method_changed": false,
+      "endpoints_changed": false
+    },
+    {
+      "registered_at": "2026-07-31T13:03:43+09:00",
+      "label_opened": false,
+      "scope": "audit_only",
+      "change": "strengthened_certificate_field_checks_and_added_full_bundle_recomputation_test",
+      "method_changed": false,
+      "endpoints_changed": false
+    },
+    {
+      "registered_at": "2026-07-31T13:14:37+09:00",
+      "label_opened": false,
+      "scope": "method",
+      "change": "replaced_selected_edge_filter_with_exact_maximum_cardinality_matching_over_all_certified_candidate_edges",
+      "rationale": "the_selected_edge_filter_could_miss_an_available_full_fracture_edge_due_to_a_partial_edge_conflict_in_the_source_matching",
+      "method_changed": true,
+      "endpoints_changed": false
+    },
+    {
+      "registered_at": "2026-07-31T13:26:13+09:00",
+      "label_opened": false,
+      "scope": "implementation_only",
+      "change": "indexed_route_clauses_and_moved_source_reproduction_from_generator_to_independent_audit",
+      "rationale": "removed_repeated_route_scans_without_changing_the_certification_set_or_exact_allocation",
+      "method_changed": false,
+      "endpoints_changed": false
+    },
+    {
+      "registered_at": "2026-07-31T13:34:02+09:00",
+      "label_opened": false,
+      "scope": "method",
+      "change": "added_conformal_evidence_secondary_objective_among_maximum_cardinality_certified_matchings",
+      "rationale": "maximum_cardinality_alone_left_the_choice_between_equally_certified_matchings_to_uuid_order_and_could_discard_more_anomaly_evidence",
+      "development_observation": "h501_v2_retained_aggregate_recovery_but_failed_segment_no_decline",
+      "method_changed": true,
+      "endpoints_changed": false
+    },
+    {
+      "registered_at": "2026-07-31T13:39:16+09:00",
+      "label_opened": false,
+      "scope": "method",
+      "change": "inserted_minimum_source_distortion_between_certified_cardinality_and_conformal_evidence",
+      "rationale": "the_certifier_is_a_projection_of_the_ravel_v6_assignment_and_evidence_only_ties_could_make_unnecessary_source_exchanges",
+      "development_observation": "h501_v3_preserved_aggregate_recovery_but_still_failed_segment_no_decline",
+      "method_changed": true,
+      "endpoints_changed": false
+    },
+    {
+      "registered_at": "2026-07-31T13:41:11+09:00",
+      "label_opened": false,
+      "scope": "test_only",
+      "change": "added_bruteforce_tuple_oracle_for_the_three_level_lexicographic_matching",
+      "method_changed": false,
+      "endpoints_changed": false
+    },
+    {
+      "registered_at": "2026-07-31T13:42:13+09:00",
+      "label_opened": false,
+      "scope": "audit_only",
+      "change": "made_the_independent_audit_reject_method_comparator_or_endpoint_plan_drift",
+      "method_changed": false,
+      "endpoints_changed": false
+    },
+    {
+      "registered_at": "2026-07-31T13:59:35+09:00",
+      "label_opened": false,
+      "scope": "final_freeze_declaration",
+      "change": "froze_v4_after_h501_and_h201_development_confirmation",
+      "development_observation": "v4_matched_the_v1_projection_on_both_hosts_with_h501_7_to_8_and_h201_2_to_2_and_no_segment_declines",
+      "method_changed": false,
+      "endpoints_changed": false
+    }
+  ],
+  "barrier": {
+    "required_before_label_access": [
+      "score_manifest_complete",
+      "route_manifest_complete",
+      "ravel_v6_manifest_complete",
+      "certified_manifest_complete",
+      "ordered_freeze_complete",
+      "independent_audit_passed"
+    ],
+    "after_label_access": [
+      "no_method_change",
+      "no_root_policy_change",
+      "no_budget_change",
+      "no_evaluator_change",
+      "report_all_registered_endpoints"
+    ]
+  }
+}

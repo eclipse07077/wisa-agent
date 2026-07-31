@@ -1,0 +1,16 @@
+{
+  "method": "ravel_numeric_optimization_rejection_v1",
+  "dataset": "optc_h501",
+  "labels_used": false,
+  "reference_code_sha256": "4f8a6da8ea5c978ca42f74673d01d72b94de2d7c5371a48fbeafb295e0ad0751",
+  "candidate_code_sha256": "463c1cb6968e867716ef139df8e7504e5ecd457101867646209207d42c816a50",
+  "reference_output_sha256": "533d5e55c18ee37e3db2af3c7392bc0cb0dd5b95cd206743a105ca516628fce1",
+  "candidate_output_sha256": "bfaf0617b6682a6b0220c5106cc1b30d4ec9a01b81459315ec2837cf665cfe37",
+  "reference_runtime_seconds": 177.41378609702224,
+  "candidate_runtime_seconds": 11.326528187957592,
+  "selected_node_set_equal": true,
+  "root_assignment_order_equal": false,
+  "objective_delta": 1.0531801208912839e-07,
+  "accepted": false,
+  "reason": "Clause-total subtraction changed IEEE-754 utilities and root assignments, so the faster algebraically equivalent implementation was rejected to preserve frozen numeric outputs."
+}

@@ -1,0 +1,377 @@
+\documentclass[runningheads]{llncs}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{url}
+
+\newcommand{\ravel}{\textsc{Ravel}}
+\newcommand{\ravelc}{\textsc{Ravel-C}}
+\emergencystretch=2em
+
+\begin{document}
+
+\title{RAVEL-C: Certified Minimum-Distortion Transport for Budgeted Attack Investigation}
+\titlerunning{RAVEL-C: Certified Transport for Attack Investigation}
+
+\author{Anonymous Authors}
+\authorrunning{Anonymous Authors}
+\institute{Anonymous Institution}
+
+\maketitle
+
+\begin{abstract}
+Provenance detectors rank anomalous entities, but attack reconstruction can replace detector roots with weak path evidence while ignoring analyst budget and competition between alerts. We formulate investigation as proof-mass transport. Each root owns a conditional account; UUID-continuous typed chains define a factorized proof posynomial; global UUID deletion defines fractional fracture; and exact matching proposes one distinct node per root. We then introduce \ravelc, a certified projection. A singleton-hyperclause condition is necessary and sufficient for complete account fracture. A provably lexicographic matching first maximizes certified moves, then minimizes proposal distortion, then preserves conformal evidence, without a tuned mixing coefficient.
+
+We prove feasibility, complete-fracture soundness, lexicographic optimality, projection consistency, and a fixed-budget impossibility: without assumptions connecting evidence to labels, no nontrivial label-free replacement can uniformly preserve actor recall. This distinction survives a strict label barrier. H501/H201 development changes Velox recovery \(7\!\rightarrow\!8\) and \(2\!\rightarrow\!2\) with no interval decline, but cannot validate the tuned method. On genuinely held-out H051, fractional transport recovers two malicious UUIDs, \ravelc\ recovers three, Velox four, and FlowSub eight at budget 512. All four registered success outcomes fail. The contribution is a verifiable attack-attribution objective and a falsified safety claim, not a new detector or state-of-the-art result.
+
+\keywords{Attack investigation \and Provenance graph \and Certified attribution \and Minimum-distortion projection \and DARPA Transparent Computing}
+\end{abstract}
+
+\section{Introduction}
+
+Whole-system provenance detectors identify anomalous entities and reconstruct attack footprints \cite{cheng2024kairos,jiang2025orthrus}. Operationally, however, an analyst needs a concise set of entities that explains where investigation should continue. If a detector reports \(B\) nodes, adding every path endpoint makes effort grow with the session, copying chain scores duplicates repeated evidence, and independent ranking lets multiple alerts spend their slots on the same process. Detection quality, reconstruction quality, and analyst effort then become confounded.
+
+Existing systems optimize neighboring triage, reconstruction, query, or counterfactual-explanation objectives \cite{cheng2024kairos,jiang2025orthrus,wu2025provx}. In our literature audit, none coupled one investigation slot per detector root with cross-root node uniqueness. We ask: given detector roots, typed chains, and budget \(B=|R|\), which distinct nodes should an analyst inspect?
+
+Our starting point is the Root-Anchored Verification and Evidence Ledger, or \ravel. Each root opens a conditional account rather than contributing its detector score a second time. An admitted chain is a proof whose clauses are predicate endpoint sets and their continuity bridges. Alternatives within a clause are averaged; serial clauses and edge confidence are multiplied. Removing a node sets all of its alternatives to zero without renormalizing the remaining choices. The resulting exact account fracture is a root-node proposal utility.
+
+The final method, \ravelc, abstains from partial fracture. It admits only UUIDs whose deletion zeroes every route in an account, then projects the proposal onto this certified graph. Exact allocation uses an analytic three-level priority: maximum certified cardinality, minimum Hamming distortion from the proposal, and maximum conformal evidence. This design exposes rather than hides a fundamental limit: at a fixed top-\(B\) budget, any nontrivial label-free replacement can be worse for some actor labeling.
+
+Our contributions are a root-owned objective joining chain reconstruction, global UUID intervention, and duplicate-free allocation; a necessary-and-sufficient structural certificate for complete proof fracture; an exact minimum-distortion projection with a provable three-level objective; and a leakage-resistant evaluation that preserves failed variants and reserves H051 for a final label-barrier test.
+
+\section{Problem Formulation}
+
+\subsection{Inputs and output}
+
+Let \(V\) be the node universe of a provenance dataset. A frozen detector emits a score \(z_v\) for every \(v\in V\), a validation score multiset \(\mathcal Z\), and a root set \(R\subseteq V\). The root set is produced by the detector's registered rule, not by attack labels. Its size \(B=|R|\) is also the investigation budget.
+
+A separate, label-free adapter emits typed temporal chains. A chain \(c=(P_1,\ldots,P_k)\) contains ordered predicates with endpoint sets \(E_1,\ldots,E_k\) and edge confidences \(a_1,\ldots,a_{k-1}\). The desired output is a set \(S\subseteq V\) satisfying
+
+\[
+|S|=B.
+\]
+
+The evaluation compares \(S\) with the detector's own \(B\)-node output in the same node universe. This isolates allocation and reconstruction from detector AUROC or Average Precision.
+
+The fixed, label-free adapter fits structural and transition frequencies on training events, thresholds at the 0.995 validation quantile, and groups subject events into 18-second staged sessions. Retained three-to-five-predicate chains span at least three stages, terminate in mission effect or response, and are capped at 48 per test day. For adjacent predicates,
+\[
+a_j=0.30t_j+0.30q_j+0.25g_j+0.15h_j,
+\]
+where \(t_j\) is 18-second temporal proximity, \(q_j\) is context Jaccard similarity, and \(g_j,h_j\) are fixed stage and mission-transition scores. Only forward edges with \(a_j\ge0.58\) and a shared UUID survive; lookup values and deterministic tie order are artifact-fixed.
+
+\subsection{Design requirements}
+
+We require root anchoring, UUID continuity, bounded within-proof reuse, exactly \(B\) unique outputs, and detector conditioning. Once a root opens an account, its score magnitude is not mixed with chain evidence again; this distinguishes the method from score fusion and avoids a raw-score/conditional-loss scale mismatch.
+
+\section{Root-Anchored Proof Accounts}
+
+\subsection{Rank-calibrated atomic evidence}
+
+For a node score \(z_v\), define
+
+\[
+p_v=
+\frac{1+|\{z\in\mathcal Z:z\ge z_v\}|}
+{|\mathcal Z|+1},
+\qquad
+e_v=\frac{1}{2}p_v^{-1/2}.
+\]
+
+The map from \(p_v\) to \(e_v\) is a standard e-value calibrator \cite{vovk2021evalues}. In this work, \(e_v\) is used as a rank-invariant evidence unit. We do not claim an anytime-valid test: root selection, topology construction, and endpoint evidence are derived from the same replay, so the predictable conditioning required by an e-process is not automatically satisfied.
+
+Applying the same strictly increasing transform to validation and test scores leaves every \(p_v\), and therefore every later decision, unchanged.
+
+\subsection{Proof admission}
+
+For adjacent predicates, define the continuity bridge
+
+\[
+J_i=E_i\cap E_{i+1}.
+\]
+
+A chain is admitted to root \(s\)'s account if and only if
+
+\[
+s\in\bigcup_i E_i,\qquad
+E_i\ne\emptyset\ \forall i,\qquad
+J_i\ne\emptyset\ \forall i.
+\]
+
+The first condition anchors the chain. The second rejects missing endpoint evidence. The third makes continuity a UUID-level requirement. Let \(\mathcal C_s\) be the admitted chains for \(s\), and let
+
+\[
+\mathcal Q_{sc}=(E_1,\ldots,E_k,J_1,\ldots,J_{k-1})
+\]
+
+be the non-root proof clauses. Alternatives within a clause are disjunctive; all clauses are serial requirements.
+
+\subsection{Factorized proof capital}
+
+Let \(m=|\mathcal Q_{sc}|\), and let \(r_{vc}\) be the number of clauses in which node \(v\) occurs. The root is a gate of value one. For a non-root clause \(Q\), define
+
+\[
+\phi_{sc}(Q)=
+\frac{1}{|Q|}
+\left(
+\mathbf{1}[s\in Q]
++
+\sum_{v\in Q\setminus\{s\}}
+e_v^{1/(m r_{vc})}
+\right).
+\]
+
+The per-UUID log-evidence budget \(1/m\) gives total node-evidence exponent one to a no-reuse realization in which every selected UUID occurs in exactly one clause. Cross-clause reuse can only reduce that total and cannot spend one UUID's budget repeatedly. The route capital is
+
+\[
+G_{sc}=
+\left(\prod_{Q\in\mathcal Q_{sc}}\phi_{sc}(Q)\right)
+\left(\prod_{j=1}^{k-1}a_j\right)^{1/m}.
+\]
+
+This expression is the factorized sum over all endpoint realizations. It preserves alternatives without enumerating their Cartesian product. If a UUID occurs in \(r\) clauses, its total exponent in any realization is at most \(1/m\), with equality only when that realization chooses it at all \(r\) occurrences.
+Because its coefficients are positive and its monomials may have fractional exponents, \(G_{sc}\) is a posynomial rather than an ordinary polynomial.
+Reuse correction is local to one root--chain proof. A chain containing several roots may contribute separately to their accounts; matching prevents duplicate reported nodes, not duplication of shared proof capital across accounts.
+
+\subsection{Exact node intervention}
+
+For a non-root node \(v\), \(G_{sc}^{-v}\) is obtained by setting every occurrence of \(v\) to zero. Clause denominators remain fixed; evidence removed by intervention is not redistributed to surviving alternatives. The account capital and relative fracture are
+
+\[
+Z_s=\sum_{c\in\mathcal C_s}G_{sc},
+\qquad
+\rho_{sv}=
+\begin{cases}
+\dfrac{\sum_{c\in\mathcal C_s}
+(G_{sc}-G_{sc}^{-v})}{Z_s},&Z_s>0,\\[8pt]
+0,&Z_s=0.
+\end{cases}
+\]
+
+Only non-root candidates with \(\rho_{sv}>0\) create proof edges. Each root also owns a private hold edge \((s,s)\) with utility zero. Other detector roots are excluded from \(s\)'s proof candidates.
+
+\section{Proof-Mass Transport}
+
+Create a bipartite graph whose left side is \(R\) and whose right side contains all candidates and private hold nodes. Set
+
+\[
+u_{ss}=0,\qquad u_{sv}=\rho_{sv}\quad(v\ne s).
+\]
+
+The allocation is
+
+\[
+x^\star\in\arg\max_x
+\sum_{s\in R}\sum_{v\in V}u_{sv}x_{sv}
+\]
+
+\[
+\text{subject to}\quad
+\sum_vx_{sv}=1,\qquad
+\sum_sx_{sv}\le1,\qquad
+x_{sv}\in\{0,1\}.
+\]
+
+Every root supplies mass \(1/B\). Every node has capacity \(1/B\). The reported set is
+
+\[
+S^\star=\{v:x^\star_{sv}=1\text{ for some }s\}.
+\]
+
+\subsection{Exact combinatorial sparse solver}
+
+An earlier version processed edges greedily and inherited the standard \(1/2\) approximation for nonnegative weighted matching. The final registered solver removes this approximation. Let
+
+\[
+u_{\max}=\max_{sv}u_{sv},
+\qquad
+c_{sv}=u_{\max}-u_{sv}.
+\]
+
+Every feasible solution has exactly \(B\) edges, so maximizing total utility is equivalent to minimizing total cost. We solve the resulting unit-capacity network with successive shortest augmenting paths. Sorted root and node identifiers make equal-cost behavior deterministic.
+With \(N\) residual-network vertices and \(M\) arcs, \(B\) heap-based shortest-path augmentations take \(O(B(M+N)\log N)\) time and \(O(M+N)\) memory.
+
+\section{Certified Minimum-Distortion Projection}
+
+The fractional objective can replace a strong detector root with a node that fractures only a small part of its account. We therefore treat the exact transport above as a proposal \(M_6\), not the final report. For root \(s\), candidate \(v\ne s\), and every admitted route \(c\), define
+\[
+\Gamma(s,v)=
+\bigwedge_{c\in\mathcal C_s}
+\bigvee_{Q\in\mathcal Q_{sc}}
+\mathbf 1[Q=\{v\}].
+\]
+The implementation records every satisfying route identifier and singleton-clause index. Since all atomic evidence and admitted edge factors are positive, a route product becomes zero after deleting one UUID exactly when one of its clauses was the singleton \(\{v\}\). Hence
+\[
+\Gamma(s,v)=1\quad\Longleftrightarrow\quad \rho_{sv}=1.
+\]
+This equivalence is about the factorized proof account, not about the correctness of an actor label or the integrity of outsourced provenance data.
+
+Construct the certified graph
+\[
+E^\Gamma=
+\{(s,s):s\in R\}\cup
+\{(s,v):v\ne s,\ \Gamma(s,v)=1\}.
+\]
+Filtering only \(M_6\) is insufficient: a partial-fracture edge chosen for one root can block a complete-fracture edge for another. We instead solve over all edges in \(E^\Gamma\). Among equally certified solutions, however, arbitrary UUID order can needlessly discard the proposal and its anomaly evidence. Let \(a_{sv}=\mathbf 1[(s,v)\in M_6]\), let \(e_{\max}=\max_{(s,v)\in E^\Gamma}e_v\), and define \(\bar e_v=e_v/e_{\max}\) when \(e_{\max}>0\), otherwise zero. The final edge rank is
+\[
+\omega_{sv}
+=(B+1)^2\mathbf 1[v\ne s]
++(B+1)a_{sv}
++\bar e_v.
+\]
+\ravelc\ applies the same exact matching solver to \(\omega\), while its structural certificate reports proof-edge value one and hold value zero. Thus the mathematical priority and the auditable fracture count remain separate.
+
+\section{Formal Properties}
+
+\textbf{Proposition 1 (Structural invariances).}
+After \(R\) is fixed, changing \(z_s\) does not change the account or utilities owned by \(s\); adding a root-disconnected chain or one with an empty adjacent bridge changes no account. The first claim follows because \(s\) is a value-one gate in its own account, and the second because the added chain fails admission. Global root-score invariance additionally requires that no root occur as ordinary evidence in another account.
+
+\textbf{Proposition 2 (Factorization and reuse).}
+For clause weights \(w_{\ell v}\ge0\),
+\[
+\prod_{\ell=1}^{m}\frac{\sum_{v\in Q_\ell}w_{\ell v}}{|Q_\ell|}
+=\frac{1}{\prod_\ell|Q_\ell|}
+\sum_{(v_1,\ldots,v_m)\in\prod_\ell Q_\ell}
+\prod_{\ell=1}^{m}w_{\ell v_\ell}.
+\]
+Repeated distributivity proves the identity, so evaluation is linear in total clause width rather than the number of realizations. If a UUID's total log-evidence budget is \(1/m\) and its \(r\) occurrences are symmetric, \(r\alpha=1/m\) uniquely gives exponent \(\alpha=1/(mr)\); any realization uses at most total exponent \(1/m\).
+
+\textbf{Proposition 3 (Intervention and coverage).}
+Deleting \(v\) removes exactly the nonnegative realization monomials containing it. More generally, for non-root UUID set \(A\), define
+\[
+F_s(A)=
+\frac{Z_s-\sum_{c\in\mathcal C_s}G_{sc}^{-A}}{Z_s}
+\quad (Z_s>0),
+\]
+where all occurrences in \(A\) are zeroed. Indexing positive realizations by capital \(w_r\) and UUID support \(P_r\) gives
+\[
+F_s(A)=Z_s^{-1}\sum_r w_r
+\mathbf 1[A\cap P_r\ne\varnothing].
+\]
+Thus \(F_s\) is normalized, monotone, and submodular weighted coverage, and \(u_{sv}=F_s(\{v\})\). It also yields the certificates \(0\le u_{sv}\le1\): utility one means every positive realization contains \(v\), while zero means none does.
+
+\textbf{Proposition 4 (Unique normalization).}
+Let \(D\) be removed capital. Any utility linear in \(D\) for fixed \(Z_s\), invariant to common positive rescaling, and satisfying \(f(0,Z_s)=0,f(Z_s,Z_s)=1\) is uniquely \(D/Z_s\). Indeed, scale invariance gives \(f=g(D/Z_s)\), linearity gives \(g(t)=at+b\), and the endpoints give \(a=1,b=0\).
+
+\textbf{Theorem 1 (Budget, conservation, and optimality).}
+The transport is feasible, reports exactly \(B\) distinct nodes, moves mass one, and the successive-shortest-augmenting-path solver maximizes total utility. Private holds give a feasible matching. Root equalities select \(B\) edges, node capacity makes their endpoints distinct, and \(B\) edges of mass \(1/B\) conserve one. Finally, every feasible transport has transformed cost
+\[
+\sum_{sv}c_{sv}x_{sv}
+=Bu_{\max}-\sum_{sv}u_{sv}x_{sv}.
+\]
+Minimum cost therefore maximizes utility; integral unit capacities and \(B\) augmentations yield the full integral matching.
+
+\textbf{Theorem 2 (Certified lexicographic projection).}
+\ravelc\ (i) always returns a feasible \(B\)-node report, (ii) transports a root only through an edge with complete account fracture, and (iii) lexicographically maximizes the number of certified transports, agreement with \(M_6\), and total normalized conformal evidence. Private holds prove feasibility and the definition of \(E^\Gamma\) proves (ii). For any two size-\(B\) matchings, the evidence-sum difference is at most \(B\), so it cannot reverse one agreement term of weight \(B+1\). The combined agreement and evidence difference is at most
+\[
+B(B+1)+B=(B+1)^2-1,
+\]
+so it cannot reverse one certified-transport term. Maximizing \(\sum\omega_{sv}x_{sv}\) is therefore exactly the stated three-level objective, with no tuned mixing coefficient.
+
+\textbf{Corollary 1 (Projection consistency).}
+If the certified edges already selected by \(M_6\) attain the maximum possible certified cardinality, \ravelc\ retains all of them and replaces every uncertified proposal by its private hold. The resulting node set equals filter-and-hold. A source edge present in \(E^\Gamma\) contributes the maximum possible agreement for its root; discarding one cannot improve the primary objective by assumption and strictly reduces the secondary objective.
+
+\textbf{Theorem 3 (No nontrivial fixed-budget safety).}
+Suppose \(R\) contains the top \(B\) detector scores and calibrated evidence is monotone in score. Then every candidate \(v\notin R\) has \(e_v\le e_s\) for every \(s\in R\); any nontrivial replacement weakly lowers detector evidence. More generally, let \(S\ne R\) be any label-free report with \(|S|=|R|=B\). There exists an actor-label set for which \(R\) recovers strictly more positives than \(S\): choose \(Y=R\setminus S\), giving \(|R\cap Y|=|Y|>0\) and \(|S\cap Y|=0\). Choosing \(Y=S\setminus R\) reverses the preference. Therefore no nontrivial fixed-budget selector can uniformly guarantee actor-recall non-decline without assumptions linking labels to its evidence. Structural fracture and actor safety are distinct claims.
+
+These are guarantees about the registered proof objective. They do not imply that maximizing proof fracture maximizes malicious-node recall.
+
+\section{Experimental Protocol}
+
+\subsection{Detector and datasets}
+
+We use public PIDSMaker code, its frozen Velox configuration, and the ORTHRUS node-label format \cite{jiang2025orthrus,bilot2026pidsmaker}. Routes and all selections remain label-free. CADETS E3, THEIA E3, and corrected OpTC H501/H201 are development evidence: their labels were observed while the fractional and certified formulations evolved. The correction audit reports timeline errors in 4.22\% of the original OpTC events \cite{majorczyk2025newhope}; H501 and H201 also belong to one campaign and are not independent deployments.
+
+The final held-out case is PIDSMaker ORTHRUS H051. A previous, separately registered strict-threshold run returned zero roots because its test maximum \(13.8157\) was below validation threshold \(18.0920\); we preserve it as inconclusive. The present study explicitly fixes an analyst capacity of 512 and chooses roots by Velox score descending, UUID ascending over the same frozen 1,470,624-node score universe. Comparators are those roots, FlowSub at 512 nodes, and the fractional exact proposal \(M_6\). H051 exposes one public attack label file and one attack window, so we do not invent sub-interval replications.
+
+Before reading or hashing that label file, we register four outcomes: activation plus \ravelc\ recovery no lower than Velox (primary safety), strictly higher than Velox (secondary efficacy), no lower than FlowSub (competitive noninferiority), and strictly higher than all three comparators. The score, route, \(M_6\), certified output, plan, and all relevant code hashes are frozen. A separate audit reconstructs both exact matchings, all cut witnesses, the three-level objective, and every budget and lineage constraint from the frozen inputs. Method, budget, comparators, and outcomes cannot change after this audit.
+
+\subsection{Metrics and leakage controls}
+
+We report malicious UUIDs at exact budget, precision, covered recall, MCC, and equal-budget selection disagreements. Corrected H501/H201 development diagnostics additionally use their released host/PID/time intervals with a frozen 90-second margin. A conditional hypergeometric statistic inside each disagreement is descriptive, not a generalization test. Ordered manifests are hashed, label-only evaluators run after selections close, and every failed variant remains in the artifact.
+
+\section{Development Evidence}
+
+CADETS and THEIA expose why aggregate development scores are insufficient. At budgets 1,103 and 503, Velox recovers 23 and 16 malicious nodes, FlowSub 29 and 25, and the first single-ledger \ravel\ 28 and 17. Yet THEIA's two attacks change \(12,4\!\rightarrow\!5,12\): one loses seven. Detector-valued holds then cause zero transports, whereas zero holds make any positive fracture replace a root. Exact matching removes allocation approximation but not this semantic misalignment. All variants and their label timing remain in the artifact rather than being promoted to independent tests.
+
+\section{Fractional Failure and Certified Development}
+
+H501 has 1,488,666 nodes and 122 rooted chains. The fractional exact proposal transports 59 slots and recovers ten malicious UUIDs versus Velox's seven, but declines in three of 65 attack intervals. H201 has 1,437,512 nodes and 139 chains; 107 transports recover one UUID versus Velox's two and decline in one of 216 intervals. FlowSub recovers 11 and four. Thus the original preregistered superiority hypothesis is rejected: exact allocation optimizes fracture, not actor recovery.
+
+The failure is structural. On H201, malicious root 4DA7C8A2 is replaced by unlabeled actor A2A5567F with fracture \(0.0548\) across 33 routes. A zero-valued hold makes this weak positive edge preferable. Conversely, an H501 gain has fracture one because actor 8916C2F9 occupies a singleton continuity bridge on every admitted route. This contrast motivates certifying complete fracture rather than tuning a scalar hold penalty after labels.
+
+The first certificate filtered only proposal edges and otherwise held the root. It retained seven of 59 H501 transports and 11 of 107 H201 transports. Recovery becomes \(7\!\rightarrow\!8\) and \(2\!\rightarrow\!2\), with no decline in 65 or 216 intervals. Filtering is computationally incomplete, however: a partial proposal edge can hide a different complete-fracture edge. Global certified matching fixes this but leaves equal-cardinality solutions to arbitrary UUID order. On H501 that version recovers seven and declines once; adding evidence as the only tie-break has the same outcome. These failures remain frozen.
+
+The final minimum-distortion objective restores projection semantics. Table~\ref{tab:certdev} is development evidence only; H501 and H201 labels had already influenced the method sequence.
+
+\begin{table}[h]
+\caption{Corrected OpTC development recovery at budget 512. ``Cert.'' is \ravelc; ``Moves'' counts certified non-hold edges. H501 FlowSub was inspected post-label.}
+\label{tab:certdev}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Host & Pos. & Velox & FlowSub & \(M_6\) & Cert. & Moves & Decl.\\
+\midrule
+H501 & 86  & 7 & \(11^\dagger\) & 10 & 8 & 7  & 0/65\\
+H201 & 352 & 2 & 4              & 1  & 2 & 11 & 0/216\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+H501 contains 92,670 proof edges; 34 satisfy \(\Gamma\), and node conflicts permit seven. H201 contains 298,021 proof edges; 19 satisfy \(\Gamma\), and conflicts permit 11. In both cases \(M_6\) already contains the maximum number of certified edges, so Corollary~1 makes \ravelc\ exactly reproduce filter-and-hold. This is a useful consistency check, not independent evidence. The lexicographic solver also matches a tuple-valued brute-force oracle; the underlying assignment solver matches exhaustive search on 729 three-root instances and SciPy on 2,000 seeded sparse graphs.
+
+\section{Held-out H051 Evaluation}
+
+The label-free H051 score universe has 1,470,624 nodes, 140 reconstructed chains, and 112 root-seeded chains. FlowSub evaluates 11,814 coverage candidates. The fractional proposal transports 59 slots. Across its full candidate graph, \ravelc\ examines 113,495 proof edges, certifies four, and transports all four. It agrees with \(M_6\) on 457 of 512 assignments, has objective four in the structural certificate, and satisfies root degree one, node degree at most one, budget 512, and mass one.
+
+The score, route, proposal, certified output, and plan form ordered freeze \texttt{af72b40f0552ad0b...}. The H051 label is not read or hashed until an independent reconstruction reproduces the source and certified assignments, all four route-clause witnesses, code hashes, comparators, registered outcomes, and the three-level objective.
+
+\begin{table}[h]
+\caption{Held-out H051 actorID recovery at exact budget 512.}
+\label{tab:h051}
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrrrr}
+\toprule
+Method & Recovered & Precision & Recall & MCC\\
+\midrule
+Velox roots & 4 & .00781 & .03509 & .01640\\
+FlowSub & 8 & .01563 & .07018 & .03296\\
+Fractional \(M_6\) & 2 & .00391 & .01754 & .00812\\
+\ravelc & 3 & .00586 & .02632 & .01226\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The audit passes, after which the single H051 label file reveals 114 malicious UUIDs, all covered by the score universe. \ravelc\ activates but misses every registered outcome: recovery is below Velox and FlowSub and therefore neither improves nor reaches strict superiority. Relative to Velox it changes four slots, loses one malicious root, and adds no malicious target. The failing move replaces malicious root 917F6126 with an unlabeled node even though its singleton witnesses completely fracture two routes. Relative to \(M_6\), the projection changes 55 slots and improves recovery \(2\!\rightarrow\!3\), but this does not satisfy the primary baseline comparison. The label and evaluation hashes are \texttt{ff8af256...} and \texttt{cee25b17...}. No method or endpoint changes follow this result.
+
+\section{Related Work and Novelty Boundary}
+
+KAIROS reconstructs compact footprints, ORTHRUS targets fine attribution, and DEPIMPACT back-propagates dependency impact \cite{cheng2024kairos,jiang2025orthrus,fang2022depimpact}. PIDSMaker standardizes evaluation choices \cite{bilot2026pidsmaker}. These systems optimize detection, path relevance, or story recovery; \ravelc\ holds the detector fixed and allocates a conserved multi-root analyst budget.
+
+ProvX learns a sparse provenance-edge mask that flips a GNN prediction \cite{wu2025provx}. \ravelc\ instead removes one UUID from an explicit proof posynomial and certifies complete route fracture without re-querying a learned predictor. VCAUSE verifies outsourced provenance queries and related components using authenticated data structures \cite{song2026vcause}; our witness assumes frozen data and verifies an algebraic cut property, so the guarantees are orthogonal.
+
+Counterfactual explanation, graph cuts, maximum-weight matching, minimum-cost flow, rank calibration, and e-values are not our novelties \cite{vovk2021evalues}. Our narrower contribution is the combination forced by a new formulation: a singleton-hyperclause condition that is necessary and sufficient for complete root-account fracture, followed by a fixed-budget, cross-alert-unique projection whose analytically bounded objective first maximizes certified moves, then minimizes source distortion, then preserves anomaly evidence. Our search found no directly matching formulation; this boundary is not proof of first use.
+
+\section{Limitations and Validity}
+
+\textbf{Alignment.} The certificate proves complete fracture of the registered proof account, not actorID correctness, recall, or detector calibration. H501/H201 directly influenced the final projection and are development data. Held-out H051 then falsifies actor-recall safety: one of four certified moves replaces a malicious root with an unlabeled endpoint. The theorem explains why this failure cannot be ruled out without an additional label--evidence assumption.
+
+\textbf{Calibration and numerics.} Rank calibration is monotone-invariant but establishes neither conditional e-validity nor false-alarm control. ``Exact'' means optimal assignment, not real arithmetic. A faster deletion formula preserved the H501 node set but changed low-order utilities and assignments, so it was rejected; near-tied optima below double precision remain possible.
+
+\textbf{Validity.} ActorID labels omit potentially useful benign infrastructure. OpTC has documented timeline and label errors \cite{majorczyk2025newhope}; no paired official dump reproduction exists. The final H051 evaluation contains one attack and a separately declared top-512 capacity, not a replacement for the preserved zero-root strict-threshold study. Velox roots determine the accounts; shared chains may fund several accounts despite unique outputs. Only four H051 transports are certified, limiting power to assess broad reconstruction. Global root-score invariance requires root-separated accounts.
+
+\section{Conclusion}
+
+\ravelc\ turns attack investigation into a certified, conserved projection: detector roots open proof accounts, typed chains define a factorized posynomial, singleton witnesses certify complete UUID fracture, and exact matching assigns one unique slot per root with minimum proposal distortion. The formulation yields checkable guarantees and removes arbitrary partial-fracture replacement. It does not create actor-label safety. On held-out H051, certification improves the failed fractional proposal from two to three malicious UUIDs but remains below Velox's four and FlowSub's eight. This negative result is consistent with the fixed-budget impossibility theorem. Future systems must either retain roots as an additional tier, learn a risk relation on disjoint data, or evaluate a risk--coverage frontier; structural completeness alone cannot justify a fixed-budget swap.
+
+\bibliographystyle{splncs04}
+\bibliography{references}
+
+\end{document}

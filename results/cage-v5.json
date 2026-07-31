@@ -1,0 +1,1655 @@
+{
+  "report__default": {
+    "episodes": 5,
+    "reward_mean": -3719.4,
+    "reward_std": 522.3177576916182,
+    "reward_min": -4238,
+    "reward_max": -2838,
+    "blue_actions": {
+      "AllowTrafficZone": 20,
+      "Analyse": 518,
+      "BlockTrafficZone": 160,
+      "DeployDecoy": 283,
+      "Monitor": 9114,
+      "Remove": 253,
+      "Restore": 165,
+      "Sleep": 1962
+    },
+    "red_actions": {
+      "AggressiveServiceDiscovery": 358,
+      "DegradeServices": 953,
+      "DiscoverDeception": 560,
+      "DiscoverRemoteSystems": 168,
+      "ExploitRemoteService": 1684,
+      "Impact": 990,
+      "PrivilegeEscalate": 213,
+      "Sleep": 9705,
+      "StealthServiceDiscovery": 339
+    },
+    "attack": {
+      "unique_session_hosts_mean": 68.8,
+      "unique_session_hosts_std": 3.1240998703626617,
+      "unique_new_session_hosts_mean": 67.8,
+      "unique_new_session_hosts_std": 3.1240998703626617,
+      "unique_privileged_hosts_mean": 37,
+      "unique_privileged_hosts_std": 3.0983866769659336,
+      "unique_new_privileged_hosts_mean": 37,
+      "unique_new_privileged_hosts_std": 3.0983866769659336,
+      "successful_exploit_hosts_mean": 46,
+      "successful_exploit_hosts_std": 3.22490309931942,
+      "unique_impacted_hosts_mean": 10.2,
+      "unique_impacted_hosts_std": 1.9390719429665315,
+      "successful_impact_count_mean": 10.4,
+      "successful_impact_count_std": 2.244994432064365,
+      "max_concurrent_session_hosts_mean": 56.2,
+      "max_concurrent_session_hosts_std": 4.445222154178574,
+      "max_concurrent_privileged_hosts_mean": 34.4,
+      "max_concurrent_privileged_hosts_std": 2.6532998322843198,
+      "max_session_lineage_depth_mean": 1,
+      "max_session_lineage_depth_std": 0.0,
+      "ordered_chain_completions_mean": 8.2,
+      "ordered_chain_completions_std": 1.9390719429665315,
+      "privileged_to_impact_host_rate_mean": 0.27677553484005096,
+      "privileged_to_impact_host_rate_std": 0.0507801423215157,
+      "episodes_with_impact": 5,
+      "impact_episode_rate": 1.0,
+      "first_successful_impact_step_mean": 81.6,
+      "first_successful_impact_step_std": 42.846703490467036,
+      "episodes_with_new_session": 5,
+      "new_session_episode_rate": 1.0,
+      "first_new_session_step_mean": 3.2,
+      "action_results": {
+        "AggressiveServiceDiscovery": {
+          "completed": 348,
+          "succeeded": 333,
+          "failed": 15,
+          "success_rate": 0.9568965517241379
+        },
+        "DegradeServices": {
+          "completed": 901,
+          "succeeded": 900,
+          "failed": 1,
+          "success_rate": 0.9988901220865705
+        },
+        "DiscoverDeception": {
+          "completed": 524,
+          "succeeded": 524,
+          "failed": 0,
+          "success_rate": 1.0
+        },
+        "DiscoverRemoteSystems": {
+          "completed": 167,
+          "succeeded": 167,
+          "failed": 0,
+          "success_rate": 1.0
+        },
+        "ExploitRemoteService": {
+          "completed": 1579,
+          "succeeded": 413,
+          "failed": 1166,
+          "success_rate": 0.2615579480683977
+        },
+        "Impact": {
+          "completed": 935,
+          "succeeded": 52,
+          "failed": 883,
+          "success_rate": 0.05561497326203209
+        },
+        "PrivilegeEscalate": {
+          "completed": 208,
+          "succeeded": 194,
+          "failed": 14,
+          "success_rate": 0.9326923076923077
+        },
+        "RedSessionCheck": {
+          "completed": 273,
+          "succeeded": 273,
+          "failed": 0,
+          "success_rate": 1.0
+        },
+        "StealthServiceDiscovery": {
+          "completed": 330,
+          "succeeded": 319,
+          "failed": 11,
+          "success_rate": 0.9666666666666667
+        }
+      }
+    },
+    "runs": [
+      {
+        "seed": 3400,
+        "reward": -2838,
+        "blue_actions": {
+          "AllowTrafficZone": 4,
+          "Analyse": 98,
+          "BlockTrafficZone": 32,
+          "DeployDecoy": 54,
+          "Monitor": 1888,
+          "Remove": 42,
+          "Restore": 29,
+          "Sleep": 348
+        },
+        "blue_metrics": [
+          {
+            "decoyed_hosts": 8,
+            "decoy_contacts": 8,
+            "verified_effects": 14,
+            "unverified_effects": 0,
+            "chains_formed": 32,
+            "decisions": {
+              "block": 3,
+              "honeypot": 9,
+              "temporary_isolate": 59
+            },
+            "failed_effects": {},
+            "remediated_hosts": 4
+          },
+          {
+            "decoyed_hosts": 12,
+            "decoy_contacts": 9,
+            "verified_effects": 13,
+            "unverified_effects": 0,
+            "chains_formed": 95,
+            "decisions": {
+              "block": 1,
+              "honeypot": 14,
+              "restore": 7,
+              "temporary_isolate": 26
+            },
+            "failed_effects": {},
+            "remediated_hosts": 5
+          },
+          {
+            "decoyed_hosts": 5,
+            "decoy_contacts": 5,
+            "verified_effects": 12,
+            "unverified_effects": 0,
+            "chains_formed": 62,
+            "decisions": {
+              "block": 4,
+              "honeypot": 7,
+              "temporary_isolate": 33
+            },
+            "failed_effects": {},
+            "remediated_hosts": 3
+          },
+          {
+            "decoyed_hosts": 6,
+            "decoy_contacts": 5,
+            "verified_effects": 11,
+            "unverified_effects": 0,
+            "chains_formed": 137,
+            "decisions": {
+              "block": 2,
+              "honeypot": 6,
+              "restore": 4,
+              "temporary_isolate": 20
+            },
+            "failed_effects": {},
+            "remediated_hosts": 2
+          },
+          {
+            "decoyed_hosts": 23,
+            "decoy_contacts": 15,
+            "verified_effects": 18,
+            "unverified_effects": 0,
+            "chains_formed": 12,
+            "decisions": {
+              "block": 3,
+              "honeypot": 29,
+              "temporary_isolate": 38
+            },
+            "failed_effects": {},
+            "remediated_hosts": 10
+          }
+        ],
+        "red_actions": {
+          "AggressiveServiceDiscovery": 62,
+          "DegradeServices": 135,
+          "DiscoverDeception": 124,
+          "DiscoverRemoteSystems": 30,
+          "ExploitRemoteService": 349,
+          "Impact": 151,
+          "PrivilegeEscalate": 42,
+          "Sleep": 2035,
+          "StealthServiceDiscovery": 66
+        },
+        "attack": {
+          "initial_session_hosts": [
+            "contractor_network_subnet_user_host_3"
+          ],
+          "initial_privileged_hosts": [],
+          "unique_session_hosts": 73,
+          "unique_new_session_hosts": 72,
+          "new_session_hosts": [
+            "admin_network_subnet_user_host_0",
+            "admin_network_subnet_user_host_1",
+            "admin_network_subnet_user_host_2",
+            "admin_network_subnet_user_host_3",
+            "admin_network_subnet_user_host_4",
+            "admin_network_subnet_user_host_5",
+            "admin_network_subnet_user_host_6",
+            "admin_network_subnet_user_host_7",
+            "contractor_network_subnet_server_host_0",
+            "contractor_network_subnet_server_host_1",
+            "contractor_network_subnet_server_host_2",
+            "contractor_network_subnet_server_host_4",
+            "contractor_network_subnet_user_host_0",
+            "contractor_network_subnet_user_host_1",
+            "contractor_network_subnet_user_host_2",
+            "contractor_network_subnet_user_host_4",
+            "contractor_network_subnet_user_host_5",
+            "contractor_network_subnet_user_host_6",
+            "contractor_network_subnet_user_host_7",
+            "contractor_network_subnet_user_host_8",
+            "office_network_subnet_user_host_1",
+            "office_network_subnet_user_host_2",
+            "office_network_subnet_user_host_3",
+            "office_network_subnet_user_host_4",
+            "office_network_subnet_user_host_5",
+            "office_network_subnet_user_host_6",
+            "operational_zone_a_subnet_server_host_2",
+            "operational_zone_a_subnet_server_host_3",
+            "operational_zone_a_subnet_user_host_0",
+            "operational_zone_a_subnet_user_host_1",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_a_subnet_user_host_3",
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_a_subnet_user_host_6",
+            "operational_zone_a_subnet_user_host_7",
+            "operational_zone_a_subnet_user_host_8",
+            "operational_zone_a_subnet_user_host_9",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_server_host_1",
+            "operational_zone_b_subnet_server_host_2",
+            "operational_zone_b_subnet_server_host_3",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "public_access_zone_subnet_user_host_0",
+            "public_access_zone_subnet_user_host_1",
+            "public_access_zone_subnet_user_host_2",
+            "public_access_zone_subnet_user_host_4",
+            "public_access_zone_subnet_user_host_5",
+            "public_access_zone_subnet_user_host_6",
+            "public_access_zone_subnet_user_host_7",
+            "public_access_zone_subnet_user_host_8",
+            "public_access_zone_subnet_user_host_9",
+            "restricted_zone_a_subnet_server_host_0",
+            "restricted_zone_a_subnet_server_host_2",
+            "restricted_zone_a_subnet_user_host_0",
+            "restricted_zone_a_subnet_user_host_1",
+            "restricted_zone_a_subnet_user_host_2",
+            "restricted_zone_a_subnet_user_host_3",
+            "restricted_zone_a_subnet_user_host_4",
+            "restricted_zone_a_subnet_user_host_5",
+            "restricted_zone_a_subnet_user_host_6",
+            "restricted_zone_a_subnet_user_host_7",
+            "restricted_zone_a_subnet_user_host_8",
+            "restricted_zone_b_subnet_server_host_0",
+            "restricted_zone_b_subnet_server_host_1",
+            "restricted_zone_b_subnet_user_host_0",
+            "restricted_zone_b_subnet_user_host_1",
+            "restricted_zone_b_subnet_user_host_2",
+            "restricted_zone_b_subnet_user_host_3",
+            "restricted_zone_b_subnet_user_host_4"
+          ],
+          "unique_privileged_hosts": 39,
+          "unique_new_privileged_hosts": 39,
+          "new_privileged_hosts": [
+            "admin_network_subnet_user_host_0",
+            "admin_network_subnet_user_host_4",
+            "contractor_network_subnet_server_host_1",
+            "contractor_network_subnet_server_host_2",
+            "contractor_network_subnet_server_host_4",
+            "contractor_network_subnet_user_host_0",
+            "contractor_network_subnet_user_host_2",
+            "contractor_network_subnet_user_host_3",
+            "contractor_network_subnet_user_host_4",
+            "contractor_network_subnet_user_host_5",
+            "contractor_network_subnet_user_host_6",
+            "contractor_network_subnet_user_host_7",
+            "contractor_network_subnet_user_host_8",
+            "office_network_subnet_user_host_4",
+            "operational_zone_a_subnet_server_host_3",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_a_subnet_user_host_6",
+            "operational_zone_a_subnet_user_host_7",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "public_access_zone_subnet_user_host_6",
+            "public_access_zone_subnet_user_host_9",
+            "restricted_zone_a_subnet_server_host_0",
+            "restricted_zone_a_subnet_user_host_0",
+            "restricted_zone_a_subnet_user_host_3",
+            "restricted_zone_a_subnet_user_host_5",
+            "restricted_zone_a_subnet_user_host_7",
+            "restricted_zone_a_subnet_user_host_8",
+            "restricted_zone_b_subnet_server_host_0",
+            "restricted_zone_b_subnet_server_host_1",
+            "restricted_zone_b_subnet_user_host_0",
+            "restricted_zone_b_subnet_user_host_1",
+            "restricted_zone_b_subnet_user_host_2",
+            "restricted_zone_b_subnet_user_host_3",
+            "restricted_zone_b_subnet_user_host_4"
+          ],
+          "successful_exploit_hosts": 43,
+          "unique_impacted_hosts": 8,
+          "impacted_hosts": [
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_a_subnet_user_host_6",
+            "operational_zone_a_subnet_user_host_7",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3"
+          ],
+          "successful_impact_count": 8,
+          "first_new_session_step": 1,
+          "first_successful_impact_step": 140,
+          "max_concurrent_session_hosts": 63,
+          "max_concurrent_privileged_hosts": 34,
+          "max_session_lineage_depth": 1,
+          "ordered_chain_completions": 6,
+          "ordered_chain_hosts": [
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_a_subnet_user_host_7",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3"
+          ],
+          "privileged_to_impact_host_rate": 0.20512820512820512,
+          "action_results": {
+            "AggressiveServiceDiscovery": {
+              "completed": 61,
+              "succeeded": 54,
+              "failed": 7,
+              "success_rate": 0.8852459016393442
+            },
+            "DegradeServices": {
+              "completed": 132,
+              "succeeded": 132,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "DiscoverDeception": {
+              "completed": 120,
+              "succeeded": 120,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "DiscoverRemoteSystems": {
+              "completed": 30,
+              "succeeded": 30,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "ExploitRemoteService": {
+              "completed": 331,
+              "succeeded": 65,
+              "failed": 266,
+              "success_rate": 0.19637462235649547
+            },
+            "Impact": {
+              "completed": 144,
+              "succeeded": 8,
+              "failed": 136,
+              "success_rate": 0.05555555555555555
+            },
+            "PrivilegeEscalate": {
+              "completed": 41,
+              "succeeded": 39,
+              "failed": 2,
+              "success_rate": 0.9512195121951219
+            },
+            "RedSessionCheck": {
+              "completed": 35,
+              "succeeded": 35,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "StealthServiceDiscovery": {
+              "completed": 65,
+              "succeeded": 62,
+              "failed": 3,
+              "success_rate": 0.9538461538461539
+            }
+          }
+        }
+      },
+      {
+        "seed": 3401,
+        "reward": -4238,
+        "blue_actions": {
+          "AllowTrafficZone": 4,
+          "Analyse": 115,
+          "BlockTrafficZone": 32,
+          "DeployDecoy": 60,
+          "Monitor": 1810,
+          "Remove": 53,
+          "Restore": 28,
+          "Sleep": 393
+        },
+        "blue_metrics": [
+          {
+            "decoyed_hosts": 8,
+            "decoy_contacts": 6,
+            "verified_effects": 20,
+            "unverified_effects": 0,
+            "chains_formed": 20,
+            "decisions": {
+              "block": 2,
+              "honeypot": 11,
+              "temporary_isolate": 53
+            },
+            "failed_effects": {},
+            "remediated_hosts": 4
+          },
+          {
+            "decoyed_hosts": 9,
+            "decoy_contacts": 8,
+            "verified_effects": 22,
+            "unverified_effects": 0,
+            "chains_formed": 76,
+            "decisions": {
+              "block": 2,
+              "honeypot": 11,
+              "restore": 3,
+              "temporary_isolate": 41
+            },
+            "failed_effects": {},
+            "remediated_hosts": 6
+          },
+          {
+            "decoyed_hosts": 11,
+            "decoy_contacts": 9,
+            "verified_effects": 9,
+            "unverified_effects": 0,
+            "chains_formed": 39,
+            "decisions": {
+              "block": 4,
+              "honeypot": 13,
+              "temporary_isolate": 42
+            },
+            "failed_effects": {},
+            "remediated_hosts": 7
+          },
+          {
+            "decoyed_hosts": 6,
+            "decoy_contacts": 6,
+            "verified_effects": 19,
+            "unverified_effects": 0,
+            "chains_formed": 79,
+            "decisions": {
+              "honeypot": 7,
+              "restore": 3,
+              "temporary_isolate": 29
+            },
+            "failed_effects": {},
+            "remediated_hosts": 3
+          },
+          {
+            "decoyed_hosts": 26,
+            "decoy_contacts": 20,
+            "verified_effects": 10,
+            "unverified_effects": 0,
+            "chains_formed": 3,
+            "decisions": {
+              "block": 1,
+              "honeypot": 32,
+              "temporary_isolate": 50
+            },
+            "failed_effects": {},
+            "remediated_hosts": 8
+          }
+        ],
+        "red_actions": {
+          "AggressiveServiceDiscovery": 78,
+          "DegradeServices": 207,
+          "DiscoverDeception": 113,
+          "DiscoverRemoteSystems": 39,
+          "ExploitRemoteService": 344,
+          "Impact": 232,
+          "PrivilegeEscalate": 39,
+          "Sleep": 1874,
+          "StealthServiceDiscovery": 68
+        },
+        "attack": {
+          "initial_session_hosts": [
+            "contractor_network_subnet_user_host_2"
+          ],
+          "initial_privileged_hosts": [],
+          "unique_session_hosts": 69,
+          "unique_new_session_hosts": 68,
+          "new_session_hosts": [
+            "admin_network_subnet_server_host_2",
+            "admin_network_subnet_server_host_4",
+            "admin_network_subnet_user_host_0",
+            "admin_network_subnet_user_host_1",
+            "admin_network_subnet_user_host_2",
+            "admin_network_subnet_user_host_3",
+            "admin_network_subnet_user_host_4",
+            "admin_network_subnet_user_host_6",
+            "admin_network_subnet_user_host_8",
+            "contractor_network_subnet_server_host_0",
+            "contractor_network_subnet_server_host_1",
+            "contractor_network_subnet_user_host_0",
+            "contractor_network_subnet_user_host_1",
+            "contractor_network_subnet_user_host_3",
+            "office_network_subnet_server_host_1",
+            "office_network_subnet_user_host_0",
+            "office_network_subnet_user_host_2",
+            "office_network_subnet_user_host_3",
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_user_host_0",
+            "operational_zone_a_subnet_user_host_1",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_a_subnet_user_host_3",
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_a_subnet_user_host_5",
+            "operational_zone_a_subnet_user_host_6",
+            "operational_zone_a_subnet_user_host_7",
+            "operational_zone_a_subnet_user_host_8",
+            "operational_zone_a_subnet_user_host_9",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_server_host_1",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "operational_zone_b_subnet_user_host_4",
+            "operational_zone_b_subnet_user_host_5",
+            "public_access_zone_subnet_server_host_0",
+            "public_access_zone_subnet_user_host_0",
+            "public_access_zone_subnet_user_host_1",
+            "public_access_zone_subnet_user_host_2",
+            "public_access_zone_subnet_user_host_3",
+            "public_access_zone_subnet_user_host_4",
+            "public_access_zone_subnet_user_host_5",
+            "restricted_zone_a_subnet_server_host_0",
+            "restricted_zone_a_subnet_server_host_1",
+            "restricted_zone_a_subnet_server_host_2",
+            "restricted_zone_a_subnet_user_host_0",
+            "restricted_zone_a_subnet_user_host_1",
+            "restricted_zone_a_subnet_user_host_2",
+            "restricted_zone_a_subnet_user_host_3",
+            "restricted_zone_a_subnet_user_host_4",
+            "restricted_zone_a_subnet_user_host_5",
+            "restricted_zone_a_subnet_user_host_6",
+            "restricted_zone_a_subnet_user_host_7",
+            "restricted_zone_b_subnet_server_host_0",
+            "restricted_zone_b_subnet_server_host_2",
+            "restricted_zone_b_subnet_server_host_4",
+            "restricted_zone_b_subnet_user_host_0",
+            "restricted_zone_b_subnet_user_host_1",
+            "restricted_zone_b_subnet_user_host_2",
+            "restricted_zone_b_subnet_user_host_3",
+            "restricted_zone_b_subnet_user_host_4",
+            "restricted_zone_b_subnet_user_host_5",
+            "restricted_zone_b_subnet_user_host_6",
+            "restricted_zone_b_subnet_user_host_7",
+            "restricted_zone_b_subnet_user_host_8"
+          ],
+          "unique_privileged_hosts": 31,
+          "unique_new_privileged_hosts": 31,
+          "new_privileged_hosts": [
+            "admin_network_subnet_user_host_6",
+            "contractor_network_subnet_server_host_0",
+            "contractor_network_subnet_server_host_1",
+            "contractor_network_subnet_user_host_0",
+            "contractor_network_subnet_user_host_1",
+            "contractor_network_subnet_user_host_2",
+            "contractor_network_subnet_user_host_3",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_a_subnet_user_host_5",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_server_host_1",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "operational_zone_b_subnet_user_host_4",
+            "operational_zone_b_subnet_user_host_5",
+            "restricted_zone_a_subnet_server_host_0",
+            "restricted_zone_a_subnet_user_host_1",
+            "restricted_zone_a_subnet_user_host_3",
+            "restricted_zone_a_subnet_user_host_4",
+            "restricted_zone_a_subnet_user_host_5",
+            "restricted_zone_a_subnet_user_host_6",
+            "restricted_zone_a_subnet_user_host_7",
+            "restricted_zone_b_subnet_server_host_4",
+            "restricted_zone_b_subnet_user_host_0",
+            "restricted_zone_b_subnet_user_host_4",
+            "restricted_zone_b_subnet_user_host_5",
+            "restricted_zone_b_subnet_user_host_6",
+            "restricted_zone_b_subnet_user_host_7",
+            "restricted_zone_b_subnet_user_host_8"
+          ],
+          "successful_exploit_hosts": 42,
+          "unique_impacted_hosts": 9,
+          "impacted_hosts": [
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_a_subnet_user_host_5",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_server_host_1",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_4",
+            "operational_zone_b_subnet_user_host_5"
+          ],
+          "successful_impact_count": 9,
+          "first_new_session_step": 4,
+          "first_successful_impact_step": 68,
+          "max_concurrent_session_hosts": 54,
+          "max_concurrent_privileged_hosts": 30,
+          "max_session_lineage_depth": 1,
+          "ordered_chain_completions": 7,
+          "ordered_chain_hosts": [
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_a_subnet_user_host_5",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_server_host_1",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_4",
+            "operational_zone_b_subnet_user_host_5"
+          ],
+          "privileged_to_impact_host_rate": 0.2903225806451613,
+          "action_results": {
+            "AggressiveServiceDiscovery": {
+              "completed": 74,
+              "succeeded": 72,
+              "failed": 2,
+              "success_rate": 0.972972972972973
+            },
+            "DegradeServices": {
+              "completed": 191,
+              "succeeded": 191,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "DiscoverDeception": {
+              "completed": 104,
+              "succeeded": 104,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "DiscoverRemoteSystems": {
+              "completed": 38,
+              "succeeded": 38,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "ExploitRemoteService": {
+              "completed": 320,
+              "succeeded": 82,
+              "failed": 238,
+              "success_rate": 0.25625
+            },
+            "Impact": {
+              "completed": 212,
+              "succeeded": 9,
+              "failed": 203,
+              "success_rate": 0.04245283018867924
+            },
+            "PrivilegeEscalate": {
+              "completed": 37,
+              "succeeded": 33,
+              "failed": 4,
+              "success_rate": 0.8918918918918919
+            },
+            "RedSessionCheck": {
+              "completed": 78,
+              "succeeded": 78,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "StealthServiceDiscovery": {
+              "completed": 66,
+              "succeeded": 63,
+              "failed": 3,
+              "success_rate": 0.9545454545454546
+            }
+          }
+        }
+      },
+      {
+        "seed": 3402,
+        "reward": -4110,
+        "blue_actions": {
+          "AllowTrafficZone": 4,
+          "Analyse": 116,
+          "BlockTrafficZone": 32,
+          "DeployDecoy": 56,
+          "Monitor": 1762,
+          "Remove": 53,
+          "Restore": 39,
+          "Sleep": 433
+        },
+        "blue_metrics": [
+          {
+            "decoyed_hosts": 5,
+            "decoy_contacts": 4,
+            "verified_effects": 6,
+            "unverified_effects": 0,
+            "chains_formed": 0,
+            "decisions": {
+              "honeypot": 5,
+              "temporary_isolate": 35
+            },
+            "failed_effects": {},
+            "remediated_hosts": 0
+          },
+          {
+            "decoyed_hosts": 10,
+            "decoy_contacts": 9,
+            "verified_effects": 36,
+            "unverified_effects": 1,
+            "chains_formed": 235,
+            "decisions": {
+              "block": 1,
+              "honeypot": 12,
+              "restore": 17,
+              "temporary_isolate": 53
+            },
+            "failed_effects": {
+              "Restore": 1
+            },
+            "remediated_hosts": 5
+          },
+          {
+            "decoyed_hosts": 10,
+            "decoy_contacts": 10,
+            "verified_effects": 15,
+            "unverified_effects": 0,
+            "chains_formed": 36,
+            "decisions": {
+              "block": 4,
+              "honeypot": 11,
+              "temporary_isolate": 53
+            },
+            "failed_effects": {},
+            "remediated_hosts": 6
+          },
+          {
+            "decoyed_hosts": 9,
+            "decoy_contacts": 8,
+            "verified_effects": 15,
+            "unverified_effects": 0,
+            "chains_formed": 95,
+            "decisions": {
+              "block": 4,
+              "honeypot": 12,
+              "restore": 3,
+              "temporary_isolate": 33
+            },
+            "failed_effects": {},
+            "remediated_hosts": 2
+          },
+          {
+            "decoyed_hosts": 22,
+            "decoy_contacts": 17,
+            "verified_effects": 15,
+            "unverified_effects": 0,
+            "chains_formed": 3,
+            "decisions": {
+              "block": 1,
+              "honeypot": 27,
+              "temporary_isolate": 53
+            },
+            "failed_effects": {},
+            "remediated_hosts": 5
+          }
+        ],
+        "red_actions": {
+          "AggressiveServiceDiscovery": 85,
+          "DegradeServices": 262,
+          "DiscoverDeception": 103,
+          "DiscoverRemoteSystems": 37,
+          "ExploitRemoteService": 302,
+          "Impact": 266,
+          "PrivilegeEscalate": 42,
+          "Sleep": 1829,
+          "StealthServiceDiscovery": 68
+        },
+        "attack": {
+          "initial_session_hosts": [
+            "contractor_network_subnet_server_host_0"
+          ],
+          "initial_privileged_hosts": [],
+          "unique_session_hosts": 64,
+          "unique_new_session_hosts": 63,
+          "new_session_hosts": [
+            "admin_network_subnet_user_host_0",
+            "admin_network_subnet_user_host_1",
+            "admin_network_subnet_user_host_3",
+            "admin_network_subnet_user_host_5",
+            "admin_network_subnet_user_host_6",
+            "admin_network_subnet_user_host_7",
+            "contractor_network_subnet_user_host_0",
+            "contractor_network_subnet_user_host_1",
+            "contractor_network_subnet_user_host_2",
+            "contractor_network_subnet_user_host_3",
+            "office_network_subnet_server_host_1",
+            "office_network_subnet_server_host_2",
+            "office_network_subnet_server_host_3",
+            "office_network_subnet_user_host_0",
+            "office_network_subnet_user_host_1",
+            "office_network_subnet_user_host_2",
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_server_host_2",
+            "operational_zone_a_subnet_server_host_3",
+            "operational_zone_a_subnet_server_host_4",
+            "operational_zone_a_subnet_server_host_5",
+            "operational_zone_a_subnet_user_host_0",
+            "operational_zone_a_subnet_user_host_1",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_a_subnet_user_host_3",
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_server_host_2",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "operational_zone_b_subnet_user_host_4",
+            "operational_zone_b_subnet_user_host_5",
+            "operational_zone_b_subnet_user_host_6",
+            "operational_zone_b_subnet_user_host_7",
+            "public_access_zone_subnet_server_host_0",
+            "public_access_zone_subnet_user_host_0",
+            "public_access_zone_subnet_user_host_1",
+            "public_access_zone_subnet_user_host_2",
+            "public_access_zone_subnet_user_host_3",
+            "public_access_zone_subnet_user_host_4",
+            "public_access_zone_subnet_user_host_5",
+            "public_access_zone_subnet_user_host_6",
+            "public_access_zone_subnet_user_host_7",
+            "restricted_zone_a_subnet_server_host_0",
+            "restricted_zone_a_subnet_server_host_2",
+            "restricted_zone_a_subnet_user_host_0",
+            "restricted_zone_a_subnet_user_host_1",
+            "restricted_zone_a_subnet_user_host_2",
+            "restricted_zone_b_subnet_server_host_0",
+            "restricted_zone_b_subnet_server_host_1",
+            "restricted_zone_b_subnet_server_host_3",
+            "restricted_zone_b_subnet_server_host_4",
+            "restricted_zone_b_subnet_user_host_0",
+            "restricted_zone_b_subnet_user_host_1",
+            "restricted_zone_b_subnet_user_host_2",
+            "restricted_zone_b_subnet_user_host_3",
+            "restricted_zone_b_subnet_user_host_4",
+            "restricted_zone_b_subnet_user_host_5",
+            "restricted_zone_b_subnet_user_host_6",
+            "restricted_zone_b_subnet_user_host_7"
+          ],
+          "unique_privileged_hosts": 37,
+          "unique_new_privileged_hosts": 37,
+          "new_privileged_hosts": [
+            "admin_network_subnet_user_host_1",
+            "contractor_network_subnet_server_host_0",
+            "contractor_network_subnet_user_host_0",
+            "contractor_network_subnet_user_host_1",
+            "contractor_network_subnet_user_host_2",
+            "contractor_network_subnet_user_host_3",
+            "office_network_subnet_server_host_3",
+            "office_network_subnet_user_host_1",
+            "office_network_subnet_user_host_2",
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_server_host_2",
+            "operational_zone_a_subnet_server_host_3",
+            "operational_zone_a_subnet_server_host_4",
+            "operational_zone_a_subnet_server_host_5",
+            "operational_zone_a_subnet_user_host_0",
+            "operational_zone_a_subnet_user_host_1",
+            "operational_zone_a_subnet_user_host_3",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "operational_zone_b_subnet_user_host_5",
+            "operational_zone_b_subnet_user_host_6",
+            "operational_zone_b_subnet_user_host_7",
+            "restricted_zone_a_subnet_server_host_0",
+            "restricted_zone_a_subnet_server_host_2",
+            "restricted_zone_a_subnet_user_host_1",
+            "restricted_zone_a_subnet_user_host_2",
+            "restricted_zone_b_subnet_server_host_1",
+            "restricted_zone_b_subnet_server_host_4",
+            "restricted_zone_b_subnet_user_host_2",
+            "restricted_zone_b_subnet_user_host_3",
+            "restricted_zone_b_subnet_user_host_4",
+            "restricted_zone_b_subnet_user_host_5",
+            "restricted_zone_b_subnet_user_host_6",
+            "restricted_zone_b_subnet_user_host_7"
+          ],
+          "successful_exploit_hosts": 47,
+          "unique_impacted_hosts": 12,
+          "impacted_hosts": [
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_server_host_3",
+            "operational_zone_a_subnet_server_host_4",
+            "operational_zone_a_subnet_user_host_0",
+            "operational_zone_a_subnet_user_host_1",
+            "operational_zone_a_subnet_user_host_3",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "operational_zone_b_subnet_user_host_6",
+            "operational_zone_b_subnet_user_host_7"
+          ],
+          "successful_impact_count": 12,
+          "first_new_session_step": 3,
+          "first_successful_impact_step": 58,
+          "max_concurrent_session_hosts": 50,
+          "max_concurrent_privileged_hosts": 34,
+          "max_session_lineage_depth": 1,
+          "ordered_chain_completions": 10,
+          "ordered_chain_hosts": [
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_server_host_3",
+            "operational_zone_a_subnet_server_host_4",
+            "operational_zone_a_subnet_user_host_0",
+            "operational_zone_a_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "operational_zone_b_subnet_user_host_6",
+            "operational_zone_b_subnet_user_host_7"
+          ],
+          "privileged_to_impact_host_rate": 0.32432432432432434,
+          "action_results": {
+            "AggressiveServiceDiscovery": {
+              "completed": 85,
+              "succeeded": 79,
+              "failed": 6,
+              "success_rate": 0.9294117647058824
+            },
+            "DegradeServices": {
+              "completed": 249,
+              "succeeded": 248,
+              "failed": 1,
+              "success_rate": 0.9959839357429718
+            },
+            "DiscoverDeception": {
+              "completed": 93,
+              "succeeded": 93,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "DiscoverRemoteSystems": {
+              "completed": 37,
+              "succeeded": 37,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "ExploitRemoteService": {
+              "completed": 286,
+              "succeeded": 101,
+              "failed": 185,
+              "success_rate": 0.3531468531468531
+            },
+            "Impact": {
+              "completed": 248,
+              "succeeded": 12,
+              "failed": 236,
+              "success_rate": 0.04838709677419355
+            },
+            "PrivilegeEscalate": {
+              "completed": 42,
+              "succeeded": 39,
+              "failed": 3,
+              "success_rate": 0.9285714285714286
+            },
+            "RedSessionCheck": {
+              "completed": 57,
+              "succeeded": 57,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "StealthServiceDiscovery": {
+              "completed": 68,
+              "succeeded": 64,
+              "failed": 4,
+              "success_rate": 0.9411764705882353
+            }
+          }
+        }
+      },
+      {
+        "seed": 3403,
+        "reward": -3418,
+        "blue_actions": {
+          "AllowTrafficZone": 4,
+          "Analyse": 109,
+          "BlockTrafficZone": 32,
+          "DeployDecoy": 60,
+          "Monitor": 1770,
+          "Remove": 52,
+          "Restore": 39,
+          "Sleep": 429
+        },
+        "blue_metrics": [
+          {
+            "decoyed_hosts": 5,
+            "decoy_contacts": 4,
+            "verified_effects": 16,
+            "unverified_effects": 0,
+            "chains_formed": 5,
+            "decisions": {
+              "block": 2,
+              "honeypot": 6,
+              "temporary_isolate": 48
+            },
+            "failed_effects": {},
+            "remediated_hosts": 4
+          },
+          {
+            "decoyed_hosts": 6,
+            "decoy_contacts": 6,
+            "verified_effects": 23,
+            "unverified_effects": 1,
+            "chains_formed": 183,
+            "decisions": {
+              "block": 1,
+              "honeypot": 6,
+              "restore": 15,
+              "temporary_isolate": 39
+            },
+            "failed_effects": {
+              "Restore": 1
+            },
+            "remediated_hosts": 3
+          },
+          {
+            "decoyed_hosts": 8,
+            "decoy_contacts": 8,
+            "verified_effects": 15,
+            "unverified_effects": 0,
+            "chains_formed": 62,
+            "decisions": {
+              "block": 8,
+              "honeypot": 9,
+              "temporary_isolate": 42
+            },
+            "failed_effects": {},
+            "remediated_hosts": 6
+          },
+          {
+            "decoyed_hosts": 13,
+            "decoy_contacts": 11,
+            "verified_effects": 17,
+            "unverified_effects": 0,
+            "chains_formed": 98,
+            "decisions": {
+              "block": 2,
+              "honeypot": 17,
+              "restore": 4,
+              "temporary_isolate": 30
+            },
+            "failed_effects": {},
+            "remediated_hosts": 0
+          },
+          {
+            "decoyed_hosts": 28,
+            "decoy_contacts": 25,
+            "verified_effects": 18,
+            "unverified_effects": 0,
+            "chains_formed": 3,
+            "decisions": {
+              "block": 1,
+              "honeypot": 36,
+              "temporary_isolate": 62
+            },
+            "failed_effects": {},
+            "remediated_hosts": 6
+          }
+        ],
+        "red_actions": {
+          "AggressiveServiceDiscovery": 73,
+          "DegradeServices": 174,
+          "DiscoverDeception": 122,
+          "DiscoverRemoteSystems": 30,
+          "ExploitRemoteService": 376,
+          "Impact": 155,
+          "PrivilegeEscalate": 45,
+          "Sleep": 1951,
+          "StealthServiceDiscovery": 68
+        },
+        "attack": {
+          "initial_session_hosts": [
+            "contractor_network_subnet_server_host_2"
+          ],
+          "initial_privileged_hosts": [],
+          "unique_session_hosts": 71,
+          "unique_new_session_hosts": 70,
+          "new_session_hosts": [
+            "admin_network_subnet_server_host_0",
+            "admin_network_subnet_server_host_1",
+            "admin_network_subnet_user_host_0",
+            "admin_network_subnet_user_host_2",
+            "admin_network_subnet_user_host_3",
+            "contractor_network_subnet_server_host_0",
+            "contractor_network_subnet_server_host_1",
+            "contractor_network_subnet_server_host_3",
+            "contractor_network_subnet_server_host_5",
+            "contractor_network_subnet_user_host_0",
+            "contractor_network_subnet_user_host_1",
+            "contractor_network_subnet_user_host_2",
+            "contractor_network_subnet_user_host_3",
+            "contractor_network_subnet_user_host_4",
+            "contractor_network_subnet_user_host_5",
+            "contractor_network_subnet_user_host_6",
+            "contractor_network_subnet_user_host_7",
+            "office_network_subnet_user_host_0",
+            "office_network_subnet_user_host_1",
+            "office_network_subnet_user_host_2",
+            "office_network_subnet_user_host_3",
+            "office_network_subnet_user_host_4",
+            "office_network_subnet_user_host_5",
+            "office_network_subnet_user_host_6",
+            "office_network_subnet_user_host_7",
+            "office_network_subnet_user_host_8",
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_server_host_2",
+            "operational_zone_a_subnet_user_host_0",
+            "operational_zone_a_subnet_user_host_1",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_a_subnet_user_host_3",
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_a_subnet_user_host_5",
+            "operational_zone_a_subnet_user_host_6",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_server_host_1",
+            "operational_zone_b_subnet_server_host_4",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "operational_zone_b_subnet_user_host_4",
+            "operational_zone_b_subnet_user_host_6",
+            "operational_zone_b_subnet_user_host_7",
+            "public_access_zone_subnet_user_host_0",
+            "public_access_zone_subnet_user_host_1",
+            "public_access_zone_subnet_user_host_2",
+            "public_access_zone_subnet_user_host_3",
+            "public_access_zone_subnet_user_host_4",
+            "public_access_zone_subnet_user_host_6",
+            "restricted_zone_a_subnet_server_host_0",
+            "restricted_zone_a_subnet_server_host_1",
+            "restricted_zone_a_subnet_server_host_2",
+            "restricted_zone_a_subnet_server_host_3",
+            "restricted_zone_a_subnet_user_host_0",
+            "restricted_zone_a_subnet_user_host_1",
+            "restricted_zone_a_subnet_user_host_2",
+            "restricted_zone_a_subnet_user_host_3",
+            "restricted_zone_a_subnet_user_host_4",
+            "restricted_zone_b_subnet_server_host_0",
+            "restricted_zone_b_subnet_server_host_1",
+            "restricted_zone_b_subnet_server_host_2",
+            "restricted_zone_b_subnet_server_host_4",
+            "restricted_zone_b_subnet_user_host_0",
+            "restricted_zone_b_subnet_user_host_1",
+            "restricted_zone_b_subnet_user_host_2",
+            "restricted_zone_b_subnet_user_host_3",
+            "restricted_zone_b_subnet_user_host_4"
+          ],
+          "unique_privileged_hosts": 39,
+          "unique_new_privileged_hosts": 39,
+          "new_privileged_hosts": [
+            "admin_network_subnet_server_host_0",
+            "admin_network_subnet_user_host_3",
+            "contractor_network_subnet_server_host_0",
+            "contractor_network_subnet_server_host_1",
+            "contractor_network_subnet_server_host_2",
+            "contractor_network_subnet_server_host_5",
+            "contractor_network_subnet_user_host_0",
+            "contractor_network_subnet_user_host_1",
+            "contractor_network_subnet_user_host_2",
+            "contractor_network_subnet_user_host_3",
+            "contractor_network_subnet_user_host_4",
+            "contractor_network_subnet_user_host_5",
+            "contractor_network_subnet_user_host_7",
+            "office_network_subnet_user_host_6",
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_server_host_2",
+            "operational_zone_a_subnet_user_host_1",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_a_subnet_user_host_3",
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_a_subnet_user_host_5",
+            "operational_zone_a_subnet_user_host_6",
+            "operational_zone_b_subnet_user_host_4",
+            "public_access_zone_subnet_user_host_0",
+            "public_access_zone_subnet_user_host_4",
+            "restricted_zone_a_subnet_server_host_1",
+            "restricted_zone_a_subnet_server_host_2",
+            "restricted_zone_a_subnet_user_host_0",
+            "restricted_zone_a_subnet_user_host_1",
+            "restricted_zone_a_subnet_user_host_2",
+            "restricted_zone_a_subnet_user_host_3",
+            "restricted_zone_a_subnet_user_host_4",
+            "restricted_zone_b_subnet_server_host_0",
+            "restricted_zone_b_subnet_server_host_2",
+            "restricted_zone_b_subnet_user_host_0",
+            "restricted_zone_b_subnet_user_host_2",
+            "restricted_zone_b_subnet_user_host_3",
+            "restricted_zone_b_subnet_user_host_4"
+          ],
+          "successful_exploit_hosts": 51,
+          "unique_impacted_hosts": 9,
+          "impacted_hosts": [
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_user_host_1",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_a_subnet_user_host_3",
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_a_subnet_user_host_5",
+            "operational_zone_a_subnet_user_host_6",
+            "operational_zone_b_subnet_user_host_4"
+          ],
+          "successful_impact_count": 9,
+          "first_new_session_step": 5,
+          "first_successful_impact_step": 22,
+          "max_concurrent_session_hosts": 59,
+          "max_concurrent_privileged_hosts": 38,
+          "max_session_lineage_depth": 1,
+          "ordered_chain_completions": 7,
+          "ordered_chain_hosts": [
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_user_host_1",
+            "operational_zone_a_subnet_user_host_3",
+            "operational_zone_a_subnet_user_host_4",
+            "operational_zone_a_subnet_user_host_5",
+            "operational_zone_a_subnet_user_host_6"
+          ],
+          "privileged_to_impact_host_rate": 0.23076923076923078,
+          "action_results": {
+            "AggressiveServiceDiscovery": {
+              "completed": 73,
+              "succeeded": 73,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "DegradeServices": {
+              "completed": 173,
+              "succeeded": 173,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "DiscoverDeception": {
+              "completed": 113,
+              "succeeded": 113,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "DiscoverRemoteSystems": {
+              "completed": 30,
+              "succeeded": 30,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "ExploitRemoteService": {
+              "completed": 357,
+              "succeeded": 91,
+              "failed": 266,
+              "success_rate": 0.2549019607843137
+            },
+            "Impact": {
+              "completed": 155,
+              "succeeded": 9,
+              "failed": 146,
+              "success_rate": 0.05806451612903226
+            },
+            "PrivilegeEscalate": {
+              "completed": 44,
+              "succeeded": 40,
+              "failed": 4,
+              "success_rate": 0.9090909090909091
+            },
+            "RedSessionCheck": {
+              "completed": 30,
+              "succeeded": 30,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "StealthServiceDiscovery": {
+              "completed": 68,
+              "succeeded": 67,
+              "failed": 1,
+              "success_rate": 0.9852941176470589
+            }
+          }
+        }
+      },
+      {
+        "seed": 3404,
+        "reward": -3993,
+        "blue_actions": {
+          "AllowTrafficZone": 4,
+          "Analyse": 80,
+          "BlockTrafficZone": 32,
+          "DeployDecoy": 53,
+          "Monitor": 1884,
+          "Remove": 53,
+          "Restore": 30,
+          "Sleep": 359
+        },
+        "blue_metrics": [
+          {
+            "decoyed_hosts": 12,
+            "decoy_contacts": 12,
+            "verified_effects": 14,
+            "unverified_effects": 0,
+            "chains_formed": 41,
+            "decisions": {
+              "block": 4,
+              "honeypot": 16,
+              "temporary_isolate": 52
+            },
+            "failed_effects": {},
+            "remediated_hosts": 7
+          },
+          {
+            "decoyed_hosts": 6,
+            "decoy_contacts": 6,
+            "verified_effects": 18,
+            "unverified_effects": 0,
+            "chains_formed": 157,
+            "decisions": {
+              "honeypot": 6,
+              "restore": 11,
+              "temporary_isolate": 19
+            },
+            "failed_effects": {},
+            "remediated_hosts": 2
+          },
+          {
+            "decoyed_hosts": 8,
+            "decoy_contacts": 7,
+            "verified_effects": 11,
+            "unverified_effects": 0,
+            "chains_formed": 102,
+            "decisions": {
+              "block": 10,
+              "honeypot": 10,
+              "temporary_isolate": 22
+            },
+            "failed_effects": {},
+            "remediated_hosts": 3
+          },
+          {
+            "decoyed_hosts": 7,
+            "decoy_contacts": 6,
+            "verified_effects": 15,
+            "unverified_effects": 0,
+            "chains_formed": 76,
+            "decisions": {
+              "block": 1,
+              "honeypot": 7,
+              "restore": 3,
+              "temporary_isolate": 26
+            },
+            "failed_effects": {},
+            "remediated_hosts": 6
+          },
+          {
+            "decoyed_hosts": 20,
+            "decoy_contacts": 15,
+            "verified_effects": 18,
+            "unverified_effects": 1,
+            "chains_formed": 12,
+            "decisions": {
+              "block": 2,
+              "honeypot": 29,
+              "temporary_isolate": 43
+            },
+            "failed_effects": {
+              "Remove": 1
+            },
+            "remediated_hosts": 10
+          }
+        ],
+        "red_actions": {
+          "AggressiveServiceDiscovery": 60,
+          "DegradeServices": 175,
+          "DiscoverDeception": 98,
+          "DiscoverRemoteSystems": 32,
+          "ExploitRemoteService": 313,
+          "Impact": 186,
+          "PrivilegeEscalate": 45,
+          "Sleep": 2016,
+          "StealthServiceDiscovery": 69
+        },
+        "attack": {
+          "initial_session_hosts": [
+            "contractor_network_subnet_server_host_3"
+          ],
+          "initial_privileged_hosts": [],
+          "unique_session_hosts": 67,
+          "unique_new_session_hosts": 66,
+          "new_session_hosts": [
+            "admin_network_subnet_user_host_0",
+            "admin_network_subnet_user_host_1",
+            "admin_network_subnet_user_host_2",
+            "admin_network_subnet_user_host_3",
+            "admin_network_subnet_user_host_4",
+            "admin_network_subnet_user_host_5",
+            "contractor_network_subnet_server_host_0",
+            "contractor_network_subnet_server_host_2",
+            "contractor_network_subnet_server_host_4",
+            "contractor_network_subnet_server_host_5",
+            "contractor_network_subnet_user_host_0",
+            "contractor_network_subnet_user_host_1",
+            "contractor_network_subnet_user_host_2",
+            "contractor_network_subnet_user_host_3",
+            "contractor_network_subnet_user_host_4",
+            "contractor_network_subnet_user_host_5",
+            "office_network_subnet_user_host_0",
+            "office_network_subnet_user_host_1",
+            "office_network_subnet_user_host_2",
+            "office_network_subnet_user_host_3",
+            "office_network_subnet_user_host_4",
+            "office_network_subnet_user_host_5",
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_server_host_2",
+            "operational_zone_a_subnet_server_host_3",
+            "operational_zone_a_subnet_user_host_0",
+            "operational_zone_a_subnet_user_host_1",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_b_subnet_server_host_0",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "operational_zone_b_subnet_user_host_4",
+            "operational_zone_b_subnet_user_host_5",
+            "operational_zone_b_subnet_user_host_6",
+            "operational_zone_b_subnet_user_host_7",
+            "public_access_zone_subnet_server_host_0",
+            "public_access_zone_subnet_user_host_0",
+            "public_access_zone_subnet_user_host_1",
+            "public_access_zone_subnet_user_host_2",
+            "public_access_zone_subnet_user_host_3",
+            "public_access_zone_subnet_user_host_4",
+            "public_access_zone_subnet_user_host_5",
+            "public_access_zone_subnet_user_host_6",
+            "restricted_zone_a_subnet_server_host_0",
+            "restricted_zone_a_subnet_server_host_1",
+            "restricted_zone_a_subnet_server_host_2",
+            "restricted_zone_a_subnet_server_host_5",
+            "restricted_zone_a_subnet_user_host_0",
+            "restricted_zone_a_subnet_user_host_1",
+            "restricted_zone_a_subnet_user_host_2",
+            "restricted_zone_a_subnet_user_host_3",
+            "restricted_zone_a_subnet_user_host_4",
+            "restricted_zone_a_subnet_user_host_5",
+            "restricted_zone_a_subnet_user_host_6",
+            "restricted_zone_a_subnet_user_host_7",
+            "restricted_zone_b_subnet_server_host_0",
+            "restricted_zone_b_subnet_server_host_1",
+            "restricted_zone_b_subnet_server_host_2",
+            "restricted_zone_b_subnet_server_host_3",
+            "restricted_zone_b_subnet_user_host_0",
+            "restricted_zone_b_subnet_user_host_1",
+            "restricted_zone_b_subnet_user_host_2",
+            "restricted_zone_b_subnet_user_host_3"
+          ],
+          "unique_privileged_hosts": 39,
+          "unique_new_privileged_hosts": 39,
+          "new_privileged_hosts": [
+            "admin_network_subnet_user_host_5",
+            "contractor_network_subnet_server_host_0",
+            "contractor_network_subnet_server_host_2",
+            "contractor_network_subnet_server_host_3",
+            "contractor_network_subnet_server_host_4",
+            "contractor_network_subnet_server_host_5",
+            "contractor_network_subnet_user_host_0",
+            "contractor_network_subnet_user_host_1",
+            "contractor_network_subnet_user_host_2",
+            "contractor_network_subnet_user_host_3",
+            "contractor_network_subnet_user_host_4",
+            "contractor_network_subnet_user_host_5",
+            "office_network_subnet_user_host_0",
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_server_host_3",
+            "operational_zone_a_subnet_user_host_0",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "operational_zone_b_subnet_user_host_4",
+            "operational_zone_b_subnet_user_host_5",
+            "operational_zone_b_subnet_user_host_6",
+            "operational_zone_b_subnet_user_host_7",
+            "restricted_zone_a_subnet_server_host_0",
+            "restricted_zone_a_subnet_server_host_2",
+            "restricted_zone_a_subnet_user_host_1",
+            "restricted_zone_a_subnet_user_host_2",
+            "restricted_zone_a_subnet_user_host_3",
+            "restricted_zone_a_subnet_user_host_4",
+            "restricted_zone_a_subnet_user_host_5",
+            "restricted_zone_a_subnet_user_host_6",
+            "restricted_zone_a_subnet_user_host_7",
+            "restricted_zone_b_subnet_server_host_3",
+            "restricted_zone_b_subnet_user_host_1",
+            "restricted_zone_b_subnet_user_host_2",
+            "restricted_zone_b_subnet_user_host_3"
+          ],
+          "successful_exploit_hosts": 47,
+          "unique_impacted_hosts": 13,
+          "impacted_hosts": [
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_server_host_3",
+            "operational_zone_a_subnet_user_host_0",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_3",
+            "operational_zone_b_subnet_user_host_4",
+            "operational_zone_b_subnet_user_host_5",
+            "operational_zone_b_subnet_user_host_6",
+            "operational_zone_b_subnet_user_host_7"
+          ],
+          "successful_impact_count": 14,
+          "first_new_session_step": 3,
+          "first_successful_impact_step": 120,
+          "max_concurrent_session_hosts": 55,
+          "max_concurrent_privileged_hosts": 36,
+          "max_session_lineage_depth": 1,
+          "ordered_chain_completions": 11,
+          "ordered_chain_hosts": [
+            "operational_zone_a_subnet_server_host_0",
+            "operational_zone_a_subnet_server_host_1",
+            "operational_zone_a_subnet_server_host_3",
+            "operational_zone_a_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_0",
+            "operational_zone_b_subnet_user_host_1",
+            "operational_zone_b_subnet_user_host_2",
+            "operational_zone_b_subnet_user_host_4",
+            "operational_zone_b_subnet_user_host_5",
+            "operational_zone_b_subnet_user_host_6",
+            "operational_zone_b_subnet_user_host_7"
+          ],
+          "privileged_to_impact_host_rate": 0.3333333333333333,
+          "action_results": {
+            "AggressiveServiceDiscovery": {
+              "completed": 55,
+              "succeeded": 55,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "DegradeServices": {
+              "completed": 156,
+              "succeeded": 156,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "DiscoverDeception": {
+              "completed": 94,
+              "succeeded": 94,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "DiscoverRemoteSystems": {
+              "completed": 32,
+              "succeeded": 32,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "ExploitRemoteService": {
+              "completed": 285,
+              "succeeded": 74,
+              "failed": 211,
+              "success_rate": 0.2596491228070175
+            },
+            "Impact": {
+              "completed": 176,
+              "succeeded": 14,
+              "failed": 162,
+              "success_rate": 0.07954545454545454
+            },
+            "PrivilegeEscalate": {
+              "completed": 44,
+              "succeeded": 43,
+              "failed": 1,
+              "success_rate": 0.9772727272727273
+            },
+            "RedSessionCheck": {
+              "completed": 73,
+              "succeeded": 73,
+              "failed": 0,
+              "success_rate": 1.0
+            },
+            "StealthServiceDiscovery": {
+              "completed": 63,
+              "succeeded": 63,
+              "failed": 0,
+              "success_rate": 1.0
+            }
+          }
+        }
+      }
+    ]
+  }
+}

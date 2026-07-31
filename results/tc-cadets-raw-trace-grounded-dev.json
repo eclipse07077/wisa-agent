@@ -1,0 +1,1599 @@
+{
+  "split": {
+    "train": [
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10
+    ],
+    "validation": [
+      2
+    ],
+    "test": [
+      6,
+      11,
+      12,
+      13
+    ]
+  },
+  "predicate_mode": "trace",
+  "chain_node_score": "chain_score_times_predicate_confidence",
+  "threshold": 0.17950530037920376,
+  "profile": {
+    "structural_states": 19,
+    "trace_transitions": 29,
+    "path_states": 8274
+  },
+  "aggregate": {
+    "nodes": 297085,
+    "positives": 68,
+    "label_coverage": 0.9444444444444444,
+    "base": {
+      "auroc": 0.787047716024969,
+      "ap": 0.12600133409178832,
+      "precision_at_100": 0.09,
+      "recall_at_100": 0.1323529411764706,
+      "precision_at_500": 0.02,
+      "recall_at_500": 0.14705882352941177,
+      "precision_at_1000": 0.01,
+      "recall_at_1000": 0.14705882352941177
+    },
+    "full": {
+      "auroc": 0.7914425427025469,
+      "ap": 0.12599610462649105,
+      "precision_at_100": 0.09,
+      "recall_at_100": 0.1323529411764706,
+      "precision_at_500": 0.02,
+      "recall_at_500": 0.14705882352941177,
+      "precision_at_1000": 0.01,
+      "recall_at_1000": 0.14705882352941177
+    },
+    "chains": {
+      "reported_nodes": 530,
+      "precision": 0.03207547169811321,
+      "recall": 0.25,
+      "matched_baseline_precision": 0.018867924528301886,
+      "matched_baseline_recall": 0.14705882352941177
+    }
+  },
+  "days": {
+    "6": {
+      "nodes": 110455,
+      "positives": 8,
+      "label_coverage": 1.0,
+      "base": {
+        "auroc": 0.6705671045840991,
+        "ap": 0.0022815217681042333,
+        "precision_at_100": 0.0,
+        "recall_at_100": 0.0,
+        "precision_at_500": 0.004,
+        "recall_at_500": 0.25,
+        "precision_at_1000": 0.003,
+        "recall_at_1000": 0.375
+      },
+      "full": {
+        "auroc": 0.6704029987233696,
+        "ap": 0.0022814662623624306,
+        "precision_at_100": 0.0,
+        "recall_at_100": 0.0,
+        "precision_at_500": 0.004,
+        "recall_at_500": 0.25,
+        "precision_at_1000": 0.003,
+        "recall_at_1000": 0.375
+      },
+      "chains": {
+        "reported_nodes": 106,
+        "precision": 0.02830188679245283,
+        "recall": 0.375,
+        "matched_baseline_precision": 0.0,
+        "matched_baseline_recall": 0.0
+      }
+    },
+    "11": {
+      "nodes": 109738,
+      "positives": 0,
+      "label_coverage": 0.0,
+      "base": {
+        "auroc": null,
+        "ap": null,
+        "precision_at_100": 0.0,
+        "recall_at_100": 0.0,
+        "precision_at_500": 0.0,
+        "recall_at_500": 0.0,
+        "precision_at_1000": 0.0,
+        "recall_at_1000": 0.0
+      },
+      "full": {
+        "auroc": null,
+        "ap": null,
+        "precision_at_100": 0.0,
+        "recall_at_100": 0.0,
+        "precision_at_500": 0.0,
+        "recall_at_500": 0.0,
+        "precision_at_1000": 0.0,
+        "recall_at_1000": 0.0
+      },
+      "chains": {
+        "reported_nodes": 108,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matched_baseline_precision": 0.0,
+        "matched_baseline_recall": 0.0
+      }
+    },
+    "12": {
+      "nodes": 104966,
+      "positives": 41,
+      "label_coverage": 0.9534883720930233,
+      "base": {
+        "auroc": 0.8289285610511573,
+        "ap": 0.21310769907427043,
+        "precision_at_100": 0.09,
+        "recall_at_100": 0.21951219512195122,
+        "precision_at_500": 0.04,
+        "recall_at_500": 0.4878048780487805,
+        "precision_at_1000": 0.021,
+        "recall_at_1000": 0.5121951219512195
+      },
+      "full": {
+        "auroc": 0.8343547365423619,
+        "ap": 0.21330000134269703,
+        "precision_at_100": 0.09,
+        "recall_at_100": 0.21951219512195122,
+        "precision_at_500": 0.04,
+        "recall_at_500": 0.4878048780487805,
+        "precision_at_1000": 0.021,
+        "recall_at_1000": 0.5121951219512195
+      },
+      "chains": {
+        "reported_nodes": 115,
+        "precision": 0.09565217391304348,
+        "recall": 0.2682926829268293,
+        "matched_baseline_precision": 0.0782608695652174,
+        "matched_baseline_recall": 0.21951219512195122
+      }
+    },
+    "13": {
+      "nodes": 33848,
+      "positives": 22,
+      "label_coverage": 0.9166666666666666,
+      "base": {
+        "auroc": 0.7184078411980026,
+        "ap": 0.007966758361717905,
+        "precision_at_100": 0.01,
+        "recall_at_100": 0.045454545454545456,
+        "precision_at_500": 0.014,
+        "recall_at_500": 0.3181818181818182,
+        "precision_at_1000": 0.011,
+        "recall_at_1000": 0.5
+      },
+      "full": {
+        "auroc": 0.7409476572620308,
+        "ap": 0.0075191869425264585,
+        "precision_at_100": 0.01,
+        "recall_at_100": 0.045454545454545456,
+        "precision_at_500": 0.01,
+        "recall_at_500": 0.22727272727272727,
+        "precision_at_1000": 0.011,
+        "recall_at_1000": 0.5
+      },
+      "chains": {
+        "reported_nodes": 271,
+        "precision": 0.014760147601476014,
+        "recall": 0.18181818181818182,
+        "matched_baseline_precision": 0.014760147601476014,
+        "matched_baseline_recall": 0.18181818181818182
+      }
+    }
+  },
+  "chain_count": 192,
+  "predicate_count": 8192,
+  "top_chains": [
+    {
+      "id": "chain-433bea50d236",
+      "score": 0.7361671118157741,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "3769BE54-47D5-5ED1-8EB7-9D99227E1ADD",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "622B54B8-3F55-11E8-A5CB-3FA3753A265A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8AFB4727-F093-5CDF-B4AD-208F94582EAB",
+        "EA671C4C-E6E3-FA5C-A3E6-A0C81CFA2957",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-e7bc9b15b93e",
+      "score": 0.7361671074447668,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "1A803EA0-399D-11E8-BF66-D9AA8AFF4A69",
+        "30A1D33E-B30E-B55E-8EB3-2F223EB5EF63",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8A44F292-648B-7854-8B64-00F954785A79",
+        "8A4FA0FB-1F9D-5868-B7BC-F8972C80C875",
+        "CA1D5458-E3F0-54A2-A364-8F1541F4F981",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-4def544b3302",
+      "score": 0.7361671052592631,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "37D96348-3E8C-11E8-A5CB-3FA3753A265A",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "77E6DA77-076C-5699-8551-AF3F266433A5",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8F2E2624-D0D6-5430-84E4-7A838EADEA4C",
+        "9091E90D-46E1-E559-A146-EDCAA9E54C87",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-6580fd81f736",
+      "score": 0.7361212763406472,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "26D41332-09C4-7255-8409-C52F1572ADD3",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "89014C9F-FF7F-51B1-A1DA-6B4B88530631",
+        "A8836C48-BE50-5587-80F9-D3D99E6C8D60",
+        "CE703908-A31D-2B54-9DA3-550CE42BBA60",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020",
+        "F6AE7D89-3DAB-11E8-B8CE-15D78AC88FB6"
+      ]
+    },
+    {
+      "id": "chain-0e684d74bcd1",
+      "score": 0.7361212697841363,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "179F3BE9-3F23-11E8-A5CB-3FA3753A265A",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "4261E4C4-DBF2-5FA0-B3B8-4F044C401F1B",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "525F441F-5FCD-551F-8E93-E0392951DA92",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "E1EED687-A550-E858-90A5-F33B58E852F7",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-bd84087b0f6f",
+      "score": 0.7360754703698195,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2D8315EC-517C-5AEE-9563-11AA9457C939",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "6D065880-39F0-11E8-B8CE-15D78AC88FB6",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "92E03B19-B0BC-6255-BCB0-D51EF5621B79",
+        "93E96AE5-17D0-5292-83D5-E35EA1601754",
+        "A5E0656F-9001-7158-8190-5B0248710A2B",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-b86590755a5b",
+      "score": 0.7360754343090093,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "01B5189C-0855-C35F-9508-609B8FC30D32",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "1C8897CE-8BBC-5444-AD5D-2E97CFA571BE",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "82453D20-3EBE-11E8-A5CB-3FA3753A265A",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020",
+        "FDC76560-6C58-5116-BEB3-B6556B3513C7"
+      ]
+    },
+    {
+      "id": "chain-5154516509ff",
+      "score": 0.7208338453341446,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_SENDTO"
+      ],
+      "nodes": [
+        "219DE547-3E7E-11E8-A5CB-3FA3753A265A",
+        "21A20E29-3E7E-11E8-A5CB-3FA3753A265A",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "308E149F-F225-9859-A5F2-8C9BB9983D48",
+        "416AB837-8E42-6D58-828E-6976586D8E68",
+        "5026C48F-56BA-3E5B-BA56-DD382B3EC82B",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "65142C5B-32FF-825F-BF32-60951F827170",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "9A717117-65ED-675C-AD65-38102C67C832",
+        "CEE6589C-8C59-1556-998C-BCE606155D40",
+        "F158CE4A-8B60-6855-A08B-FE9DD568D823",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-b28f2ce9ccbe",
+      "score": 0.7171318235722778,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "00CB5B40-736C-57A3-B249-E84E79F1D402",
+        "01B5189C-0855-C35F-9508-609B8FC30D32",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "303FF10B-31C1-581A-8082-A22DE147577B",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8250EC3F-3EBE-11E8-A5CB-3FA3753A265A",
+        "C8F095F5-7578-D953-B875-E85843D9EB88",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-0649e8c2a4fb",
+      "score": 0.7171317743984459,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "17A8D06F-3F23-11E8-A5CB-3FA3753A265A",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "3ABE5765-E024-8656-A4E0-8F972686B9CC",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "A4284B78-DFE6-593A-89FF-EFA983CCFB15",
+        "D5B269BF-76F1-58AA-B53F-42581B86973E",
+        "E1EED687-A550-E858-90A5-F33B58E852F7",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-f808ed903fb5",
+      "score": 0.7171317689346867,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "1BBF3592-5CDB-B953-9B5C-C376E3B9528D",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "26D41332-09C4-7255-8409-C52F1572ADD3",
+        "28073CE1-6C98-5699-8203-F8E54C5AD6FD",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "5615DF6A-1738-5A8B-881C-CA31C6C512A0",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "789543E8-D568-DA55-A8D5-AFBC45DAE3C4",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "ABB3C430-3D79-11E8-B8CE-15D78AC88FB6",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-43d0f167c1ac",
+      "score": 0.7171317175753512,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "04252A03-E713-4C5B-93E7-03CE8B4C7DA8",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2239C822-4D06-5A9B-9143-270FC89E1A86",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "6233C23C-3F55-11E8-A5CB-3FA3753A265A",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "D70A69F4-427C-556C-BEDF-B45358CE23EC",
+        "EA671C4C-E6E3-FA5C-A3E6-A0C81CFA2957",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-cefae75c2ce5",
+      "score": 0.7170859771696326,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "1CA9ECAC-9B09-576E-8B73-48FB8B5FAEB4",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "37E17E38-3E8C-11E8-A5CB-3FA3753A265A",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "6A619D1A-8139-5B5B-9398-2FBD8FF62E19",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "9091E90D-46E1-E559-A146-EDCAA9E54C87",
+        "BF526524-1715-9952-9517-F3FC42997E11",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-1726321b965b",
+      "score": 0.717085950943589,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "52FEA5F6-5C62-558C-A377-470F6DCFFAF5",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "6D1027FB-39F0-11E8-B8CE-15D78AC88FB6",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "76C2AD63-9462-5614-921D-B0655D618919",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "92E03B19-B0BC-6255-BCB0-D51EF5621B79",
+        "A5E0656F-9001-7158-8190-5B0248710A2B",
+        "D8B5843D-AC59-B85F-99AC-24E16FB83EB8",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-f3c1318bb280",
+      "score": 0.7170859487580853,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "2FFDF306-0C32-0954-B20C-2548A4091A58",
+        "490D5261-9B03-534B-8C3D-B41FCED51416",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8A44F292-648B-7854-8B64-00F954785A79",
+        "AD2CB5FB-B5AE-C150-AEB5-D6C200C1DC4C",
+        "B65957E1-A558-5D9C-911E-92C63C8373FD",
+        "CF829614-396A-11E8-BF66-D9AA8AFF4A69",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-45ccec090900",
+      "score": 0.7170859476653336,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "07C190AA-B125-5A72-A401-C288354B9A38",
+        "0AF186A4-F013-FF5A-93F0-613F2AFF70BC",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "2FA90E86-2EE0-8158-A02E-2802E8815F58",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "CCE57FD0-A076-5BE4-8C9F-4F6509B058A6",
+        "ECF172C5-3E59-11E8-A5CB-3FA3753A265A",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-5eeb3d4a1b5c",
+      "score": 0.7170859454798298,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "26D41332-09C4-7255-8409-C52F1572ADD3",
+        "3FABE989-9F77-EF54-B79F-02A5B4EF3703",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "617A07D4-3D47-11E8-B8CE-15D78AC88FB6",
+        "6766E841-8B1D-3956-9D8B-9C72F6399865",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "9326FB1A-0C1E-578E-A6F9-C75BF9D78A61",
+        "B3DD2955-6CA1-5782-ADE2-9C07ED101425",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-653c49fb0fb6",
+      "score": 0.7170859367378153,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "1A88BA28-399D-11E8-BF66-D9AA8AFF4A69",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "2C762143-F689-445F-89F6-18ABDF447BAD",
+        "30A1D33E-B30E-B55E-8EB3-2F223EB5EF63",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "6173CA93-131F-5CB1-8C50-FFD0F128237B",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8A44F292-648B-7854-8B64-00F954785A79",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020",
+        "FDAE46B8-B93A-5768-BB39-7842C985BC6A"
+      ]
+    },
+    {
+      "id": "chain-86b9f0382eb0",
+      "score": 0.7170401110974548,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "26D41332-09C4-7255-8409-C52F1572ADD3",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "984F59FE-80B1-5FCB-BCD4-F5D19E1E236C",
+        "9DA380BC-EBD0-8C52-90EB-E367728C3623",
+        "A25800B7-70A7-5CA7-BB03-EC40A7F471F6",
+        "CE703908-A31D-2B54-9DA3-550CE42BBA60",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020",
+        "F6B8017F-3DAB-11E8-B8CE-15D78AC88FB6"
+      ]
+    },
+    {
+      "id": "chain-4ea5683a3e1d",
+      "score": 0.7170401045409439,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "159F914F-0C43-AA5B-830C-ADAE8BAAF96D",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "19E6AE38-22AB-3851-AB22-EC79B1384786",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "335A18B0-BDFC-514B-A29E-4D27B4568A1F",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "AE073E93-632B-5628-8514-41BF1FFB7ACD",
+        "CCE61B22-3EF0-11E8-A5CB-3FA3753A265A",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-4873bc0207a4",
+      "score": 0.7169942657875615,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "4F35C82C-C8AD-025E-ADC8-5A634E02E5B1",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "57BC0555-3DF5-11E8-A5CB-3FA3753A265A",
+        "5B036169-0EDD-50D8-BB39-F9FF5CFA608C",
+        "66BF9E3E-E780-9C5B-80E7-EE1A0B9C8A86",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "7F4A7690-D8BE-5FED-8E45-8F563FEB0F53",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020",
+        "FDE1A3AE-5BEF-0C57-AF5B-C8D2A70C5B81"
+      ]
+    },
+    {
+      "id": "chain-12566ec8d71d",
+      "score": 0.7169942646948096,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "77F60C80-0686-155B-8606-C20B6B159F1B",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "7F9282C1-665D-5A7E-9F86-5871A7679856",
+        "9F007556-713D-7A5A-BD71-FA22BA7A5089",
+        "A2AF45CD-3E27-11E8-A5CB-3FA3753A265A",
+        "E51A5138-D328-54EF-87C2-90F8C992837E",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-dfda0a4b57ac",
+      "score": 0.7167086502030123,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "1A803EA0-399D-11E8-BF66-D9AA8AFF4A69",
+        "1A88BA28-399D-11E8-BF66-D9AA8AFF4A69",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "2C762143-F689-445F-89F6-18ABDF447BAD",
+        "30A1D33E-B30E-B55E-8EB3-2F223EB5EF63",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "6173CA93-131F-5CB1-8C50-FFD0F128237B",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8A44F292-648B-7854-8B64-00F954785A79",
+        "8A4FA0FB-1F9D-5868-B7BC-F8972C80C875",
+        "CA1D5458-E3F0-54A2-A364-8F1541F4F981",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020",
+        "FDAE46B8-B93A-5768-BB39-7842C985BC6A"
+      ]
+    },
+    {
+      "id": "chain-d85895b5776a",
+      "score": 0.7167086210629638,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "04252A03-E713-4C5B-93E7-03CE8B4C7DA8",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2239C822-4D06-5A9B-9143-270FC89E1A86",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "3769BE54-47D5-5ED1-8EB7-9D99227E1ADD",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "622B54B8-3F55-11E8-A5CB-3FA3753A265A",
+        "6233C23C-3F55-11E8-A5CB-3FA3753A265A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8AFB4727-F093-5CDF-B4AD-208F94582EAB",
+        "D70A69F4-427C-556C-BEDF-B45358CE23EC",
+        "EA671C4C-E6E3-FA5C-A3E6-A0C81CFA2957",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-7ff9584ce4b3",
+      "score": 0.7166781041471126,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "1CA9ECAC-9B09-576E-8B73-48FB8B5FAEB4",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "37D96348-3E8C-11E8-A5CB-3FA3753A265A",
+        "37E17E38-3E8C-11E8-A5CB-3FA3753A265A",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "6A619D1A-8139-5B5B-9398-2FBD8FF62E19",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "77E6DA77-076C-5699-8551-AF3F266433A5",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8F2E2624-D0D6-5430-84E4-7A838EADEA4C",
+        "9091E90D-46E1-E559-A146-EDCAA9E54C87",
+        "BF526524-1715-9952-9517-F3FC42997E11",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-da1a58fc0b1c",
+      "score": 0.7166780961335993,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "179F3BE9-3F23-11E8-A5CB-3FA3753A265A",
+        "17A8D06F-3F23-11E8-A5CB-3FA3753A265A",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "3ABE5765-E024-8656-A4E0-8F972686B9CC",
+        "4261E4C4-DBF2-5FA0-B3B8-4F044C401F1B",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "525F441F-5FCD-551F-8E93-E0392951DA92",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "A4284B78-DFE6-593A-89FF-EFA983CCFB15",
+        "D5B269BF-76F1-58AA-B53F-42581B86973E",
+        "E1EED687-A550-E858-90A5-F33B58E852F7",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-d85257f7d7a5",
+      "score": 0.7166475682902299,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "2D8315EC-517C-5AEE-9563-11AA9457C939",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "52FEA5F6-5C62-558C-A377-470F6DCFFAF5",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "6D065880-39F0-11E8-B8CE-15D78AC88FB6",
+        "6D1027FB-39F0-11E8-B8CE-15D78AC88FB6",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "76C2AD63-9462-5614-921D-B0655D618919",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "92E03B19-B0BC-6255-BCB0-D51EF5621B79",
+        "93E96AE5-17D0-5292-83D5-E35EA1601754",
+        "A5E0656F-9001-7158-8190-5B0248710A2B",
+        "D8B5843D-AC59-B85F-99AC-24E16FB83EB8",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-6ba597f72386",
+      "score": 0.7166475639192227,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "00CB5B40-736C-57A3-B249-E84E79F1D402",
+        "01B5189C-0855-C35F-9508-609B8FC30D32",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "1C8897CE-8BBC-5444-AD5D-2E97CFA571BE",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "303FF10B-31C1-581A-8082-A22DE147577B",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "82453D20-3EBE-11E8-A5CB-3FA3753A265A",
+        "8250EC3F-3EBE-11E8-A5CB-3FA3753A265A",
+        "C8F095F5-7578-D953-B875-E85843D9EB88",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020",
+        "FDC76560-6C58-5116-BEB3-B6556B3513C7"
+      ]
+    },
+    {
+      "id": "chain-68292fef2808",
+      "score": 0.7166475457066923,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2454E8EA-3F4D-545B-8D3F-E9E67B54D477",
+        "26D41332-09C4-7255-8409-C52F1572ADD3",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "6B001D5D-068B-9156-8B06-DD89C691DA5C",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "89014C9F-FF7F-51B1-A1DA-6B4B88530631",
+        "984F59FE-80B1-5FCB-BCD4-F5D19E1E236C",
+        "9DA380BC-EBD0-8C52-90EB-E367728C3623",
+        "A25800B7-70A7-5CA7-BB03-EC40A7F471F6",
+        "A8836C48-BE50-5587-80F9-D3D99E6C8D60",
+        "CE703908-A31D-2B54-9DA3-550CE42BBA60",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020",
+        "F6AE7D89-3DAB-11E8-B8CE-15D78AC88FB6",
+        "F6B8017F-3DAB-11E8-B8CE-15D78AC88FB6"
+      ]
+    },
+    {
+      "id": "chain-35a547e06ce0",
+      "score": 0.7155344051003224,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "0737FF79-8EB5-555D-9108-E53709EB8503",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "2FA90E86-2EE0-8158-A02E-2802E8815F58",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "BEE1D528-8A16-5F9F-94DA-4630E4715C6F",
+        "ECE8A035-3E59-11E8-A5CB-3FA3753A265A",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-639aef7bbfc3",
+      "score": 0.7154428368687397,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "07FED5B5-5A4F-588A-88CF-68807378506D",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "26D41332-09C4-7255-8409-C52F1572ADD3",
+        "3FABE989-9F77-EF54-B79F-02A5B4EF3703",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "616C627B-3D47-11E8-B8CE-15D78AC88FB6",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "794BF648-70E5-5D02-9CC0-AF8602923961",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-4dcfc9e6a21f",
+      "score": 0.7154428368687397,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "57B0B54C-3DF5-11E8-A5CB-3FA3753A265A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "66BF9E3E-E780-9C5B-80E7-EE1A0B9C8A86",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8250A05A-6156-54C0-AC82-884B0543F769",
+        "CCE3C307-AB89-5C7C-AB2E-21EE738543B9",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020",
+        "FDE1A3AE-5BEF-0C57-AF5B-C8D2A70C5B81"
+      ]
+    },
+    {
+      "id": "chain-5b8238a316fc",
+      "score": 0.7154427614688642,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "19E6AE38-22AB-3851-AB22-EC79B1384786",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "A527B213-2ACA-5CEA-83AF-46F3D20AFD7A",
+        "CCD96A3A-3EF0-11E8-A5CB-3FA3753A265A",
+        "DB528ED8-E4B6-56F9-A35F-D72AFBEE82C4",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-c8c0a88ecd6b",
+      "score": 0.7154427538196014,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "77F60C80-0686-155B-8606-C20B6B159F1B",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "A2A389B4-3E27-11E8-A5CB-3FA3753A265A",
+        "C3C9E50C-F104-5B90-AAF7-BBDF08F787E8",
+        "C5CFE07D-D897-5AE6-B121-5857C89E406C",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-1f51c1f60d92",
+      "score": 0.7153510850548511,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "0F10AB13-6DAA-5769-ACB0-F4D9D818F677",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "26D41332-09C4-7255-8409-C52F1572ADD3",
+        "37D814B4-0CF5-51C6-8FD9-16CF80A51B6F",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "789543E8-D568-DA55-A8D5-AFBC45DAE3C4",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "ABA5F4C0-3D79-11E8-B8CE-15D78AC88FB6",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-b9dc1043dc02",
+      "score": 0.7152594261248674,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "1A20431A-6832-50C4-A95C-43665A9D2B9D",
+        "2FFDF306-0C32-0954-B20C-2548A4091A58",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8A44F292-648B-7854-8B64-00F954785A79",
+        "BC40FED3-9F9B-5E4A-9E16-7FE71FFFE596",
+        "CF6E8E68-396A-11E8-BF66-D9AA8AFF4A69",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-134318876993",
+      "score": 0.7146773525901639,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "1A803EA0-399D-11E8-BF66-D9AA8AFF4A69",
+        "1A84DD34-399D-11E8-BF66-D9AA8AFF4A69",
+        "1A86238E-399D-11E8-BF66-D9AA8AFF4A69",
+        "30A1D33E-B30E-B55E-8EB3-2F223EB5EF63",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8A44F292-648B-7854-8B64-00F954785A79",
+        "8A4FA0FB-1F9D-5868-B7BC-F8972C80C875",
+        "CA1D5458-E3F0-54A2-A364-8F1541F4F981",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-f79151d9bf07",
+      "score": 0.7146316034424308,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "1378ECB7-9959-5295-BC38-106A1C6C68D0",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "57DA6C8F-3DF5-11E8-A5CB-3FA3753A265A",
+        "57DF85F1-3DF5-11E8-A5CB-3FA3753A265A",
+        "57E0C28D-3DF5-11E8-A5CB-3FA3753A265A",
+        "62A22724-A36E-53FA-8AF0-782CACE717FD",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "66BF9E3E-E780-9C5B-80E7-EE1A0B9C8A86",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-a1b75f190efe",
+      "score": 0.7146315466193361,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "0C3186F6-8C03-5BFF-8525-1D532283EEC2",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "848BA241-33C3-5DFF-8653-CA3D33A50D7D",
+        "ED1B06DF-3E59-11E8-A5CB-3FA3753A265A",
+        "ED20286A-3E59-11E8-A5CB-3FA3753A265A",
+        "ED216624-3E59-11E8-A5CB-3FA3753A265A",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-8701c633b67f",
+      "score": 0.7146315324135625,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "3769BE54-47D5-5ED1-8EB7-9D99227E1ADD",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "622B54B8-3F55-11E8-A5CB-3FA3753A265A",
+        "622FCE73-3F55-11E8-A5CB-3FA3753A265A",
+        "623123DB-3F55-11E8-A5CB-3FA3753A265A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8AFB4727-F093-5CDF-B4AD-208F94582EAB",
+        "EA671C4C-E6E3-FA5C-A3E6-A0C81CFA2957",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-140dfa4d58b3",
+      "score": 0.7146315280425551,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "4707E777-85CE-5D41-9E3E-26DA505A6A20",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "58F3B8A2-28DC-5699-9464-54FBB3694FAE",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "CD01C889-3EF0-11E8-A5CB-3FA3753A265A",
+        "CD06D598-3EF0-11E8-A5CB-3FA3753A265A",
+        "CD081263-3EF0-11E8-A5CB-3FA3753A265A",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-359e5bbf415d",
+      "score": 0.7146315247642997,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "26D41332-09C4-7255-8409-C52F1572ADD3",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "89014C9F-FF7F-51B1-A1DA-6B4B88530631",
+        "A8836C48-BE50-5587-80F9-D3D99E6C8D60",
+        "CE703908-A31D-2B54-9DA3-550CE42BBA60",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020",
+        "F6AE7D89-3DAB-11E8-B8CE-15D78AC88FB6",
+        "F6B2DEED-3DAB-11E8-B8CE-15D78AC88FB6",
+        "F6B53E9D-3DAB-11E8-B8CE-15D78AC88FB6"
+      ]
+    },
+    {
+      "id": "chain-d85bdbc0845d",
+      "score": 0.7146315214860443,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "37D96348-3E8C-11E8-A5CB-3FA3753A265A",
+        "37DDB8C7-3E8C-11E8-A5CB-3FA3753A265A",
+        "37DEF8BD-3E8C-11E8-A5CB-3FA3753A265A",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "77E6DA77-076C-5699-8551-AF3F266433A5",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8F2E2624-D0D6-5430-84E4-7A838EADEA4C",
+        "9091E90D-46E1-E559-A146-EDCAA9E54C87",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-55863f1eb885",
+      "score": 0.7146315203932925,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "179F3BE9-3F23-11E8-A5CB-3FA3753A265A",
+        "17A3B11F-3F23-11E8-A5CB-3FA3753A265A",
+        "17A5975B-3F23-11E8-A5CB-3FA3753A265A",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "4261E4C4-DBF2-5FA0-B3B8-4F044C401F1B",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "525F441F-5FCD-551F-8E93-E0392951DA92",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "E1EED687-A550-E858-90A5-F33B58E852F7",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-f7bc35824504",
+      "score": 0.7145856925674283,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "26D41332-09C4-7255-8409-C52F1572ADD3",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8A6BCD1F-0716-5E06-82A8-0F9AB2815F78",
+        "ABC9FCDE-3D79-11E8-B8CE-15D78AC88FB6",
+        "ABCF2A44-3D79-11E8-B8CE-15D78AC88FB6",
+        "ABD12D16-3D79-11E8-B8CE-15D78AC88FB6",
+        "CCB7A798-07A4-56F6-BDD3-646ED0F0DDDF",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-81b9e40b48fd",
+      "score": 0.7145856903819247,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "2D8315EC-517C-5AEE-9563-11AA9457C939",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "6D065880-39F0-11E8-B8CE-15D78AC88FB6",
+        "6D0B66C4-39F0-11E8-B8CE-15D78AC88FB6",
+        "6D0D61D2-39F0-11E8-B8CE-15D78AC88FB6",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "92E03B19-B0BC-6255-BCB0-D51EF5621B79",
+        "93E96AE5-17D0-5292-83D5-E35EA1601754",
+        "A5E0656F-9001-7158-8190-5B0248710A2B",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    },
+    {
+      "id": "chain-12cb25f36172",
+      "score": 0.7145856827326619,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "01B5189C-0855-C35F-9508-609B8FC30D32",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "1C8897CE-8BBC-5444-AD5D-2E97CFA571BE",
+        "24782D99-5286-465D-8652-63817D46C1BD",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "82453D20-3EBE-11E8-A5CB-3FA3753A265A",
+        "824BCA2A-3EBE-11E8-A5CB-3FA3753A265A",
+        "824D47AC-3EBE-11E8-A5CB-3FA3753A265A",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020",
+        "FDC76560-6C58-5116-BEB3-B6556B3513C7"
+      ]
+    },
+    {
+      "id": "chain-a81a553c630c",
+      "score": 0.714585664155881,
+      "stages": [
+        "trust_break",
+        "lifecycle",
+        "mission_effect"
+      ],
+      "relations": [
+        "EVENT_EXECUTE",
+        "EVENT_OPEN",
+        "EVENT_WRITE"
+      ],
+      "nodes": [
+        "0FA8B43C-06FC-536D-9E4B-E7C14D1996BB",
+        "198422DC-10D0-CE5E-9010-9A117ECE544A",
+        "51110606-D232-9652-B2D2-3A7242968F8A",
+        "66A7C19D-10AE-0852-AE10-87BD2208535B",
+        "76A739B1-A13E-FD50-BEA1-B218A0FD0400",
+        "7A1B4973-09E5-AA50-A509-1753C0AA87A1",
+        "8A44F292-648B-7854-8B64-00F954785A79",
+        "CF8C0FCB-396A-11E8-BF66-D9AA8AFF4A69",
+        "CF92BB52-396A-11E8-BF66-D9AA8AFF4A69",
+        "CF94D9F1-396A-11E8-BF66-D9AA8AFF4A69",
+        "DCDAF702-9643-5EFB-8327-175074C1F70C",
+        "F410BE96-4C0C-765E-8C4C-6F0E2E760020"
+      ]
+    }
+  ],
+  "runtime_seconds": 168.68859474203782,
+  "peak_memory_mb": 400.83984375
+}

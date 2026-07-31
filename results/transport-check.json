@@ -1,0 +1,21 @@
+{
+  "method": "transport_cross_solver_check_v1",
+  "seed": 20260731,
+  "trials": 2000,
+  "max_roots": 15,
+  "max_shared_nodes": 20,
+  "edge_probability": 0.35,
+  "weights": [
+    0.0,
+    0.01,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "reference": "scipy.optimize.linear_sum_assignment",
+  "scipy": "1.17.1",
+  "matched": 2000
+}

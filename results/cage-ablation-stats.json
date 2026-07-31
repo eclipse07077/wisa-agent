@@ -1,0 +1,94 @@
+{
+  "report_no_chain__default": {
+    "reward": {
+      "count": 5,
+      "mean_difference": -117.0,
+      "standard_deviation": 536.5519546139031,
+      "confidence_interval": [
+        -525.2,
+        314.8
+      ],
+      "effect_size": -0.21805903229668022,
+      "win_rate": 0.4
+    },
+    "unique_privileged_hosts": {
+      "count": 5,
+      "mean_difference": 1.0,
+      "standard_deviation": 5.1478150704935,
+      "confidence_interval": [
+        -2.6,
+        5.2
+      ],
+      "effect_size": 0.19425717247145283,
+      "win_rate": 0.6
+    },
+    "unique_impacted_hosts": {
+      "count": 5,
+      "mean_difference": 2.4,
+      "standard_deviation": 2.6076809620810595,
+      "confidence_interval": [
+        0.0,
+        4.0
+      ],
+      "effect_size": 0.9203579866168445,
+      "win_rate": 0.8
+    },
+    "successful_impact_count": {
+      "count": 5,
+      "mean_difference": 2.4,
+      "standard_deviation": 2.6076809620810595,
+      "confidence_interval": [
+        0.0,
+        4.0
+      ],
+      "effect_size": 0.9203579866168445,
+      "win_rate": 0.8
+    }
+  },
+  "report_no_honeypot__default": {
+    "reward": {
+      "count": 5,
+      "mean_difference": -74.4,
+      "standard_deviation": 935.2723132863498,
+      "confidence_interval": [
+        -843.4,
+        620.6
+      ],
+      "effect_size": -0.07954902432487719,
+      "win_rate": 0.6
+    },
+    "unique_privileged_hosts": {
+      "count": 5,
+      "mean_difference": 2.0,
+      "standard_deviation": 4.743416490252569,
+      "confidence_interval": [
+        -1.0,
+        6.2
+      ],
+      "effect_size": 0.4216370213557839,
+      "win_rate": 0.6
+    },
+    "unique_impacted_hosts": {
+      "count": 5,
+      "mean_difference": 0.4,
+      "standard_deviation": 5.029910535983716,
+      "confidence_interval": [
+        -3.4,
+        4.2
+      ],
+      "effect_size": 0.07952427724875442,
+      "win_rate": 0.4
+    },
+    "successful_impact_count": {
+      "count": 5,
+      "mean_difference": 0.4,
+      "standard_deviation": 5.029910535983716,
+      "confidence_interval": [
+        -3.4,
+        4.2
+      ],
+      "effect_size": 0.07952427724875442,
+      "win_rate": 0.4
+    }
+  }
+}

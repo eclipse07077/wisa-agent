@@ -1,0 +1,48 @@
+{
+  "report__default": {
+    "reward": {
+      "count": 20,
+      "mean_difference": -100.75,
+      "standard_deviation": 1366.7417218372045,
+      "confidence_interval": [
+        -672.5,
+        500.2687499999997
+      ],
+      "effect_size": -0.07371546385850401,
+      "win_rate": 0.45
+    },
+    "unique_privileged_hosts": {
+      "count": 20,
+      "mean_difference": 1.9,
+      "standard_deviation": 5.514573992230903,
+      "confidence_interval": [
+        -0.55,
+        4.15
+      ],
+      "effect_size": 0.3445415734156032,
+      "win_rate": 0.65
+    },
+    "unique_impacted_hosts": {
+      "count": 20,
+      "mean_difference": 0.55,
+      "standard_deviation": 2.459674775249769,
+      "confidence_interval": [
+        -0.55,
+        1.6
+      ],
+      "effect_size": 0.22360679774997896,
+      "win_rate": 0.45
+    },
+    "successful_impact_count": {
+      "count": 20,
+      "mean_difference": 0.5,
+      "standard_deviation": 2.438722702779599,
+      "confidence_interval": [
+        -0.55,
+        1.55
+      ],
+      "effect_size": 0.20502535996819637,
+      "win_rate": 0.45
+    }
+  }
+}

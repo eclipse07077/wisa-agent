@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "dataset": "optc_h051",
+  "label_access_authorized_at": "2026-07-31T14:11:23+09:00",
+  "audit_completed_before_label_access": true,
+  "evaluation_written_at": "2026-07-31T14:11:40.097557619+09:00",
+  "method_locked_after_label_access": true,
+  "sha256": {
+    "frozen": "af72b40f0552ad0b368161ffd1b10c379d7c2cee838debfa919dbf72f9d829b1",
+    "audit": "474b793467a7adabf2d486ddb880e79799975331c80bd904440193838595b942",
+    "labels": "ff8af2562c6746b48f81445fa36a5860ebd9a4402fa6b83cd47ddda35bfdeb3b",
+    "evaluation": "cee25b17dc9310feaf81d7a35da7732e96e189aa1175284b508570742de98ca8"
+  },
+  "results": {
+    "official": 4,
+    "flowsub": 8,
+    "ravel_v6": 2,
+    "ravel_cert": 3,
+    "certified_transports": 4,
+    "primary_safety": false,
+    "secondary_efficacy": false,
+    "competitive_noninferiority": false,
+    "strict_all_comparators": false
+  }
+}

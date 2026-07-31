@@ -1,0 +1,19 @@
+{
+  "method": "certified_label_barrier_audit_v4",
+  "frozen_sha256": "af72b40f0552ad0b368161ffd1b10c379d7c2cee838debfa919dbf72f9d829b1",
+  "score_universe": 1470624,
+  "budget": 512,
+  "flowsub_nodes": 512,
+  "candidate_transports": 113495,
+  "certified_candidates": 4,
+  "source_transports": 59,
+  "source_certified_transports": 4,
+  "certified_transports": 4,
+  "changed_from_source": 55,
+  "selected_e_value": 19301.601405700076,
+  "maximum_e_value": 228.1246004562711,
+  "secondary_objective": 84.60990777450138,
+  "source_agreement": 457,
+  "source_distance": 55,
+  "witnessed_routes": 5
+}

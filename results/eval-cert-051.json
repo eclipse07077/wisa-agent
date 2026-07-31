@@ -1,0 +1,143 @@
+{
+  "method": "ravel_cert_orthrus_eval_v1",
+  "dataset": "optc_h051",
+  "manifest_sha256": "551fc12945a6b71d4549c5763e1c3fd8f502b94fcd0eb01fed2e11f025341b0c",
+  "routes_sha256": "ec1e386c1af4c2aa06db60e73cc94a5511be68e1c657d3a8b4d27e3c82ab1466",
+  "source_sha256": "569c56a2d505e7dea9c4332c71db626afb264e53e29787975068d3ae6946a04f",
+  "candidate_sha256": "20e04656ff56f0f2c5a8a5df7fe6d3df2539a4f7ff4f8f8307edf7d68d7cbe5e",
+  "labels_sha256": "ff8af2562c6746b48f81445fa36a5860ebd9a4402fa6b83cd47ddda35bfdeb3b",
+  "label_rows": 114,
+  "score_universe": 1470624,
+  "metrics": {
+    "official": {
+      "budget": 512,
+      "malicious": 114,
+      "covered_malicious": 114,
+      "recovered": 4,
+      "false_positive": 508,
+      "false_negative": 110,
+      "true_negative": 1470002,
+      "precision": 0.0078125,
+      "covered_recall": 0.03508771929824561,
+      "mcc": 0.016395863822230627,
+      "random_budget": {
+        "expected_recovered": 0.039689274756837915,
+        "p_at_least_observed": 9.399211296344531e-08
+      },
+      "recovered_nodes": [
+        "39BE10BB-2C30-4EEB-BA8B-E5685F72EF80",
+        "56799F02-D8AA-4C3C-A5C0-108FFBF5B0FD",
+        "917F6126-DCB7-4E30-892F-9626AD012D89",
+        "D5B8FE6B-F1E5-4463-A72C-420E57ECA18E"
+      ]
+    },
+    "flowsub": {
+      "budget": 512,
+      "malicious": 114,
+      "covered_malicious": 114,
+      "recovered": 8,
+      "false_positive": 504,
+      "false_negative": 106,
+      "true_negative": 1470006,
+      "precision": 0.015625,
+      "covered_recall": 0.07017543859649122,
+      "mcc": 0.03295604302001206,
+      "random_budget": {
+        "expected_recovered": 0.039689274756837915,
+        "p_at_least_observed": 1.0886650214978129e-16
+      },
+      "recovered_nodes": [
+        "102B9229-0606-42F3-A5D9-B508CAD95720",
+        "39BE10BB-2C30-4EEB-BA8B-E5685F72EF80",
+        "56799F02-D8AA-4C3C-A5C0-108FFBF5B0FD",
+        "5EA9ECFF-BE55-4952-9DC6-5A967CF71B50",
+        "917F6126-DCB7-4E30-892F-9626AD012D89",
+        "9CD219ED-ECC9-4426-AD24-4FBDB1F4FD3B",
+        "BFEEDBA5-1A48-4219-8BDA-F309CBF3DA0E",
+        "D5B8FE6B-F1E5-4463-A72C-420E57ECA18E"
+      ]
+    },
+    "ravel_v6": {
+      "budget": 512,
+      "malicious": 114,
+      "covered_malicious": 114,
+      "recovered": 2,
+      "false_positive": 510,
+      "false_negative": 112,
+      "true_negative": 1470000,
+      "precision": 0.00390625,
+      "covered_recall": 0.017543859649122806,
+      "mcc": 0.00811577422333991,
+      "random_budget": {
+        "expected_recovered": 0.039689274756837915,
+        "p_at_least_observed": 0.0007592976917872
+      },
+      "recovered_nodes": [
+        "102B9229-0606-42F3-A5D9-B508CAD95720",
+        "5EA9ECFF-BE55-4952-9DC6-5A967CF71B50"
+      ]
+    },
+    "certified": {
+      "budget": 512,
+      "malicious": 114,
+      "covered_malicious": 114,
+      "recovered": 3,
+      "false_positive": 509,
+      "false_negative": 111,
+      "true_negative": 1470001,
+      "precision": 0.005859375,
+      "covered_recall": 0.02631578947368421,
+      "mcc": 0.012255819022785268,
+      "random_budget": {
+        "expected_recovered": 0.039689274756837915,
+        "p_at_least_observed": 9.801742559197873e-06
+      },
+      "recovered_nodes": [
+        "39BE10BB-2C30-4EEB-BA8B-E5685F72EF80",
+        "56799F02-D8AA-4C3C-A5C0-108FFBF5B0FD",
+        "D5B8FE6B-F1E5-4463-A72C-420E57ECA18E"
+      ]
+    }
+  },
+  "comparisons": {
+    "official": {
+      "changed_slots": 4,
+      "baseline_only_malicious": 1,
+      "candidate_only_malicious": 0,
+      "recovered_delta": -1,
+      "conditional_null": {
+        "p_candidate_at_least_observed": 1.0,
+        "p_two_sided": 1.0,
+        "descriptive_not_generalization_test": true
+      }
+    },
+    "flowsub": {
+      "changed_slots": 484,
+      "baseline_only_malicious": 5,
+      "candidate_only_malicious": 0,
+      "recovered_delta": -5,
+      "conditional_null": {
+        "p_candidate_at_least_observed": 1.0,
+        "p_two_sided": 0.061854675804124584,
+        "descriptive_not_generalization_test": true
+      }
+    },
+    "ravel_v6": {
+      "changed_slots": 55,
+      "baseline_only_malicious": 2,
+      "candidate_only_malicious": 3,
+      "recovered_delta": 1,
+      "conditional_null": {
+        "p_candidate_at_least_observed": 0.5000000000000236,
+        "p_two_sided": 1.0,
+        "descriptive_not_generalization_test": true
+      }
+    }
+  },
+  "certified_transports": 4,
+  "activated": true,
+  "primary_safety": false,
+  "secondary_efficacy": false,
+  "competitive_noninferiority": false,
+  "strict_all_comparators": false
+}
